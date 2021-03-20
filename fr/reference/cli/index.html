@@ -112,13 +112,13 @@
             <ul class="md-select__list">
               
                 <li class="md-select__item">
-                  <a href="https://docs.hapify.io/" class="md-select__link">
+                  <a href="https://documentation.hapify.io/" class="md-select__link">
                     English
                   </a>
                 </li>
                 
                 <li class="md-select__item">
-                  <a href="https://docs.hapify.io/fr/" class="md-select__link">
+                  <a href="https://documentation.hapify.io/fr/" class="md-select__link">
                     Français
                   </a>
                 </li>
@@ -752,8 +752,8 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#appliquer-un-patch-au-code-source-avec-de-nouveaux-modeles-de-donnees" class="md-nav__link">
-    Appliquer un patch au code source avec de nouveaux modèles de données
+  <a href="#appliquer-un-patch-au-code-genere-avec-de-nouveaux-modeles-de-donnees" class="md-nav__link">
+    Appliquer un patch au code généré avec de nouveaux modèles de données
   </a>
   
 </li>
@@ -1004,8 +1004,8 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#appliquer-un-patch-au-code-source-avec-de-nouveaux-modeles-de-donnees" class="md-nav__link">
-    Appliquer un patch au code source avec de nouveaux modèles de données
+  <a href="#appliquer-un-patch-au-code-genere-avec-de-nouveaux-modeles-de-donnees" class="md-nav__link">
+    Appliquer un patch au code généré avec de nouveaux modèles de données
   </a>
   
 </li>
@@ -1047,7 +1047,7 @@ Il utilise un langage de templating dédié.
 Il affiche une console web pour la définition des modèles et l'écriture des templates.</p>
 <h2 id="utilisation">Utilisation</h2>
 <h3 id="installation">Installation</h3>
-<p>Vous devez installer ce package globalement pour avoir la commande <code>hpf</code> :</p>
+<p>Vous devez installer ce package globalement pour obtenir la commande <code>hpf</code> :</p>
 <div class="highlight"><pre><span></span><code>npm install -g @hapify/cli
 </code></pre></div>
 <p>Pour vérifier la version installée, exécutez <code>hpf --version</code>.</p>
@@ -1056,12 +1056,12 @@ Il affiche une console web pour la définition des modèles et l'écriture des t
 <li><code>-V</code>, <code>--version</code> : affiche le numéro de version</li>
 <li><code>--debug</code> : active le mode débogage (par défaut : <code>false</code>)</li>
 <li><code>--silent</code> : active le mode silencieux (par défaut : <code>false</code>)</li>
-<li><code>-d &lt;path&gt;</code>, <code>--dir &lt;path&gt;</code> : change le répertoire de travail. Ce chemin peut être absolu ou relatif au chemin actuel.</li>
+<li><code>-d &lt;path&gt;</code>, <code>--dir &lt;path&gt;</code> : change le répertoire de travail. Ce chemin peut être absolu ou relatif au chemin courant.</li>
 <li><code>-k &lt;secret&gt;</code>, <code>--key &lt;secret&gt;</code> : force l'utilisation d'une clé API plutôt que celle définie dans la configuration globale. Si vous voulez définir votre clé d'API de façon permanente, vous devriez utiliser la commande <code>hpf key</code>.</li>
 <li><code>-h</code>, <code>--help</code> : affiche l'aide</li>
 </ul>
 <h3 id="commandes">Commandes</h3>
-<h4 id="definir-la-configuration-globale">Définir la configuration globale</h4>
+<h4 id="definir-la-configuration-globale"><a name="config"></a>Définir la configuration globale</h4>
 <div class="highlight"><pre><span></span><code>hpf config <span class="o">[</span>options<span class="o">]</span>
 </code></pre></div>
 <p>Cette commande enregistre une ou plusieurs configurations globales dans <code>~/.hapify/config.json</code>.
@@ -1071,16 +1071,16 @@ Si le fichier n'existe pas, il sera automatiquement créé.</p>
 <li><code>hpf config --apiKey &lt;secret&gt;</code> : définit la clé d'API à utiliser pour chaque commande. Ceci est équivalent à <code>hpf key &lt;key&gt;</code>.</li>
 <li><code>hpf config --apiUrl &lt;url&gt;</code> : remplace l'URL d'API par défaut.</li>
 </ul>
-<h4 id="definir-la-cle-dapi-globale">Définir la clé d'API globale</h4>
+<h4 id="definir-la-cle-dapi-globale"><a name="key"></a>Définir la clé d'API globale</h4>
 <div class="highlight"><pre><span></span><code>hpf key &lt;key&gt;
 </code></pre></div>
 <p>Cette commande est un alias de <code>hpf config --apiKey &lt;secret&gt;</code>.</p>
-<h4 id="lister-les-boilerplates-channels">Lister les boilerplates (channels)</h4>
+<h4 id="lister-les-boilerplates-channels"><a name="list"></a>Lister les boilerplates (channels)</h4>
 <div class="highlight"><pre><span></span><code>hpf list
 </code></pre></div>
 <p>Alias : <code>hpf ls</code></p>
 <p>Cette commande affiche ce qui est visible pour le CLI à partir du répertoire courant.
-Elle affiche la liste des channels et la liste des modèles de données utilisés par ces channels.</p>
+Elle affiche la liste des <a href="../../getting-started/terminology/">channels</a> et la liste des modèles de données utilisés par ces channels.</p>
 <p>Le CLI recherche les fichiers <code>hapify.json</code> afin de détecter automatiquement les channels.
 Il réitère sur les sous-répertoires. La profondeur par défaut est de <code>2</code>.
 Pour modifier cette valeur, utilisez l'option <code>depth</code>.</p>
@@ -1091,7 +1091,7 @@ Pour modifier cette valeur, utilisez l'option <code>depth</code>.</p>
 <p>Vous n'êtes pas censé exécuter le CLI avec des ensembles de modèles de données différents.
 Si c'est le cas, le premier ensemble trouvé sera utilisé.</p>
 </div>
-<h4 id="generer-le-code">Générer le code</h4>
+<h4 id="generer-le-code"><a name="generate"></a>Générer le code</h4>
 <div class="highlight"><pre><span></span><code>hpf generate
 </code></pre></div>
 <p>Alias : <code>hpf g</code></p>
@@ -1103,13 +1103,13 @@ Pour définir la profondeur de la recherche de channels, utilisez cette option :
 <p class="admonition-title">À savoir</p>
 <p>Les fichiers générés vides ne seront pas sauvegardés.</p>
 </div>
-<h4 id="exporter-le-code">Exporter le code</h4>
+<h4 id="exporter-le-code"><a name="export"></a>Exporter le code</h4>
 <div class="highlight"><pre><span></span><code>hpf <span class="nb">export</span>
 </code></pre></div>
 <p>Alias : <code>hpf x</code></p>
 <p>Cette commande génère un channel à partir de ses templates et de ses modèles de données puis sauvegarde les fichiers générés dans un fichier zip.
 Vous devez lancer cette commande à partir du répertoire du channel, au niveau du fichier <code>hapify.json</code>.</p>
-<p>Par défaut, le fichier zip porte le nom du channel, c’est-à-dire le nom du dossier.
+<p>Par défaut, le fichier zip porte le nom du dossier du channel.
 Exemple : <code>angular-admin/angular-admin.zip</code>.
 Vous pouvez définir un chemin personnalisé avec cette option : <code>-o, --output &lt;path&gt;</code>.</p>
 <div class="highlight"><pre><span></span><code>hpf <span class="nb">export</span> -o /path/to/file.zip
@@ -1118,7 +1118,7 @@ Vous pouvez définir un chemin personnalisé avec cette option : <code>-o, --out
 <p class="admonition-title">À savoir</p>
 <p>Les fichiers générés vides ne seront pas sauvegardés.</p>
 </div>
-<h4 id="importez-des-modeles-de-donnees">Importez des modèles de données</h4>
+<h4 id="importez-des-modeles-de-donnees"><a name="import"></a>Importez des modèles de données</h4>
 <div class="highlight"><pre><span></span><code>hpf import
 </code></pre></div>
 <p>Alias : <code>hpf m</code></p>
@@ -1127,7 +1127,7 @@ Vous pouvez définir un chemin personnalisé avec cette option : <code>-o, --out
 <p>Vous pouvez également importer des préréglages à partir de leurs ID (visibles sur <a href="https://hub.hapify.io/">Hapify Hub</a>)</p>
 <div class="highlight"><pre><span></span><code>hpf import --preset ab123 --preset bd456
 </code></pre></div>
-<h4 id="cloner-un-boilerplate-et-demarrer-un-nouveau-projet">Cloner un boilerplate et démarrer un nouveau projet</h4>
+<h4 id="cloner-un-boilerplate-et-demarrer-un-nouveau-projet"><a name="new"></a>Cloner un boilerplate et démarrer un nouveau projet</h4>
 <div class="highlight"><pre><span></span><code>hpf new
 </code></pre></div>
 <p>Alias : <code>hpf n</code></p>
@@ -1136,7 +1136,7 @@ Elle vous demandera de :</p>
 <ul>
 <li>sélectionner un boilerplate</li>
 <li>sélectionner ou créer le projet à utiliser</li>
-<li>sélectionner des modèles de données à importer</li>
+<li>sélectionner des <a href="../../getting-started/terminology/">presets</a> de modèles de données à importer</li>
 </ul>
 <p><em>Options</em></p>
 <ul>
@@ -1149,8 +1149,8 @@ Elle vous demandera de :</p>
 <li><code>--project-name &lt;name&gt;</code> : Le nom du projet à créer</li>
 <li><code>--project-desc &lt;description&gt;</code> : La description du projet à créer (le nom doit être défini)</li>
 </ul>
-<p>Pour consulter les modèles disponibles, visitez <a href="https://hub.hapify.io">hub.hapify.io</a>.</p>
-<h4 id="creer-un-nouveau-boilerplatechannel">Créer un nouveau boilerplate/channel</h4>
+<p>Pour consulter les presets disponibles, visitez <a href="https://hub.hapify.io">hub.hapify.io</a>.</p>
+<h4 id="creer-un-nouveau-boilerplatechannel"><a name="init"></a>Créer un nouveau boilerplate/channel</h4>
 <div class="highlight"><pre><span></span><code>hpf init
 </code></pre></div>
 <p>Alias : <code>hpf i</code></p>
@@ -1165,11 +1165,11 @@ Elle vous demandera de sélectionner ou de créer un projet.</p>
 <li><code>--project-name &lt;name&gt;</code> : Le nom du projet à créer</li>
 <li><code>--project-desc &lt;description&gt;</code> : La description du projet à créer</li>
 </ul>
-<h4 id="definir-le-projet-a-utiliser-dans-un-boilerplatechannel">Définir le projet à utiliser dans un boilerplate/channel</h4>
+<h4 id="definir-le-projet-a-utiliser-dans-un-boilerplatechannel"><a name="use"></a>Définir le projet à utiliser dans un boilerplate/channel</h4>
 <div class="highlight"><pre><span></span><code>hpf use
 </code></pre></div>
 <p>Alias : <code>hpf u</code></p>
-<p>Change le projet utilisé par un ou plusieurs channels existants.
+<p>Change le projet utilisé par un ou plusieurs <a href="../../getting-started/terminology/">channels</a> existants.
 Change l'ID du projet dans le fichier <code>hapify.json</code> pour chaque channel trouvé.
 Elle vous demandera de sélectionner ou de créer le projet à utiliser.</p>
 <p><em>Options</em></p>
@@ -1178,14 +1178,14 @@ Elle vous demandera de sélectionner ou de créer le projet à utiliser.</p>
 <li><code>--project-name &lt;name&gt;</code> : Le nom du projet à créer</li>
 <li><code>--project-desc &lt;description&gt;</code> : La description du projet à créer</li>
 </ul>
-<h4 id="appliquer-un-patch-au-code-source-avec-de-nouveaux-modeles-de-donnees">Appliquer un patch au code source avec de nouveaux modèles de données</h4>
+<h4 id="appliquer-un-patch-au-code-genere-avec-de-nouveaux-modeles-de-donnees"><a name="patch"></a>Appliquer un patch au code généré avec de nouveaux modèles de données</h4>
 <p>Au cours du processus de développement, vous pouvez ajouter, modifier ou supprimer certains modèles.
 Pour fusionner automatiquement la différence entre deux générations à votre branche de travail, utilisez cette commande.</p>
 <p>Cette commande utilise <code>git format-patch</code> et <code>git am</code>.</p>
 <div class="highlight"><pre><span></span><code>hpf patch
 </code></pre></div>
-<p>Cela vous permettra de choisir la branche source et le commit, puis la branche de destination.</p>
-<h4 id="demarrer-la-console">Démarrer la console</h4>
+<p>Elle vous permettra de choisir la branche source et le commit, puis la branche de destination.</p>
+<h4 id="demarrer-la-console"><a name="serve"></a>Démarrer la console</h4>
 <p>Exécutez cette commande pour modifier les modèles de données et les templates.</p>
 <div class="highlight"><pre><span></span><code>hpf serve
 </code></pre></div>

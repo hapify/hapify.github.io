@@ -112,13 +112,13 @@
             <ul class="md-select__list">
               
                 <li class="md-select__item">
-                  <a href="https://docs.hapify.io/" class="md-select__link">
+                  <a href="https://documentation.hapify.io/" class="md-select__link">
                     English
                   </a>
                 </li>
                 
                 <li class="md-select__item">
-                  <a href="https://docs.hapify.io/fr/" class="md-select__link">
+                  <a href="https://documentation.hapify.io/fr/" class="md-select__link">
                     Français
                   </a>
                 </li>
@@ -939,12 +939,12 @@
                   <h1>Objet modèle</h1>
                 
                 <p>Ce document décrit la structure de l'objet qui représente un modèle de données lors de l'écriture d'un template.</p>
-<p>Avant de lire ce document, vous devriez jeter un coup d'œil à la section <a href="../../getting-started/concepts/key-concepts/">concepts clés</a>.</p>
+<p>Avant de lire ce document, vous devriez jeter un coup d'œil à la section <a href="../../getting-started/concepts/models/">concepts</a>.</p>
 <h3 id="dans-les-templates">Dans les templates</h3>
 <h3 id="injection-du-modele-de-donnees">Injection du modèle de données</h3>
-<p>L'entrée du template peut être définie comme <code>one</code> modèle ou <code>all</code> modèles.
-Au cours de la génération, s'il est défini comme <code>one</code>, le template sera appelé une fois pour chaque modèle de données. Par conséquent, il engendrera un fichier pour chaque modèle de données.
-S'il est défini comme <code>all</code>, le template sera appelé une seule fois pour tous les modèles de données. Il engendrera alors un unique fichier.</p>
+<p>L'entrée du template peut être définie comme <code>one model</code> ou <code>all models</code>.
+Au cours de la génération, s'il est défini comme <code>one model</code>, le template sera appelé une fois pour chaque modèle de données. Par conséquent, il engendrera un fichier pour chaque modèle de données.
+S'il est défini comme <code>all models</code>, le template sera appelé une seule fois pour tous les modèles de données. Il engendrera alors un unique fichier.</p>
 <h4 id="modele-unique">Modèle unique</h4>
 <p>Si le template ne nécessite qu'un seul modèle, alors un objet <code>model</code> (alias <code>m</code>) sera disponible comme variable globale dans le template.
 Dans un template Hapify, il sera disponible sous <code>Model</code>, <code>M</code> ou encore <code>root</code>.

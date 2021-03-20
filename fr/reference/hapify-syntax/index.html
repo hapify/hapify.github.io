@@ -112,13 +112,13 @@
             <ul class="md-select__list">
               
                 <li class="md-select__item">
-                  <a href="https://docs.hapify.io/" class="md-select__link">
+                  <a href="https://documentation.hapify.io/" class="md-select__link">
                     English
                   </a>
                 </li>
                 
                 <li class="md-select__item">
-                  <a href="https://docs.hapify.io/fr/" class="md-select__link">
+                  <a href="https://documentation.hapify.io/fr/" class="md-select__link">
                     Français
                   </a>
                 </li>
@@ -1551,7 +1551,7 @@
                 <h2 id="pourquoi-utiliser-une-syntaxe-specifique">Pourquoi utiliser une syntaxe spécifique ?</h2>
 <p>Nous avons conçu une syntaxe capable de manipuler <a href="../model-object/">l'objet modèle</a> injecté dans les templates.
 Cette syntaxe est optimisée pour jouer avec les propriétés de cet objet modèle en utilisant des mots courts.
-Cela permet de gérer des idées complexes avec des phrases courtes.</p>
+Cela permet de gérer des idées complexes avec des phrases simples.</p>
 <p>Par exemple, cette boucle en JavaScript :</p>
 <div class="highlight"><pre><span></span><code><span class="k">for</span> <span class="p">(</span><span class="kd">let</span> <span class="nx">field</span> <span class="k">of</span> <span class="nx">root</span><span class="p">.</span><span class="nx">fields</span><span class="p">.</span><span class="nx">filter</span><span class="p">(</span><span class="nx">f</span> <span class="p">=&gt;</span> <span class="nx">f</span><span class="p">.</span><span class="nx">searchable</span> <span class="o">&amp;&amp;</span> <span class="nx">f</span><span class="p">.</span><span class="nx">type</span> <span class="o">===</span> <span class="s1">&#39;entity&#39;</span><span class="p">))</span> <span class="p">{</span>
     <span class="nx">out</span> <span class="o">+=</span> <span class="s1">&#39;    Do something&#39;</span><span class="p">;</span>
@@ -1573,7 +1573,7 @@ Cela permet de gérer des idées complexes avec des phrases courtes.</p>
 </div>
 <h3 id="syntaxes-longue-et-courte">Syntaxes longue et courte</h3>
 <p>Les templates Hapify peuvent être écrits avec une syntaxe longue ou courte.</p>
-<p>Les deux ont des avantages :</p>
+<p>Chacune a ses avantages :</p>
 <ul>
 <li>La syntaxe courte n'interfère pas avec le code cible lors de la lecture du template, grâce à un méta-code plus court.</li>
 <li>La syntaxe longue est explicite et peut être lue naturellement.</li>
@@ -1782,7 +1782,7 @@ const<span class="w"> </span>mongoDb<span class="w"> </span>=<span class="w"> </
 </div>
 </div>
 <p>Les conditions peuvent également être écrites avec des opérateurs natifs.
-Réécrivons la dernière condition :</p>
+Réécrivons cette dernière condition :</p>
 <div class="tabbed-set" data-tabs="8:3"><input checked="checked" id="__tabbed_8_1" name="__tabbed_8" type="radio" /><label for="__tabbed_8_1">Hapify (long)</label><div class="tabbed-content">
 <div class="highlight"><pre><span></span><code><span class="o">&lt;&lt;if</span><span class="w"> </span><span class="n">Fields</span><span class="w"> </span><span class="p">(</span><span class="n">entity</span><span class="w"> </span><span class="n">&amp;&amp;</span><span class="w"> </span><span class="n">hidden</span><span class="p">)</span><span class="w"> </span><span class="n">||</span><span class="w"> </span><span class="p">(</span><span class="n">unique</span><span class="w"> </span><span class="n">&amp;&amp;</span><span class="w"> </span><span class="n">!multiple</span><span class="p">)</span><span class="w"> </span><span class="o">&gt;&gt;</span>
 <span class="w">  </span>//<span class="w"> </span>This<span class="w"> </span>code<span class="w"> </span>block<span class="w"> </span>is<span class="w"> </span>reached<span class="w"> </span>if<span class="w"> </span>the<span class="w"> </span>model<span class="w"> </span>has<span class="w"> </span>at<span class="w"> </span>least<span class="w"> </span>one<span class="w"> </span>field<span class="w"> </span>that<span class="w"> </span>validates<span class="w"> </span>this<span class="w"> </span>conditions:

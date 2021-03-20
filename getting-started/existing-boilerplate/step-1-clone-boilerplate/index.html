@@ -112,13 +112,13 @@
             <ul class="md-select__list">
               
                 <li class="md-select__item">
-                  <a href="https://docs.hapify.io/" class="md-select__link">
+                  <a href="https://documentation.hapify.io/" class="md-select__link">
                     English
                   </a>
                 </li>
                 
                 <li class="md-select__item">
-                  <a href="https://docs.hapify.io/fr/" class="md-select__link">
+                  <a href="https://documentation.hapify.io/fr/" class="md-select__link">
                     Français
                   </a>
                 </li>
@@ -448,11 +448,11 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#facultatif-stocker-vos-modeles-sur-hapify-cloud" class="md-nav__link">
-    Facultatif : Stocker vos modèles sur Hapify Cloud
+  <a href="#facultatif-stocker-vos-modeles-de-donnees-sur-hapify-cloud" class="md-nav__link">
+    Facultatif : Stocker vos modèles de données sur Hapify Cloud
   </a>
   
-    <nav class="md-nav" aria-label="Facultatif : Stocker vos modèles sur Hapify Cloud">
+    <nav class="md-nav" aria-label="Facultatif : Stocker vos modèles de données sur Hapify Cloud">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -912,11 +912,11 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#facultatif-stocker-vos-modeles-sur-hapify-cloud" class="md-nav__link">
-    Facultatif : Stocker vos modèles sur Hapify Cloud
+  <a href="#facultatif-stocker-vos-modeles-de-donnees-sur-hapify-cloud" class="md-nav__link">
+    Facultatif : Stocker vos modèles de données sur Hapify Cloud
   </a>
   
-    <nav class="md-nav" aria-label="Facultatif : Stocker vos modèles sur Hapify Cloud">
+    <nav class="md-nav" aria-label="Facultatif : Stocker vos modèles de données sur Hapify Cloud">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -970,11 +970,11 @@
 <p>Créez un nouveau dossier pour votre projet et allez dans ce dossier :</p>
 <div class="highlight"><pre><span></span><code>mkdir my-project <span class="o">&amp;&amp;</span> <span class="nb">cd</span> my-project
 </code></pre></div>
-<p>Utilisez la commande <code>new</code> pour cloner un boilerplate et initialiser votre projet :</p>
+<p>Utilisez la <a href="../../../reference/cli/#new">commande</a> <code>new</code> pour cloner un boilerplate et initialiser votre projet :</p>
 <div class="highlight"><pre><span></span><code>hpf new
 </code></pre></div>
 <h2 id="choisir-un-ou-plusieurs-boilerplates">Choisir un ou plusieurs boilerplates</h2>
-<p>Une fois que vous avez sélectionné un projet, vous pourrez choisir un boilerplate public (disponible dans le Hub Hapify) ou entrer une URL de git personnalisée.</p>
+<p>Une fois que vous avez sélectionné un projet, vous pourrez choisir un boilerplate public (disponible sur le <a href="https://hub.hapify.io/">Hub Hapify</a>) ou entrer une URL de git personnalisée.</p>
 <div class="highlight"><pre><span></span><code>? Choose a boilerplate 
   Enter a Git URL 
   ──────────────
@@ -983,7 +983,7 @@
   NG-ZORRO Dashboard 
   PHP Slim Backend 
 </code></pre></div>
-<p>Ensuite, vous pouvez ajouter une autre boilerplate :</p>
+<p>Vous pouvez ajouter un autre boilerplate :</p>
 <div class="highlight"><pre><span></span><code>? Choose a project New one
 ? Choose a boilerplate HapiJS
 ? Add another boilerplate? (y/N)
@@ -997,8 +997,8 @@ Si vous n'avez besoin que d'un seul boilerplate ou si vous choisissez un boilerp
 </code></pre></div>
 <p>Vous devez entrer une URL compatible avec <code>git clone</code>.</p>
 <h2 id="importer-des-modeles-de-donnees-predefinis">Importer des modèles de données prédéfinis</h2>
-<p>Vous pouvez importer des modèles de données prédéfinis depuis Hapify Cloud.
-Pour ce faire, sélectionnez des collections de modèles de données lorsque cela vous est demandé :</p>
+<p>Vous pouvez importer des collections de modèles de données prédéfinies (<a href="../../terminology/">presets</a>) depuis Hapify Cloud.
+Pour ce faire, sélectionnez un ou plusieurs presets lorsque cela vous est demandé :</p>
 <div class="highlight"><pre><span></span><code>? Choose some presets to preload in your project 
  ◉ User
  ◯ Listing
@@ -1011,7 +1011,7 @@ Pour ce faire, sélectionnez des collections de modèles de données lorsque cel
 ? Enter a project description A food delivery app
 </code></pre></div>
 <h2 id="sortie">Sortie</h2>
-<p>Après quelques secondes, le boilerplate sera clonée dans votre dossier actuel :</p>
+<p>Après quelques secondes, le boilerplate sera cloné dans votre dossier courant :</p>
 <div class="highlight"><pre><span></span><code>✓ Created 2 new dynamic boilerplates in ~/my-project.
 Run hpf use to connect a remote project (optional).
 Run hpf serve to edit models and templates.
@@ -1044,12 +1044,12 @@ Run hpf generate to generate the source code.
 Il est référencé par le fichier de configuration (<code>hapify.json</code>).
 Vous pouvez déplacer ou renommer ce fichier tant que vous changez le chemin dans le fichier de configuration.</p>
 <p>Le dossier <code>.hapify</code> (peut aussi être nommé <code>hapify</code>) est le dossier des templates. Il contient tous les templates du boilerplate.</p>
-<h2 id="facultatif-stocker-vos-modeles-sur-hapify-cloud"><strong>Facultatif</strong> : Stocker vos modèles sur Hapify Cloud</h2>
-<p>Par défaut, Hapify stocke vos modèles localement. Le chemin d'accès est défini dans le fichier de configuration.
-Vous pouvez stocker vos modèles en ligne, afin de les partager sur plusieurs dépôts.</p>
-<p>Pour connecter le CLI à Hapify Cloud, veuillez suivre <a href="../../installation/#facultatif-connecter-le-cli-a-hapify-cloud">ces étapes</a></p>
+<h2 id="facultatif-stocker-vos-modeles-de-donnees-sur-hapify-cloud"><strong>Facultatif</strong> : Stocker vos modèles de données sur Hapify Cloud</h2>
+<p>Par défaut, Hapify stocke vos modèles de données localement. Le chemin d'accès est défini dans le fichier de configuration.
+Vous pouvez stocker vos modèles de données en ligne, afin de les partager sur plusieurs dépôts.</p>
+<p>Pour connecter le CLI à Hapify Cloud, veuillez suivre <a href="../../installation/#cloud">ces étapes</a>.</p>
 <h3 id="connecter-votre-boilerplate-a-un-projet-distant">Connecter votre boilerplate à un projet distant</h3>
-<p>Exécutez <a href="../../../reference/cli/#definir-le-projet-a-utiliser-dans-un-boilerplatechannel">cette commande</a> pour configurer votre boilerplate :</p>
+<p>Exécutez <a href="../../../reference/cli/#use">cette commande</a> pour configurer votre boilerplate :</p>
 <div class="highlight"><pre><span></span><code>hpf use
 </code></pre></div>
 <h4 id="creer-un-projet">Créer un projet</h4>
@@ -1071,7 +1071,7 @@ Vous pouvez stocker vos modèles en ligne, afin de les partager sur plusieurs d�
 <p class="admonition-title">À savoir</p>
 <p>Vous pouvez créer un projet en ligne à partir de votre compte Hapify : <a href="https://www.hapify.io/my-projects">https://www.hapify.io/my-projects</a></p>
 </div>
-<p>Le boilerplate va maintenant stocker et lire les modèles de Hapify Cloud.</p>
+<p>Le boilerplate va maintenant stocker et lire les modèles depuis Hapify Cloud.</p>
 <div class="highlight"><pre><span></span><code>? Choose a project First project
 ✓ Did set project 5c893c0a74e4650010e6f683 for channel HapiJS
 ✓ Did set project 5c893c0a74e4650010e6f683 for channel Angular Dashboard

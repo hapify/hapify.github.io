@@ -112,13 +112,13 @@
             <ul class="md-select__list">
               
                 <li class="md-select__item">
-                  <a href="https://docs.hapify.io/" class="md-select__link">
+                  <a href="https://documentation.hapify.io/" class="md-select__link">
                     English
                   </a>
                 </li>
                 
                 <li class="md-select__item">
-                  <a href="https://docs.hapify.io/fr/" class="md-select__link">
+                  <a href="https://documentation.hapify.io/fr/" class="md-select__link">
                     Français
                   </a>
                 </li>
@@ -873,9 +873,8 @@
                   <h1>Modèles de données</h1>
                 
                 <h2 id="approche-de-modelisation">Approche de modélisation</h2>
-<p>Hapify vous permet de définir les modèles de données qui correspondent aux spécifications de votre projet.</p>
 <p>La définition du modèle dans Hapify est <strong>agnostique</strong> et <strong>comportementales</strong>. Ce qui signifie que Hapify définit ce que le modèle <strong>doit faire</strong>, et non pas <strong>comment il le fera</strong>.</p>
-<h2 id="gestion-des-acces">Gestion des accès</h2>
+<h2 id="gestion-des-acces"><a name="access"></a>Gestion des accès</h2>
 <p>Hapify prend en charge ces 6 actions de base :</p>
 <ul>
 <li><em>Create</em></li>
@@ -894,7 +893,7 @@
 </ul>
 <p>Les accès sont inclusifs, ce qui signifie que la restriction <em>Authenticated</em> inclut nécessairement <em>Owner</em> et <em>Admin</em>.</p>
 <p><em>Guest</em> est le plus permissif et <em>Admin</em> le moins permissif. Par conséquent <code>Admin &lt; Owner &lt; Authenticated &lt; Guest</code>.</p>
-<h2 id="champs">Champs</h2>
+<h2 id="champs"><a name="fields"></a>Champs</h2>
 <p>Un modèle contient une liste de champs. Chaque champ est défini par :</p>
 <ul>
 <li>un nom</li>
@@ -903,21 +902,31 @@
 <li>un ensemble d'attributs (comportementaux).</li>
 </ul>
 <h3 id="types-et-sous-types">Types et sous-types</h3>
-<p>Les types disponibles sont :</p>
+<p>Les types et sous-types disponibles sont :</p>
 <ul>
-<li><code>string</code></li>
+<li><code>string</code><ul>
 <li><code>email</code>, <code>password</code>, <code>url</code>, <code>text</code>, <code>rich</code></li>
-<li><code>number</code></li>
+</ul>
+</li>
+<li><code>number</code><ul>
 <li><code>integer</code>, <code>float</code>, <code>latitude</code>, <code>longitude</code></li>
+</ul>
+</li>
 <li><code>boolean</code></li>
-<li><code>datetime</code></li>
+<li><code>datetime</code><ul>
 <li><code>date</code>, <code>time</code></li>
+</ul>
+</li>
 <li><code>enum</code></li>
-<li><code>entity</code> (référence à un autre modèle)</li>
+<li><code>entity</code> (référence à un autre modèle)<ul>
 <li><code>oneOne</code>, <code>oneMany</code>, <code>manyOne</code>, <code>manyMany</code></li>
+</ul>
+</li>
 <li><code>object</code></li>
-<li><code>file</code></li>
+<li><code>file</code><ul>
 <li><code>image</code>, <code>video</code>, <code>audio</code>, <code>document</code></li>
+</ul>
+</li>
 </ul>
 <h3 id="attributs-de-champ">Attributs de champ</h3>
 <ul>
@@ -928,13 +937,13 @@
 <p><strong>Unique</strong> : le champ contient des valeurs uniques, nécessaires pour éviter les doublons. Un modèle peut avoir plusieurs clés uniques. (par exemple : le courriel de l'utilisateur ou le code du coupon).</p>
 </li>
 <li>
-<p><strong>Label</strong> : le champ est un identifiant lisible. (par exemple : <code>Prénom</code> et <code>Nom</code> de l'utilisateur, un titre de film).</p>
+<p><strong>Label</strong> : le champ est un identifiant lisible. (par exemple : nom et prénom de l'utilisateur, un titre de film).</p>
 </li>
 <li>
 <p><strong>Nullable</strong> : le champ peut contenir une valeur vide. En d'autres termes, il n'est pas obligatoire.</p>
 </li>
 <li>
-<p><strong>Multiple</strong> : ce champ ne contiendra pas une seule valeur mais une liste de valeurs ou de références.</p>
+<p><strong>Multiple</strong> : ce champ contiendra une liste de valeurs ou de références.</p>
 </li>
 <li>
 <p><strong>Embedded</strong> : possibilité d'imbriquer des données provenant d'une entité liée. Cela peut être utilisé pour imbriquer les formulaires par exemple.</p>
@@ -952,12 +961,16 @@
 <p><strong>Internal</strong> : valeur définie en interne par le système, que l'utilisateur final ne peut pas définir (ex. : date de création de l'entité, clé primaire, etc.).</p>
 </li>
 <li>
-<p><strong>Restricted</strong> : défini si l'accès aux données (lecture et/ou écriture) est limité à des utilisateurs spécifiques (par exemple : le statut <code>validé</code> peut être défini par un administrateur uniquement).</p>
+<p><strong>Restricted</strong> : défini si l'accès aux données (lecture et/ou écriture) est limité à des utilisateurs spécifiques (par exemple : le statut <code>validated</code> peut être défini par un administrateur uniquement).</p>
 </li>
 <li>
-<p><strong>Ownership</strong> : définit l'identité du ou des propriétaires de l'entité (par exemple : un établissement avec un champ <code>owner</code> contenant l'ID de l'utilisateur).</p>
+<p><strong>Ownership</strong> : définit l'identité du ou des propriétaires de l'entité (par exemple : le champ <code>owner</code> d'un établissement  contenant l'ID de l'utilisateur).</p>
 </li>
 </ul>
+<div class="admonition seealso">
+<p class="admonition-title">Voir aussi</p>
+<p>Pour connaître la structure complète des modèles de données, vous pouvez vous référer à cette <a href="../../../reference/model-object/">documentation</a>.</p>
+</div>
                 
               
               

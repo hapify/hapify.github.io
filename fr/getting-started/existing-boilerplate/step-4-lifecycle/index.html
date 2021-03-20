@@ -64,7 +64,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#hapify-git-patches" class="md-skip">
+        <a href="#hapify-git-patch" class="md-skip">
           Aller au contenu
         </a>
       
@@ -112,13 +112,13 @@
             <ul class="md-select__list">
               
                 <li class="md-select__item">
-                  <a href="https://docs.hapify.io/" class="md-select__link">
+                  <a href="https://documentation.hapify.io/" class="md-select__link">
                     English
                   </a>
                 </li>
                 
                 <li class="md-select__item">
-                  <a href="https://docs.hapify.io/fr/" class="md-select__link">
+                  <a href="https://documentation.hapify.io/fr/" class="md-select__link">
                     Français
                   </a>
                 </li>
@@ -436,12 +436,19 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#hapify-git-patches" class="md-nav__link">
-    Hapify &amp; Git patches
+  <a href="#hapify-git-patch" class="md-nav__link">
+    Hapify &amp; Git patch
   </a>
   
-    <nav class="md-nav" aria-label="Hapify &amp; Git patches">
+    <nav class="md-nav" aria-label="Hapify &amp; Git patch">
       <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#preparation-du-depot" class="md-nav__link">
+    Préparation du dépôt
+  </a>
+  
+</li>
         
           <li class="md-nav__item">
   <a href="#premiere-generation" class="md-nav__link">
@@ -810,12 +817,19 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#hapify-git-patches" class="md-nav__link">
-    Hapify &amp; Git patches
+  <a href="#hapify-git-patch" class="md-nav__link">
+    Hapify &amp; Git patch
   </a>
   
-    <nav class="md-nav" aria-label="Hapify &amp; Git patches">
+    <nav class="md-nav" aria-label="Hapify &amp; Git patch">
       <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#preparation-du-depot" class="md-nav__link">
+    Préparation du dépôt
+  </a>
+  
+</li>
         
           <li class="md-nav__item">
   <a href="#premiere-generation" class="md-nav__link">
@@ -858,21 +872,25 @@
                 
                   <h1>Étape 4: Cycle de vie</h1>
                 
-                <h2 id="hapify-git-patches">Hapify &amp; Git patches</h2>
-<p>Pour pouvoir utiliser correctement la commande <code>hpf patch</code>, vous devez lancer la génération sur une branche séparée.
-Par exemple, créez une branche appelée <code>hapify</code>.</p>
+                <h2 id="hapify-git-patch">Hapify &amp; Git patch</h2>
+<p>Hapify permet de régénérer le <a href="../../terminology/">code cible</a> sans écraser les modifications que vous avez pu y apporter.
+Cette fonctionnalité se base sur les commandes <code>git format-patch</code> et <code>git am</code>.
+Vous pouvez ainsi utiliser Hapify tout au long de votre projet et non pas en démarrage seulement.</p>
+<h3 id="preparation-du-depot">Préparation du dépôt</h3>
+<p>Pour pouvoir utiliser correctement <a href="../../../reference/cli/#appliquer-un-patch-au-code-source-avec-de-nouveaux-modeles-de-donnees">la commande</a> <code>hpf patch</code>, vous devez lancer la génération sur une branche séparée.
+Par exemple, créez une branche nommée <code>hapify</code>.</p>
 <h3 id="premiere-generation">Première génération</h3>
 <p>Allez sur cette nouvelle branche <code>hapify</code>.
 Exécutez votre première génération en utilisant <code>hpf generate</code>.</p>
 <p>Si vous utilisez un formateur de code, exécutez le après chaque génération.</p>
 <p>Commitez ceci. Appelons-le <code>Génération 1</code>.</p>
 <p>Fusionnez la branche <code>hapify</code> dans votre branche de travail, disons <code>develop</code>.</p>
-<p>Maintenant vous pouvez commencer à travailler sur <code>develop</code> et personnaliser le code généré.</p>
+<p>Maintenant vous pouvez commencer à travailler sur <code>develop</code> et personnaliser le code cible généré.</p>
 <h3 id="deuxieme-generation">Deuxième génération</h3>
-<p>Oh non ! Vous avez oublié quelque chose dans vos modèles, les spécifications du projet ont changé, ou vous voulez modifier quelques lignes dans vos templates.</p>
+<p>Oh non ! Vous avez oublié quelque chose dans vos modèles de données, les spécifications du projet ont changé, ou vous voulez modifier quelques lignes dans vos templates.</p>
 <p>Si vous utilisez un formateur de code, lancez-le dans votre branche de travail (<code>develop</code> par exemple).</p>
 <p>Passez sur la branche <code>hapify</code>.
-Modifiez vos modèles et/ou templates.
+Modifiez vos modèles de données et/ou templates.
 Lancez la génération et exécutez votre formateur de code (s'il y en a un).</p>
 <p>Commitez le tout. Appelons-le <code>Génération 2</code>.</p>
 <h3 id="appliquez-la-difference">Appliquez la différence</h3>
@@ -887,7 +905,7 @@ Lancez la génération et exécutez votre formateur de code (s'il y en a un).</p
 Cela devrait ressembler à ceci :</p>
 <div class="highlight"><pre><span></span><code>git format-patch --stdout e5d01ec559aa79b0af8f80839e22e15f3283c752..be93268f6d404c4c7c83c55a6dcb98f4930a0c1c | git am -3 -k
 </code></pre></div>
-<p>Si une erreur s'est produite pendant cette commande git, cela est probablement dû à un conflit de fusion.</p>
+<p>Si une erreur s'est produite pendant cette commande git, c'est probablement dû à un conflit de fusion.</p>
 <p>Si c'est le cas, ouvrez votre éditeur de code et résolvez le conflit. Une fois que c'est fait, lancez <code>git am --continue</code> pour finaliser ou <code>git am --abort</code> pour annuler la fusion.</p>
                 
               

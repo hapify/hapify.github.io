@@ -112,13 +112,13 @@
             <ul class="md-select__list">
               
                 <li class="md-select__item">
-                  <a href="https://docs.hapify.io/" class="md-select__link">
+                  <a href="https://documentation.hapify.io/" class="md-select__link">
                     English
                   </a>
                 </li>
                 
                 <li class="md-select__item">
-                  <a href="https://docs.hapify.io/fr/" class="md-select__link">
+                  <a href="https://documentation.hapify.io/fr/" class="md-select__link">
                     Français
                   </a>
                 </li>
@@ -588,8 +588,8 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#inclure-la-validation-de-la-session-si-loperation-necessite-une-authentification" class="md-nav__link">
-    Inclure la validation de la session si l'opération nécessite une authentification
+  <a href="#valider-la-session-si-loperation-necessite-une-authentification" class="md-nav__link">
+    Valider la session si l'opération nécessite une authentification
   </a>
   
 </li>
@@ -650,8 +650,8 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#definir-une-valeur-par-defaut-en-fonction-du-type-de-donnees-pour-les-champs-internes" class="md-nav__link">
-    Définir une valeur par défaut en fonction du type de données pour les champs internes
+  <a href="#definir-une-valeur-par-defaut-en-fonction-du-type-de-donnees" class="md-nav__link">
+    Définir une valeur par défaut en fonction du type de données
   </a>
   
 </li>
@@ -1002,8 +1002,8 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#inclure-la-validation-de-la-session-si-loperation-necessite-une-authentification" class="md-nav__link">
-    Inclure la validation de la session si l'opération nécessite une authentification
+  <a href="#valider-la-session-si-loperation-necessite-une-authentification" class="md-nav__link">
+    Valider la session si l'opération nécessite une authentification
   </a>
   
 </li>
@@ -1064,8 +1064,8 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#definir-une-valeur-par-defaut-en-fonction-du-type-de-donnees-pour-les-champs-internes" class="md-nav__link">
-    Définir une valeur par défaut en fonction du type de données pour les champs internes
+  <a href="#definir-une-valeur-par-defaut-en-fonction-du-type-de-donnees" class="md-nav__link">
+    Définir une valeur par défaut en fonction du type de données
   </a>
   
 </li>
@@ -1202,8 +1202,8 @@ const<span class="w"> </span>mongoDb<span class="w"> </span>=<span class="w"> </
 </code></pre></div>
 </div>
 </div>
-<h4 id="inclure-la-validation-de-la-session-si-loperation-necessite-une-authentification">Inclure la validation de la session si l'opération nécessite une authentification</h4>
-<p>Dans un template de type <code>one model</code>, si l'opération <code>create</code> requiert au plus un utilisateur authentifié, ce bloc récupère l'utilisateur connecté.</p>
+<h4 id="valider-la-session-si-loperation-necessite-une-authentification">Valider la session si l'opération nécessite une authentification</h4>
+<p>Dans un template de type <code>one model</code>, si l'action <code>create</code> requiert au plus un utilisateur authentifié, ce bloc récupère l'utilisateur connecté.</p>
 <div class="admonition info">
 <p class="admonition-title">Rappel</p>
 <p><code>guest</code> est l'accès le plus permissif et <code>admin</code> le moins permissif. Par conséquent <code>admin &lt; owner &lt; authenticated &lt; guest</code>.</p>
@@ -1240,7 +1240,7 @@ const<span class="w"> </span>user<span class="w"> </span>=<span class="w"> </spa
 </div>
 </div>
 <h4 id="tester-si-le-modele-de-donnees-est-geo-localise">Tester si le modèle de données est géo-localisé</h4>
-<p>Dans un template de type <code>one model</code>, si le modèle de données a la propriété <code>isGeolocated</code> (c'est-à-dire si le modèle de données contient au moins un champ de latitude et un champ de longitude),
+<p>Dans un template de type <code>one model</code>, si le modèle de données a la propriété <code>isGeolocated</code> (c'est-à-dire si le modèle de données contient au moins un champ latitude et un champ longitude),
 ce bloc importe le composant de sélection de la position sur la carte.</p>
 <div class="tabbed-set" data-tabs="4:5"><input checked="checked" id="__tabbed_4_1" name="__tabbed_4" type="radio" /><label for="__tabbed_4_1">Hapify (long)</label><div class="tabbed-content">
 <div class="highlight"><pre><span></span><code><span class="o">&lt;&lt;if</span><span class="w"> </span><span class="n">Model</span><span class="w"> </span><span class="n">isGeolocated</span><span class="o">&gt;&gt;</span>
@@ -1533,7 +1533,7 @@ require_once(&#39;./<span class="s">&lt;&lt;m a-a&gt;&gt;</span>.php&#39;);
 </code></pre></div>
 </div>
 </div>
-<h4 id="definir-une-valeur-par-defaut-en-fonction-du-type-de-donnees-pour-les-champs-internes">Définir une valeur par défaut en fonction du type de données pour les champs internes</h4>
+<h4 id="definir-une-valeur-par-defaut-en-fonction-du-type-de-donnees">Définir une valeur par défaut en fonction du type de données</h4>
 <p>Dans un template de type <code>one model</code>, ce bloc attribue une valeur au champ en fonction de son type pour tous les champs <code>internal</code>.
 Si le type du champ est <code>boolean</code>, il attribue la valeur <code>false</code>, si le type est <code>string</code>, il attribue la valeur <code>''</code>, si le type est <code>number</code>, il attribue la valeur <code>0</code>, sinon il attribue la valeur <code>NULL</code>.
 Ce template génère du PHP.</p>

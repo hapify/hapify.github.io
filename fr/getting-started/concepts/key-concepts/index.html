@@ -112,13 +112,13 @@
             <ul class="md-select__list">
               
                 <li class="md-select__item">
-                  <a href="https://docs.hapify.io/" class="md-select__link">
+                  <a href="https://documentation.hapify.io/" class="md-select__link">
                     English
                   </a>
                 </li>
                 
                 <li class="md-select__item">
-                  <a href="https://docs.hapify.io/fr/" class="md-select__link">
+                  <a href="https://documentation.hapify.io/fr/" class="md-select__link">
                     Français
                   </a>
                 </li>
@@ -859,7 +859,7 @@
                   <h1>Concepts clés</h1>
                 
                 <p>Hapify automatise l'écriture des opérations CRUD, tant pour le développement back-end que front-end.
-Concentrez-vous uniquement sur les fonctionnalités métier au lieu de faire du travail répétitif !</p>
+Concentrez-vous uniquement sur les fonctionnalités métiers au lieu de faire du travail répétitif !</p>
 <ul>
 <li>Hapify est un générateur de code agnostique permettant la création de tout type d'application manipulant des modèles de données, dans n'importe quel langage.</li>
 <li>Hapify n'impose aucun paradigme ou structure de code. Vous pouvez écrire vos propres templates de code ou utiliser ceux fournis par la communauté.</li>
@@ -867,29 +867,35 @@ Concentrez-vous uniquement sur les fonctionnalités métier au lieu de faire du 
 </ul>
 <h2 id="templates">Templates</h2>
 <p>Hapify fournit une syntaxe simple mais puissante pour vous aider à créer des templates dynamiques.
-Avec Hapify, vous pouvez soit</p>
+Avec Hapify, vous pouvez soit :</p>
 <ul>
-<li>Convertir vos propres boilerplates en boilerplates dynamiques.</li>
-<li>Utilisez des boilerplates fournis par la <strong><a href="https://hub.hapify.io/">communauté</a></strong></li>
+<li><a href="../../create-boilerplate/introduction/">Convertir vos propres boilerplates</a> en boilerplates dynamiques.</li>
+<li><a href="../../existing-boilerplate/introduction/">Utilisez des boilerplates</a> fournis par la <strong><a href="https://hub.hapify.io/">communauté</a></strong></li>
 </ul>
 <div class="admonition seealso">
 <p class="admonition-title">Voir aussi</p>
 <p>Pour plus d'informations sur les moteurs de template, vous pouvez consulter la documentation de la <a href="../../../reference/hapify-syntax/">syntaxe Hapify</a> et celle des <a href="../../../reference/ejs-javascript/">templates EJS et JavaScript</a>.</p>
 </div>
 <h2 id="modelisation">Modélisation</h2>
-<p>Hapify vous permet de définir les modèles de données qui correspondent aux spécifications de votre projet. La définition du modèle dans Hapify est <strong>agnostique</strong> et <strong> comportementales</strong>, ce qui signifie que Hapify définit ce que le modèle de donnée <strong>doit faire</strong>, et non pas <strong>comment il le fera</strong>.</p>
-<p>Les modèles de données peuvent être édités dans une console Web locale.</p>
+<p>Hapify vous permet de définir les modèles de données qui correspondent aux spécifications de votre projet. La définition du modèle dans Hapify est <strong>agnostique</strong> et <strong>comportementales</strong>, ce qui signifie que Hapify définit ce que le modèle de données <strong>doit faire</strong>, et non pas <strong>comment il le fera</strong>.</p>
+<p>Les modèles de données sont gérés dans une console Web locale.</p>
 <p><img alt="Hapify GUI - models edition" src="../../../assets/gui-models-access.jpg" title="Models Edition" /></p>
-<p>Remarque : vous pouvez importer des modèles de données fournis par la communauté via <a href="https://hub.hapify.io/">Hapify Hub</a>.</p>
-<p>Pour plus d'informations sur les modèles de données, vous pouvez vous référer à la <a href="../../../reference/model-object/">documentation sur les modèles de données</a>.</p>
+<div class="admonition tip">
+<p class="admonition-title">À savoir</p>
+<p>Vous pouvez importer des modèles de données fournis dans <a href="https://hub.hapify.io/">Hapify Hub</a>.</p>
+</div>
+<div class="admonition seealso">
+<p class="admonition-title">Voir aussi</p>
+<p>Pour plus d'informations sur les modèles de données, vous pouvez vous référer <a href="../models/">ici</a>.</p>
+</div>
 <h2 id="hapify-boilerplate">Hapify Boilerplate</h2>
-<p>Un boilerplate Hapify typique est divisée en deux parties : </p>
+<p>Un <a href="../../terminology/">boilerplate</a> Hapify typique est divisée en deux parties : </p>
 <ul>
 <li>Les fichiers dynamiques : Fichiers des templates Hapify, compatibles avec les modèles de données Hapify et le moteur Hapify.</li>
 <li>Fichiers statiques : Tous les autres fichiers, qui ne sont pas liés aux modèles de données : Fichiers Docker, fichiers CSS, bibliothèques, plugins, etc.</li>
 </ul>
 <h3 id="channel">Channel</h3>
-<p>Un channel est un ensemble de templates. La plupart des boilerplates n'ont qu'un seul channel. Cependant, un boilerplate full-stack peut contenir deux channels, un pour les templates du front-end et un pour ceux du back-end.</p>
+<p>Un <a href="../../terminology/">channel</a> est un ensemble de templates. La plupart des boilerplates n'ont qu'un seul channel. Cependant, un boilerplate full-stack peut contenir deux channels, un pour les templates du front-end et un pour ceux du back-end par exemple.</p>
                 
               
               

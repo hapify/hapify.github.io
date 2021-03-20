@@ -64,7 +64,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#selection-du-boilerplate" class="md-skip">
+        <a href="#selection-du-boilerplatechannel" class="md-skip">
           Aller au contenu
         </a>
       
@@ -112,13 +112,13 @@
             <ul class="md-select__list">
               
                 <li class="md-select__item">
-                  <a href="https://docs.hapify.io/" class="md-select__link">
+                  <a href="https://documentation.hapify.io/" class="md-select__link">
                     English
                   </a>
                 </li>
                 
                 <li class="md-select__item">
-                  <a href="https://docs.hapify.io/fr/" class="md-select__link">
+                  <a href="https://documentation.hapify.io/fr/" class="md-select__link">
                     Français
                   </a>
                 </li>
@@ -513,8 +513,8 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#selection-du-boilerplate" class="md-nav__link">
-    Sélection du boilerplate
+  <a href="#selection-du-boilerplatechannel" class="md-nav__link">
+    Sélection du boilerplate/channel
   </a>
   
 </li>
@@ -851,8 +851,8 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#selection-du-boilerplate" class="md-nav__link">
-    Sélection du boilerplate
+  <a href="#selection-du-boilerplatechannel" class="md-nav__link">
+    Sélection du boilerplate/channel
   </a>
   
 </li>
@@ -941,18 +941,18 @@
                   <h1>Étape 3: Ajouter des templates</h1>
                 
                 <p>Maintenant que vous avez ajouté quelques modèles de données pour servir de guide au développement des templates, vous pouvez commencer à écrire des templates.</p>
-<h2 id="selection-du-boilerplate">Sélection du boilerplate</h2>
+<h2 id="selection-du-boilerplatechannel">Sélection du boilerplate/channel</h2>
 <p>Rendez-vous dans l'interface graphique (commande <code>hpf serve</code>). Cliquez sur l'onglet <code>Boilerplates</code> et sélectionnez le boilerplate précédemment créé. Cliquez sur <code>Edit boilerplate</code>.</p>
 <p><img alt="Hapify GUI - Boilerplate selection" src="../../../assets/gui-boilerplate-list.jpg" style="width: 722px" title="Boilerplate selection" /></p>
 <h2 id="liste-des-templates">Liste des templates</h2>
 <p>Vous arrivez maintenant sur cette page:</p>
 <p><img alt="Hapify GUI - Boilerplate templates" src="../../../assets/gui-boilerplate-templates.jpg" style="width: 1060px" title="Boilerplate templates" /></p>
-<p>La barre latérale gauche expose tous les templates présents dans votre dossier en les organisant par dossiers. A droite, un aperçu des templates disponible dans le dossier sélectionné à gauche.</p>
+<p>La barre latérale gauche expose tous les templates présents dans votre channel en les organisant par dossiers. A droite, un aperçu des templates disponibles dans le dossier sélectionné à gauche.</p>
 <h3 id="ajout-dun-template">Ajout d'un template</h3>
 <p>Cliquez sur <code>New path</code> en dessous d'un dossier puis entrez un chemin de fichier pour créer un nouveau template.</p>
 <div class="admonition tip">
 <p class="admonition-title">À savoir</p>
-<p>Vous pouvez ajouter des <code>/</code> dans le nom du template pour créer des dossiers parents: <code>path/to/template.ts</code></p>
+<p>Vous pouvez ajouter des <code>/</code> dans le nom du template pour créer ses dossiers parents: <code>path/to/template.ts</code></p>
 </div>
 <h4 id="nom-de-template-dynamique">Nom de template dynamique</h4>
 <p>Vous pouvez créer un nom de template dynamique en fonction du nom du modèle: <code>path/to/{camel}.ts</code>. </p>
@@ -968,28 +968,28 @@
 <li><code>{snake}</code> exemple : <code>user_profile</code></li>
 <li><code>{constant}</code>  exemple : <code>USER_PROFILE</code></li>
 <li><code>{compact}</code> exemple : <code>userprofile</code></li>
-<li><code>{raw}</code> exemple : <code>User profile</code> (for the original name)</li>
+<li><code>{raw}</code> exemple : <code>User profile</code> (le nom original)</li>
 </ul>
 <div class="admonition warning">
 <p class="admonition-title">Attention</p>
 <p>Les noms dynamiques ne fonctionnent que pour les templates de type <code>one model</code></p>
 </div>
 <h4 id="modifier-le-nom-dun-template">Modifier le nom d'un template</h4>
-<p>Cliquez sur le nom dans la partie gauche et modifiez-le:</p>
+<p>Cliquez sur le nom dans la partie gauche et modifiez-le.</p>
 <p><img alt="Hapify GUI - Boilerplate template name" src="../../../assets/gui-boilerplate-template-name.jpg" style="width: 478px" title="Boilerplate template name" /></p>
 <h4 id="supprimer-un-template">Supprimer un template</h4>
-<p>Survoler le nom dans la barre de gauche et cliquez sur l'icône "supprimer"</p>
+<p>Survoler le nom dans la barre de gauche et cliquez sur l'icône "supprimer".</p>
 <p><img alt="Hapify GUI - Boilerplate template name" src="../../../assets/gui-boilerplate-template-delete.jpg" style="width: 300px" title="Boilerplate template name" /></p>
 <h4 id="choisir-le-moteur-de-template">Choisir le moteur de template</h4>
-<p>Plusieurs moteurs de template sont disponibles. Nous</p>
+<p>Plusieurs moteurs de template sont disponibles.</p>
 <p><img alt="Hapify GUI - Boilerplate template engine" src="../../../assets/gui-boilerplate-template-engine.jpg" style="width: 279px" title="Boilerplate template engine" /></p>
 <h4 id="choisir-le-type-dentree">Choisir le type d'entrée</h4>
 <p>Un template peut recevoir en entrée <strong>un</strong> modèle de données ou alors <strong>tous</strong> les modèles de données.</p>
-<p>Au cours de la génération, s'il est défini comme <code>one</code>, le template sera appelé une fois pour chaque modèle de données. Par conséquent, il engendrera un fichier pour chaque modèle de données.
-S'il est défini comme <code>all</code>, le template sera appelé une seule fois pour tous les modèles de données. Il engendrera alors un unique fichier.</p>
+<p>Au cours de la génération, s'il est défini comme <code>one model</code>, le template sera appelé une fois pour chaque modèle de données. Par conséquent, il engendrera un fichier pour chaque modèle de données.
+S'il est défini comme <code>all models</code>, le template sera appelé une seule fois pour tous les modèles de données. Il engendrera alors un unique fichier.</p>
 <p><img alt="Hapify GUI - Boilerplate template input" src="../../../assets/gui-boilerplate-template-input.jpg" style="width: 192px" title="Boilerplate template input" /></p>
 <h3 id="editeur-de-template">Éditeur de template</h3>
-<p>Pour accéder à l'éditeur de template, survoler un template dans la liste de droite et cliquez sur <code>Open editor</code></p>
+<p>Pour accéder à l'éditeur de template, survoler un template dans la liste de droite et cliquez sur <code>Open editor</code>.</p>
 <p><img alt="Hapify GUI - Boilerplate template open editor" src="../../../assets/gui-boilerplate-template-open-editor.jpg" style="width: 667px" title="Boilerplate template open editor" /></p>
 <p>Sur la partie gauche se trouve le code du template, que vous pouvez modifier. À droite, un aperçu du rendu du template pour le modèle de données sélectionné.</p>
 <p>De même, dans la barre de navigation se trouve le chemin du template et le chemin du fichier généré.</p>
@@ -1004,7 +1004,7 @@ S'il est défini comme <code>all</code>, le template sera appelé une seule fois
 </div>
 <div class="admonition warning">
 <p class="admonition-title">Attention</p>
-<p>La sélection des modèles de données n'est présente que pour les templates de type <code>one model</code></p>
+<p>La sélection des modèles de données n'est présente que pour les templates de type <code>one model</code>.</p>
 </div>
                 
               

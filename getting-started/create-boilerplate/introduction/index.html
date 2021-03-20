@@ -112,13 +112,13 @@
             <ul class="md-select__list">
               
                 <li class="md-select__item">
-                  <a href="https://docs.hapify.io/" class="md-select__link">
+                  <a href="https://documentation.hapify.io/" class="md-select__link">
                     English
                   </a>
                 </li>
                 
                 <li class="md-select__item">
-                  <a href="https://docs.hapify.io/fr/" class="md-select__link">
+                  <a href="https://documentation.hapify.io/fr/" class="md-select__link">
                     Français
                   </a>
                 </li>
@@ -951,19 +951,26 @@
                   <h1>Introduction</h1>
                 
                 <h2 id="resume">Résumé</h2>
-<p>Dans cette section, vous apprendrez comment créer votre propre boilerplate avec Hapify.</p>
-<p>Vous pouvez démarrer un boilerplate à partir de zéro ou utiliser un boilerplate existant.</p>
-<p>Cette section se concentre sur l'écriture de templates de code.
-Comme Hapify est un moteur agnostique et n'est pas limité à un cadre spécifique, nous ne nous concentrerons pas sur la structure du boilerplate lui-même.
+<p>Dans cette section, vous apprendrez comment créer votre propre <a href="../../terminology/">boilerplate</a> avec Hapify.</p>
+<p>Vous pouvez démarrer un boilerplate à partir de zéro ou utiliser un boilerplate pré-existant.</p>
+<p>Cette section se concentre sur l'écriture de <a href="../../terminology/">templates</a> de code.
+Comme Hapify est un moteur agnostique et n'est pas limité à un cadre spécifique, nous ne nous concentrerons pas sur la structure du boilerplate elle-même.
 Nous étudierons des exemples de templates courants.</p>
+<div class="admonition tip">
+<p class="admonition-title">À savoir</p>
+<p>Si votre boilerplate utilise <code>npm</code> ou <code>yarn</code> comme gestionnaire de paquets,
+vous pouvez ajouter le <code>CLI</code> comme dépendance de développement :<code>npm install --save-dev @hapify/cli</code>.
+Ajoutez également un script dans <code>package.json</code>: <code>"hpf": "hpf"</code>.
+Ainsi vous pourrez définir une version d'Hapify pour votre boilerplate et l'utiliser avec <code>npm run hpf</code>.</p>
+</div>
 <h2 id="moteurs-de-templates">Moteurs de templates</h2>
 <p>Hapify propose trois moteurs de templates.
 Un boilerplate peut utiliser plusieurs moteurs simultanément.</p>
 <p>Ces moteurs ont accès à l'<a href="../../../reference/model-object/">objet modèle</a>.
 Cet objet, injecté dans les templates, explicite le modèle de données ainsi que toutes ses propriétés et relations, de sorte qu'elles soient facilement accessibles depuis le template.</p>
 <h3 id="moteur-de-template-hapify">Moteur de template Hapify</h3>
-<p>Cette syntaxe est optimisée pour jouer avec le <a href="../../../reference/model-object/">objet modèle</a> et ses propriétés en utilisant des mots courts.
-Cela vous permet de gérer des idées complexes avec des phrases courtes.</p>
+<p>Cette syntaxe est optimisée pour jouer avec l'<a href="../../../reference/model-object/">objet modèle</a> et ses propriétés en utilisant des mots courts.
+Cela vous permet de gérer des idées complexes avec des phrases simples.</p>
 <p>Cette syntaxe a deux variantes :</p>
 <ul>
 <li><strong>long</strong> : facile à lire</li>
@@ -971,7 +978,7 @@ Cela vous permet de gérer des idées complexes avec des phrases courtes.</p>
 </ul>
 <p>Les deux variantes peuvent être utilisées dans le même template.</p>
 <h4 id="exemple">Exemple</h4>
-<p>Par exemple, cette boucle en JavaScript :</p>
+<p>Cette boucle en JavaScript :</p>
 <div class="highlight"><pre><span></span><code><span class="k">for</span> <span class="p">(</span><span class="kd">let</span> <span class="nx">f</span> <span class="k">of</span> <span class="nx">model</span><span class="p">.</span><span class="nx">fields</span><span class="p">.</span><span class="nx">list</span><span class="p">.</span><span class="nx">filter</span><span class="p">(</span><span class="nx">f</span> <span class="p">=&gt;</span> <span class="nx">f</span><span class="p">.</span><span class="nx">searchable</span> <span class="o">&amp;&amp;</span> <span class="nx">f</span><span class="p">.</span><span class="nx">type</span> <span class="o">===</span> <span class="s1">&#39;entity&#39;</span><span class="p">))</span> <span class="p">{</span>
     <span class="nx">out</span> <span class="o">+=</span> <span class="s1">&#39;Field name: &#39;</span> <span class="o">+</span> <span class="nx">f</span><span class="p">.</span><span class="nx">names</span><span class="p">.</span><span class="nx">camel</span><span class="p">;</span>
 <span class="p">}</span>
@@ -993,8 +1000,8 @@ Cela vous permet de gérer des idées complexes avec des phrases courtes.</p>
 <div class="admonition success">
 <p class="admonition-title">Pour</p>
 <ul>
-<li>Un méta-code facile à lire</li>
-<li>Un méta-code plus court, rendant le code cible lisible</li>
+<li>Un <a href="../../terminology/">méta-code</a> facile à lire</li>
+<li>Un méta-code plus court, rendant le <a href="../../terminology/">code cible</a> plus lisible</li>
 <li>Encore plus court avec la variante courte</li>
 </ul>
 </div>
@@ -1006,11 +1013,11 @@ Cela vous permet de gérer des idées complexes avec des phrases courtes.</p>
 </ul>
 </div>
 <h3 id="moteur-ejs">Moteur EJS</h3>
-<p>Vous pouvez utiliser EJS comme moteur de template.
+<p>Vous pouvez utiliser <a href="https://ejs.co/">EJS</a> comme moteur de template.
 Toutes les fonctionnalités d'EJS sont disponibles, sauf la fonctionnalité <code>include</code>.
 Cette fonction est volontairement désactivée afin que les templates n'aient pas accès à votre système de fichiers.</p>
 <h4 id="exemple_1">Exemple</h4>
-<p>Par exemple, cette boucle en JavaScript :</p>
+<p>Cette boucle en JavaScript :</p>
 <div class="highlight"><pre><span></span><code><span class="k">for</span> <span class="p">(</span><span class="kd">let</span> <span class="nx">f</span> <span class="k">of</span> <span class="nx">model</span><span class="p">.</span><span class="nx">fields</span><span class="p">.</span><span class="nx">list</span><span class="p">.</span><span class="nx">filter</span><span class="p">(</span><span class="nx">f</span> <span class="p">=&gt;</span> <span class="nx">f</span><span class="p">.</span><span class="nx">searchable</span><span class="p">)</span> <span class="p">{</span>
     <span class="nx">out</span> <span class="o">+=</span> <span class="s1">&#39;Field name: &#39;</span> <span class="o">+</span> <span class="nx">f</span><span class="p">.</span><span class="nx">names</span><span class="p">.</span><span class="nx">camel</span><span class="p">;</span>
 <span class="p">}</span>
@@ -1035,7 +1042,7 @@ Cette fonction est volontairement désactivée afin que les templates n'aient pa
 </ul>
 </div>
 <h3 id="moteur-javascript">Moteur JavaScript</h3>
-<p>Vous pouvez écrire des templates en JavaScript pure.</p>
+<p>Vous pouvez écrire des templates en JavaScript pur.</p>
 <p>Ce moteur est très utile pour générer des fichiers JSON. </p>
 <h4 id="exemple_2">Exemple</h4>
 <div class="highlight"><pre><span></span><code><span class="kr">const</span> <span class="nx">output</span> <span class="o">=</span> <span class="nx">models</span><span class="p">.</span><span class="nx">map</span><span class="p">((</span><span class="nx">model</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="nx">model</span><span class="p">.</span><span class="nx">names</span><span class="p">.</span><span class="nx">snake</span><span class="p">);</span>
@@ -1049,7 +1056,7 @@ Cette fonction est volontairement désactivée afin que les templates n'aient pa
 <div class="admonition success">
 <p class="admonition-title">Pour</p>
 <ul>
-<li>Puissant lors de la génération de fichiers de configuration tels que JSON</li>
+<li>Puissant lors de la génération de fichiers de configuration tels que le JSON</li>
 <li>Très flexible</li>
 </ul>
 </div>

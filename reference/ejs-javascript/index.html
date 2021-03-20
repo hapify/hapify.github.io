@@ -112,13 +112,13 @@
             <ul class="md-select__list">
               
                 <li class="md-select__item">
-                  <a href="https://docs.hapify.io/" class="md-select__link">
+                  <a href="https://documentation.hapify.io/" class="md-select__link">
                     English
                   </a>
                 </li>
                 
                 <li class="md-select__item">
-                  <a href="https://docs.hapify.io/fr/" class="md-select__link">
+                  <a href="https://documentation.hapify.io/fr/" class="md-select__link">
                     Français
                   </a>
                 </li>
@@ -856,10 +856,10 @@
                 
                   <h1>EJS & JavaScript</h1>
                 
-                <p>Hapify offre la possibilité d'écrire des template avec la syntaxe <a href="https://ejs.co/">EJS</a> ou bien en JavaScript.
+                <p>Hapify offre la possibilité d'écrire des template avec la syntaxe <a href="https://ejs.co/">EJS</a> ou bien en JavaScript pur.
 Ces deux options se basent sur le même objet décrit ci-dessous.</p>
 <h2 id="objet-modele">Objet modèle</h2>
-<p>Les templates reçoivent le <a href="../model-object/">l'objet modèle</a> via la variable <code>model</code> (alias <code>m</code>).
+<p>Les templates de type <code>one model</code> reçoivent <a href="../model-object/">l'objet modèle</a> via la variable <code>model</code> (alias <code>m</code>).
 Dans le cas d'un template de type <code>all models</code>, un tableau d'objets modèles sera disponible via la variable <code>models</code> (alias <code>m</code>).</p>
 <p>Le bloc suivant est une représentation en JSON de cet objet modèle pour un cas très simple. Ici, le modèle <code>User profile</code> possède 3 champs dont une référence à une entité.
 Pour garder ce JSON aussi court que possible, nous avons supprimé tous les alias, de nombreuses propriétés récurrentes et les détails des sous-modèles.
@@ -1203,6 +1203,10 @@ ou bien à l'interface TypeScript <code>ExplicitModel</code> dans le <a href="ht
 <div class="admonition warning">
 <p class="admonition-title">Attention</p>
 <p>Un template JavaScript doit retourner une chaîne de caractères.</p>
+</div>
+<div class="admonition tip">
+<p class="admonition-title">À savoir</p>
+<p>Les fichiers générés vides ne seront pas sauvegardés.</p>
 </div>
 <h3 id="template-de-type-all-models">Template de type <code>all models</code></h3>
 <div class="tabbed-set" data-tabs="2:3"><input checked="checked" id="__tabbed_2_1" name="__tabbed_2" type="radio" /><label for="__tabbed_2_1">EJS</label><div class="tabbed-content">
