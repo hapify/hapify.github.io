@@ -1,0 +1,2642 @@
+
+<!doctype html>
+<html lang="fr" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+      <link rel="shortcut icon" href="../../assets/icon-192x192.png">
+      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-7.0.3">
+    
+    
+      
+        <title>Syntaxe Hapify - Hapify</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.1655a90d.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.7fa14f5b.min.css">
+        
+          
+          
+          <meta name="theme-color" content="#7e56c2">
+        
+      
+    
+    
+    
+      
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&display=fallback">
+        <style>:root{--md-text-font-family:"Roboto";--md-code-font-family:"Roboto Mono"}</style>
+      
+    
+    
+    
+      <link rel="stylesheet" href="../../stylesheets/extra.css">
+    
+    
+      
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="" data-md-color-primary="deep-purple" data-md-color-accent="cyan">
+      
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#pourquoi-utiliser-une-syntaxe-specifique" class="md-skip">
+          Aller au contenu
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="Hapify" class="md-header__button md-logo" aria-label="Hapify">
+      
+  <img src="../../assets/logo-no-margin-white.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Hapify
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Syntaxe Hapify
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    <div class="md-header__options">
+      
+        <div class="md-select">
+          
+          <span class="md-header__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12.87 15.07l-2.54-2.51.03-.03A17.52 17.52 0 0 0 14.07 6H17V4h-7V2H8v2H1v2h11.17C11.5 7.92 10.44 9.75 9 11.35 8.07 10.32 7.3 9.19 6.69 8h-2c.73 1.63 1.73 3.17 2.98 4.56l-5.09 5.02L4 19l5-5 3.11 3.11.76-2.04M18.5 10h-2L12 22h2l1.12-3h4.75L21 22h2l-4.5-12m-2.62 7l1.62-4.33L19.12 17h-3.24z"/></svg>
+          </span>
+          <div class="md-select__inner">
+            <ul class="md-select__list">
+              
+                <li class="md-select__item">
+                  <a href="https://docs.hapify.io/" class="md-select__link">
+                    English
+                  </a>
+                </li>
+                
+                <li class="md-select__item">
+                  <a href="https://docs.hapify.io/fr/" class="md-select__link">
+                    Français
+                  </a>
+                </li>
+                
+            </ul>
+          </div>
+        </div>
+      
+    </div>
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+      </label>
+      
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Rechercher" placeholder="Rechercher" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" data-md-state="active" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </label>
+      <button type="reset" class="md-search__icon md-icon" aria-label="Clear" tabindex="-1">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg>
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-tabs__inner md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+
+
+  <li class="md-tabs__item">
+    <a href="../.." class="md-tabs__link">
+      Accueil
+    </a>
+  </li>
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../getting-started/installation/" class="md-tabs__link">
+        Démarrer
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+    
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../cli/" class="md-tabs__link md-tabs__link--active">
+        Référence
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../code-samples/javascript/" class="md-tabs__link">
+        Exemples
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Hapify" class="md-nav__button md-logo" aria-label="Hapify">
+      
+  <img src="../../assets/logo-no-margin-white.png" alt="logo">
+
+    </a>
+    Hapify
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        Accueil
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2" type="checkbox" id="__nav_2" >
+      
+      <label class="md-nav__link" for="__nav_2">
+        Démarrer
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Démarrer" data-md-level="1">
+        <label class="md-nav__title" for="__nav_2">
+          <span class="md-nav__icon md-icon"></span>
+          Démarrer
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../getting-started/installation/" class="md-nav__link">
+        Installation
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../getting-started/terminology/" class="md-nav__link">
+        Terminologie
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_3" type="checkbox" id="__nav_2_3" >
+      
+      <label class="md-nav__link" for="__nav_2_3">
+        Utiliser un boilerplate existant
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Utiliser un boilerplate existant" data-md-level="2">
+        <label class="md-nav__title" for="__nav_2_3">
+          <span class="md-nav__icon md-icon"></span>
+          Utiliser un boilerplate existant
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../getting-started/existing-boilerplate/introduction/" class="md-nav__link">
+        Introduction
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../getting-started/existing-boilerplate/step-1-clone-boilerplate/" class="md-nav__link">
+        Étape 1: Cloner un boilerplate
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../getting-started/existing-boilerplate/step-2-edit-models/" class="md-nav__link">
+        Étape 2: Éditer les modèles de données
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../getting-started/existing-boilerplate/step-3-generate/" class="md-nav__link">
+        Étape 3: Générer le code
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../getting-started/existing-boilerplate/step-4-lifecycle/" class="md-nav__link">
+        Étape 4: Cycle de vie
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_4" type="checkbox" id="__nav_2_4" >
+      
+      <label class="md-nav__link" for="__nav_2_4">
+        Créer votre propre boilerplate
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Créer votre propre boilerplate" data-md-level="2">
+        <label class="md-nav__title" for="__nav_2_4">
+          <span class="md-nav__icon md-icon"></span>
+          Créer votre propre boilerplate
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../getting-started/create-boilerplate/introduction/" class="md-nav__link">
+        Introduction
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../getting-started/create-boilerplate/step-1-new-channel/" class="md-nav__link">
+        Étape 1: Nouveau channel
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../getting-started/create-boilerplate/step-2-add-models/" class="md-nav__link">
+        Étape 2: Ajouter des modèles de données
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../getting-started/create-boilerplate/step-3-boilerplate-and-templates/" class="md-nav__link">
+        Étape 3: Ajouter des templates
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../getting-started/create-boilerplate/step-4-template-writing/" class="md-nav__link">
+        Étape 4: Rédiger les templates
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../getting-started/create-boilerplate/step-5-models-validator/" class="md-nav__link">
+        Étape 5: Validateur de modèles de données
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_5" type="checkbox" id="__nav_2_5" >
+      
+      <label class="md-nav__link" for="__nav_2_5">
+        Concepts
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Concepts" data-md-level="2">
+        <label class="md-nav__title" for="__nav_2_5">
+          <span class="md-nav__icon md-icon"></span>
+          Concepts
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../getting-started/concepts/key-concepts/" class="md-nav__link">
+        Concepts clés
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../getting-started/concepts/models/" class="md-nav__link">
+        Modèles de données
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../getting-started/troubleshooting/" class="md-nav__link">
+        Dépannage
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3" type="checkbox" id="__nav_3" checked>
+      
+      <label class="md-nav__link" for="__nav_3">
+        Référence
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Référence" data-md-level="1">
+        <label class="md-nav__title" for="__nav_3">
+          <span class="md-nav__icon md-icon"></span>
+          Référence
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../cli/" class="md-nav__link">
+        CLI
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Syntaxe Hapify
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        Syntaxe Hapify
+      </a>
+      
+        
+<nav class="md-nav md-nav--secondary" aria-label="Table des matières">
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table des matières
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#pourquoi-utiliser-une-syntaxe-specifique" class="md-nav__link">
+    Pourquoi utiliser une syntaxe spécifique ?
+  </a>
+  
+    <nav class="md-nav" aria-label="Pourquoi utiliser une syntaxe spécifique ?">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#syntaxes-longue-et-courte" class="md-nav__link">
+    Syntaxes longue et courte
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#balises" class="md-nav__link">
+    Balises
+  </a>
+  
+    <nav class="md-nav" aria-label="Balises">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#echappement" class="md-nav__link">
+    Échappement
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#noms" class="md-nav__link">
+    Noms
+  </a>
+  
+    <nav class="md-nav" aria-label="Noms">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#noms-du-modele-de-donnees" class="md-nav__link">
+    Noms du modèle de données
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#noms-des-champs" class="md-nav__link">
+    Noms des champs
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#casses" class="md-nav__link">
+    Casses
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#conditions" class="md-nav__link">
+    Conditions
+  </a>
+  
+    <nav class="md-nav" aria-label="Conditions">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#condition-simple" class="md-nav__link">
+    Condition simple
+  </a>
+  
+    <nav class="md-nav" aria-label="Condition simple">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#sans-filtre" class="md-nav__link">
+    Sans filtre
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#conditions-alternatives" class="md-nav__link">
+    Conditions alternatives
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#conditions-complexes" class="md-nav__link">
+    Conditions complexes
+  </a>
+  
+    <nav class="md-nav" aria-label="Conditions complexes">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#operateurs" class="md-nav__link">
+    Opérateurs
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#conditions-relatives-au-nombre-doccurrences" class="md-nav__link">
+    Conditions relatives au nombre d'occurrences
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#conditions-sur-les-modeles-de-donnees" class="md-nav__link">
+    Conditions sur les modèles de données
+  </a>
+  
+    <nav class="md-nav" aria-label="Conditions sur les modèles de données">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#tester-un-seul-modele-de-donnees" class="md-nav__link">
+    Tester un seul modèle de données
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tester-une-liste-de-modeles-de-donnees" class="md-nav__link">
+    Tester une liste de modèles de données
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#objets-et-filtres-disponibles" class="md-nav__link">
+    Objets et filtres disponibles
+  </a>
+  
+    <nav class="md-nav" aria-label="Objets et filtres disponibles">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#objet-racine" class="md-nav__link">
+    Objet racine
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#objets-filtrables-et-testables" class="md-nav__link">
+    Objets filtrables et testables
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#filtrage-sur-les-attributs-de-champ" class="md-nav__link">
+    Filtrage sur les attributs de champ
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#filtrage-sur-les-proprietes-du-modele-de-donnees" class="md-nav__link">
+    Filtrage sur les propriétés du modèle de données
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#filtrage-sur-les-acces-aux-modeles-de-donnees" class="md-nav__link">
+    Filtrage sur les accès aux modèles de données
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#iterations" class="md-nav__link">
+    Itérations
+  </a>
+  
+    <nav class="md-nav" aria-label="Itérations">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#iteration-simple" class="md-nav__link">
+    Itération simple
+  </a>
+  
+    <nav class="md-nav" aria-label="Itération simple">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#boucler-sans-filtrer" class="md-nav__link">
+    Boucler sans filtrer
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#boucler-sur-les-modeles-de-donnees" class="md-nav__link">
+    Boucler sur les modèles de données
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#boucler-sur-les-dependances" class="md-nav__link">
+    Boucler sur les dépendances
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#boucler-sur-les-modeles-de-donnees-referents" class="md-nav__link">
+    Boucler sur les modèles de données référents
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#boucler-sur-les-acces-du-modele-de-donnees" class="md-nav__link">
+    Boucler sur les accès du modèle de données
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#iteration-raccourcie" class="md-nav__link">
+    Itération raccourcie
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#iterations-imbriquees" class="md-nav__link">
+    Itérations imbriquées
+  </a>
+  
+    <nav class="md-nav" aria-label="Itérations imbriquées">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#boucle-sur-les-enum" class="md-nav__link">
+    Boucle sur les enum
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#boucler-sur-les-champs-de-tous-les-modeles-de-donnees" class="md-nav__link">
+    Boucler sur les champs de tous les modèles de données
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#entrees-brutes-et-interpolation" class="md-nav__link">
+    Entrées brutes et interpolation
+  </a>
+  
+    <nav class="md-nav" aria-label="Entrées brutes et interpolation">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#variable-personnalisee" class="md-nav__link">
+    Variable personnalisée
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fonction-personnalisee" class="md-nav__link">
+    Fonction personnalisée
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#condition-ou-iteration-personnalisee" class="md-nav__link">
+    Condition ou itération personnalisée
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#erreur" class="md-nav__link">
+    Erreur
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#commentaires" class="md-nav__link">
+    Commentaires
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#echappement_1" class="md-nav__link">
+    Échappement
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#formatage" class="md-nav__link">
+    Formatage
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#mots-reserves" class="md-nav__link">
+    Mots réservés
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ejs-javascript/" class="md-nav__link">
+        EJS & JavaScript
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../model-object/" class="md-nav__link">
+        Objet modèle
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4" type="checkbox" id="__nav_4" >
+      
+      <label class="md-nav__link" for="__nav_4">
+        Exemples
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Exemples" data-md-level="1">
+        <label class="md-nav__title" for="__nav_4">
+          <span class="md-nav__icon md-icon"></span>
+          Exemples
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../code-samples/javascript/" class="md-nav__link">
+        JavaScript
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../code-samples/hapify/" class="md-nav__link">
+        Hapify
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary" aria-label="Table des matières">
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table des matières
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#pourquoi-utiliser-une-syntaxe-specifique" class="md-nav__link">
+    Pourquoi utiliser une syntaxe spécifique ?
+  </a>
+  
+    <nav class="md-nav" aria-label="Pourquoi utiliser une syntaxe spécifique ?">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#syntaxes-longue-et-courte" class="md-nav__link">
+    Syntaxes longue et courte
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#balises" class="md-nav__link">
+    Balises
+  </a>
+  
+    <nav class="md-nav" aria-label="Balises">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#echappement" class="md-nav__link">
+    Échappement
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#noms" class="md-nav__link">
+    Noms
+  </a>
+  
+    <nav class="md-nav" aria-label="Noms">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#noms-du-modele-de-donnees" class="md-nav__link">
+    Noms du modèle de données
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#noms-des-champs" class="md-nav__link">
+    Noms des champs
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#casses" class="md-nav__link">
+    Casses
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#conditions" class="md-nav__link">
+    Conditions
+  </a>
+  
+    <nav class="md-nav" aria-label="Conditions">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#condition-simple" class="md-nav__link">
+    Condition simple
+  </a>
+  
+    <nav class="md-nav" aria-label="Condition simple">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#sans-filtre" class="md-nav__link">
+    Sans filtre
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#conditions-alternatives" class="md-nav__link">
+    Conditions alternatives
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#conditions-complexes" class="md-nav__link">
+    Conditions complexes
+  </a>
+  
+    <nav class="md-nav" aria-label="Conditions complexes">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#operateurs" class="md-nav__link">
+    Opérateurs
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#conditions-relatives-au-nombre-doccurrences" class="md-nav__link">
+    Conditions relatives au nombre d'occurrences
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#conditions-sur-les-modeles-de-donnees" class="md-nav__link">
+    Conditions sur les modèles de données
+  </a>
+  
+    <nav class="md-nav" aria-label="Conditions sur les modèles de données">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#tester-un-seul-modele-de-donnees" class="md-nav__link">
+    Tester un seul modèle de données
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tester-une-liste-de-modeles-de-donnees" class="md-nav__link">
+    Tester une liste de modèles de données
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#objets-et-filtres-disponibles" class="md-nav__link">
+    Objets et filtres disponibles
+  </a>
+  
+    <nav class="md-nav" aria-label="Objets et filtres disponibles">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#objet-racine" class="md-nav__link">
+    Objet racine
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#objets-filtrables-et-testables" class="md-nav__link">
+    Objets filtrables et testables
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#filtrage-sur-les-attributs-de-champ" class="md-nav__link">
+    Filtrage sur les attributs de champ
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#filtrage-sur-les-proprietes-du-modele-de-donnees" class="md-nav__link">
+    Filtrage sur les propriétés du modèle de données
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#filtrage-sur-les-acces-aux-modeles-de-donnees" class="md-nav__link">
+    Filtrage sur les accès aux modèles de données
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#iterations" class="md-nav__link">
+    Itérations
+  </a>
+  
+    <nav class="md-nav" aria-label="Itérations">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#iteration-simple" class="md-nav__link">
+    Itération simple
+  </a>
+  
+    <nav class="md-nav" aria-label="Itération simple">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#boucler-sans-filtrer" class="md-nav__link">
+    Boucler sans filtrer
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#boucler-sur-les-modeles-de-donnees" class="md-nav__link">
+    Boucler sur les modèles de données
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#boucler-sur-les-dependances" class="md-nav__link">
+    Boucler sur les dépendances
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#boucler-sur-les-modeles-de-donnees-referents" class="md-nav__link">
+    Boucler sur les modèles de données référents
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#boucler-sur-les-acces-du-modele-de-donnees" class="md-nav__link">
+    Boucler sur les accès du modèle de données
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#iteration-raccourcie" class="md-nav__link">
+    Itération raccourcie
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#iterations-imbriquees" class="md-nav__link">
+    Itérations imbriquées
+  </a>
+  
+    <nav class="md-nav" aria-label="Itérations imbriquées">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#boucle-sur-les-enum" class="md-nav__link">
+    Boucle sur les enum
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#boucler-sur-les-champs-de-tous-les-modeles-de-donnees" class="md-nav__link">
+    Boucler sur les champs de tous les modèles de données
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#entrees-brutes-et-interpolation" class="md-nav__link">
+    Entrées brutes et interpolation
+  </a>
+  
+    <nav class="md-nav" aria-label="Entrées brutes et interpolation">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#variable-personnalisee" class="md-nav__link">
+    Variable personnalisée
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fonction-personnalisee" class="md-nav__link">
+    Fonction personnalisée
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#condition-ou-iteration-personnalisee" class="md-nav__link">
+    Condition ou itération personnalisée
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#erreur" class="md-nav__link">
+    Erreur
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#commentaires" class="md-nav__link">
+    Commentaires
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#echappement_1" class="md-nav__link">
+    Échappement
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#formatage" class="md-nav__link">
+    Formatage
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#mots-reserves" class="md-nav__link">
+    Mots réservés
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content" data-md-component="content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                
+                  <h1>Syntaxe Hapify</h1>
+                
+                <h2 id="pourquoi-utiliser-une-syntaxe-specifique">Pourquoi utiliser une syntaxe spécifique ?</h2>
+<p>Nous avons conçu une syntaxe capable de manipuler <a href="../model-object/">l'objet modèle</a> injecté dans les templates.
+Cette syntaxe est optimisée pour jouer avec les propriétés de cet objet modèle en utilisant des mots courts.
+Cela permet de gérer des idées complexes avec des phrases courtes.</p>
+<p>Par exemple, cette boucle en JavaScript :</p>
+<div class="highlight"><pre><span></span><code><span class="k">for</span> <span class="p">(</span><span class="kd">let</span> <span class="nx">field</span> <span class="k">of</span> <span class="nx">root</span><span class="p">.</span><span class="nx">fields</span><span class="p">.</span><span class="nx">filter</span><span class="p">(</span><span class="nx">f</span> <span class="p">=&gt;</span> <span class="nx">f</span><span class="p">.</span><span class="nx">searchable</span> <span class="o">&amp;&amp;</span> <span class="nx">f</span><span class="p">.</span><span class="nx">type</span> <span class="o">===</span> <span class="s1">&#39;entity&#39;</span><span class="p">))</span> <span class="p">{</span>
+    <span class="nx">out</span> <span class="o">+=</span> <span class="s1">&#39;    Do something&#39;</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div>
+<p>sera écrit comme ceci avec la syntaxe Hapify :</p>
+<div class="tabbed-set" data-tabs="1:2"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><label for="__tabbed_1_1">Hapify (long)</label><div class="tabbed-content">
+<div class="highlight"><pre><span></span><code><span class="o">&lt;&lt;for</span><span class="w"> </span><span class="n">Fields</span><span class="w"> </span><span class="n">searchable</span><span class="w"> </span><span class="k">and</span><span class="w"> </span><span class="n">entity</span><span class="w"> </span><span class="n">field</span><span class="o">&gt;&gt;</span>
+<span class="w">    </span>Do<span class="w"> </span>something
+<span class="o">&lt;&lt;endfor&gt;&gt;</span>
+</code></pre></div>
+</div>
+<input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><label for="__tabbed_1_2">Hapify (short)</label><div class="tabbed-content">
+<div class="highlight"><pre><span></span><code><span class="o">&lt;&lt;@</span><span class="w"> </span><span class="n">F</span><span class="w"> </span><span class="n">se</span><span class="k">*</span><span class="n">tE</span><span class="w"> </span><span class="n">f</span><span class="o">&gt;&gt;</span>
+<span class="w">    </span>Do<span class="w"> </span>something
+<span class="o">&lt;&lt;@&gt;&gt;</span>
+</code></pre></div>
+</div>
+</div>
+<h3 id="syntaxes-longue-et-courte">Syntaxes longue et courte</h3>
+<p>Les templates Hapify peuvent être écrits avec une syntaxe longue ou courte.</p>
+<p>Les deux ont des avantages :</p>
+<ul>
+<li>La syntaxe courte n'interfère pas avec le code cible lors de la lecture du template, grâce à un méta-code plus court.</li>
+<li>La syntaxe longue est explicite et peut être lue naturellement.</li>
+</ul>
+<p>Dans un même template, vous pouvez mélanger les deux syntaxes.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Tous les exemples de codes ci-dessous sont traduits en équivalent JavaScript à titre informatif.
+Lors de la génération, la syntaxe Hapify est convertie en code JavaScript semblable.</p>
+</div>
+<h2 id="balises">Balises</h2>
+<p>Les blocs de syntaxe Hapify sont enveloppés par deux balises :</p>
+<ul>
+<li>ouverture : <code>&lt;&lt;</code>.</li>
+<li>fermeture : <code>&gt;&gt;</code>.</li>
+</ul>
+<h3 id="echappement">Échappement</h3>
+<p>Généralement utilisées pour les opérations binaires, ces balises peuvent être échappées.
+Les balises échappées <code>\&lt;\&lt;</code> (et <code>\&gt;\&gt;</code>) sont remplacées par <code>&lt;&lt;</code> (et <code>&gt;&gt;</code>) lors de la génération.</p>
+<h2 id="noms">Noms</h2>
+<h3 id="noms-du-modele-de-donnees">Noms du modèle de données</h3>
+<p>Dans un template de type <code>one model</code> :</p>
+<div class="tabbed-set" data-tabs="2:3"><input checked="checked" id="__tabbed_2_1" name="__tabbed_2" type="radio" /><label for="__tabbed_2_1">Hapify (long)</label><div class="tabbed-content">
+<div class="highlight"><pre><span></span><code>//<span class="w"> </span>Create<span class="w"> </span>a<span class="w"> </span>new<span class="w"> </span><span class="s">&lt;&lt;Model lower&gt;&gt;</span>
+const<span class="w"> </span><span class="s">&lt;&lt;Model camel&gt;&gt;</span><span class="w"> </span>=<span class="w"> </span>new<span class="w"> </span><span class="s">&lt;&lt;Model pascal&gt;&gt;</span>();
+</code></pre></div>
+</div>
+<input id="__tabbed_2_2" name="__tabbed_2" type="radio" /><label for="__tabbed_2_2">Hapify (short)</label><div class="tabbed-content">
+<div class="highlight"><pre><span></span><code>//<span class="w"> </span>Create<span class="w"> </span>a<span class="w"> </span>new<span class="w"> </span><span class="s">&lt;&lt;M a&gt;&gt;</span>
+const<span class="w"> </span><span class="s">&lt;&lt;M aA&gt;&gt;</span><span class="w"> </span>=<span class="w"> </span>new<span class="w"> </span><span class="s">&lt;&lt;M AA&gt;&gt;</span>();
+</code></pre></div>
+</div>
+<input id="__tabbed_2_3" name="__tabbed_2" type="radio" /><label for="__tabbed_2_3">Équivalent JavaScript</label><div class="tabbed-content">
+<div class="highlight"><pre><span></span><code><span class="nx">out</span> <span class="o">+=</span> <span class="sb">`// Create a new </span><span class="si">${</span><span class="nx">root</span><span class="p">.</span><span class="nx">names</span><span class="p">.</span><span class="nx">lower</span><span class="si">}</span><span class="sb"></span>
+<span class="sb">const </span><span class="si">${</span><span class="nx">root</span><span class="p">.</span><span class="nx">names</span><span class="p">.</span><span class="nx">camel</span><span class="si">}</span><span class="sb"> = new </span><span class="si">${</span><span class="nx">root</span><span class="p">.</span><span class="nx">names</span><span class="p">.</span><span class="nx">pascal</span><span class="si">}</span><span class="sb">();`</span><span class="p">;</span>
+</code></pre></div>
+</div>
+</div>
+<p>Pour un modèle de données nommé <code>user group</code>, le résultat sera le suivant :</p>
+<div class="highlight"><pre><span></span><code><span class="c1">// Create a new user group</span>
+<span class="kr">const</span> <span class="nx">userGroup</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">UserGroup</span><span class="p">();</span>
+</code></pre></div>
+<h3 id="noms-des-champs">Noms des champs</h3>
+<p>Lister tous les champs d'un modèle de données :</p>
+<div class="tabbed-set" data-tabs="3:3"><input checked="checked" id="__tabbed_3_1" name="__tabbed_3" type="radio" /><label for="__tabbed_3_1">Hapify (long)</label><div class="tabbed-content">
+<div class="highlight"><pre><span></span><code>&lt;?php
+$fields<span class="w"> </span>=<span class="w"> </span>array(
+<span class="o">&lt;&lt;for</span><span class="w"> </span><span class="n">Fields</span><span class="w"> </span><span class="n">field</span><span class="o">&gt;&gt;</span>
+<span class="w">    </span>&#39;<span class="s">&lt;&lt;field camel&gt;&gt;</span>&#39;,
+<span class="o">&lt;&lt;endfor&gt;&gt;</span>
+);
+</code></pre></div>
+</div>
+<input id="__tabbed_3_2" name="__tabbed_3" type="radio" /><label for="__tabbed_3_2">Hapify (short)</label><div class="tabbed-content">
+<div class="highlight"><pre><span></span><code>&lt;?php
+$fields<span class="w"> </span>=<span class="w"> </span>array(
+<span class="o">&lt;&lt;@</span><span class="w"> </span><span class="n">F</span><span class="w"> </span><span class="n">f</span><span class="o">&gt;&gt;</span>
+<span class="w">    </span>&#39;<span class="s">&lt;&lt;f aA&gt;&gt;</span>&#39;,
+<span class="o">&lt;&lt;@&gt;&gt;</span>
+);
+</code></pre></div>
+</div>
+<input id="__tabbed_3_3" name="__tabbed_3" type="radio" /><label for="__tabbed_3_3">Équivalent JavaScript</label><div class="tabbed-content">
+<div class="highlight"><pre><span></span><code><span class="nx">out</span> <span class="o">+=</span> <span class="sb">`&lt;?php</span>
+<span class="sb">$fields = array(</span>
+<span class="sb">    </span><span class="si">${</span><span class="nx">root</span><span class="p">.</span><span class="nx">fields</span><span class="p">.</span><span class="nx">list</span><span class="p">.</span><span class="nx">map</span><span class="p">(</span><span class="nx">f</span> <span class="p">=&gt;</span> <span class="s2">&quot;&#39;&quot;</span><span class="o">+</span><span class="nx">f</span><span class="p">.</span><span class="nx">names</span><span class="p">.</span><span class="nx">camel</span><span class="o">+</span><span class="s2">&quot;&#39;&quot;</span><span class="p">).</span><span class="nx">join</span><span class="p">(</span><span class="s2">&quot;,\n\t&quot;</span><span class="p">)</span><span class="si">}</span><span class="sb"></span>
+<span class="sb">);`</span><span class="p">;</span>
+</code></pre></div>
+</div>
+</div>
+<p>Pour un modèle de données avec les champs <code>name</code>, <code>created at</code> et <code>role</code> :</p>
+<div class="highlight"><pre><span></span><code><span class="cp">&lt;?php</span>
+<span class="nv">$fields</span> <span class="o">=</span> <span class="k">array</span><span class="p">(</span>
+    <span class="s1">&#39;name&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;createdAt&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;role&#39;</span><span class="p">,</span>
+<span class="p">);</span>
+</code></pre></div>
+<h3 id="casses">Casses</h3>
+<p>Les casses disponibles sont :</p>
+<ul>
+<li><code>camel</code> (alias : <code>aA</code>) pour <code>camelCase</code></li>
+<li><code>pascal</code> (alias : <code>AA</code>) pour <code>PascalCase</code></li>
+<li><code>lower</code> (alias : <code>a</code>) pour <code>lower case</code></li>
+<li><code>capital</code> (alias : <code>A</code>) pour <code>Capital Case</code></li>
+<li><code>kebab</code> (alias : <code>a-a</code>) pour <code>kebab-case</code></li>
+<li><code>header</code> (alias : <code>A-A</code>) pour <code>Header-Case</code></li>
+<li><code>snake</code> (alias : <code>a_a</code>) pour <code>snake_case</code></li>
+<li><code>constant</code> (alias : <code>A_A</code>) pour <code>CONSTANT_CASE</code></li>
+<li><code>compact</code> (alias : <code>aa</code>) pour <code>compactcase</code></li>
+<li><code>raw</code> (alias : <code>R</code>) (raw) pour le nom original</li>
+</ul>
+<h2 id="conditions">Conditions</h2>
+<h3 id="condition-simple">Condition simple</h3>
+<div class="tabbed-set" data-tabs="4:3"><input checked="checked" id="__tabbed_4_1" name="__tabbed_4" type="radio" /><label for="__tabbed_4_1">Hapify (long)</label><div class="tabbed-content">
+<div class="highlight"><pre><span></span><code>const<span class="w"> </span>utils<span class="w"> </span>=<span class="w"> </span>require(&#39;utils&#39;);
+<span class="o">&lt;&lt;if</span><span class="w"> </span><span class="n">Fields</span><span class="w"> </span><span class="n">entity</span><span class="o">&gt;&gt;</span>
+const<span class="w"> </span>mongoDb<span class="w"> </span>=<span class="w"> </span>require(&#39;mongodb&#39;);
+<span class="o">&lt;&lt;endif&gt;&gt;</span>
+</code></pre></div>
+</div>
+<input id="__tabbed_4_2" name="__tabbed_4" type="radio" /><label for="__tabbed_4_2">Hapify (short)</label><div class="tabbed-content">
+<div class="highlight"><pre><span></span><code>const<span class="w"> </span>utils<span class="w"> </span>=<span class="w"> </span>require(&#39;utils&#39;);
+<span class="o">&lt;&lt;?</span><span class="w"> </span><span class="n">F</span><span class="w"> </span><span class="n">tE</span><span class="o">&gt;&gt;</span>
+const<span class="w"> </span>mongoDb<span class="w"> </span>=<span class="w"> </span>require(&#39;mongodb&#39;);
+<span class="o">&lt;&lt;?&gt;&gt;</span>
+</code></pre></div>
+</div>
+<input id="__tabbed_4_3" name="__tabbed_4" type="radio" /><label for="__tabbed_4_3">Équivalent JavaScript</label><div class="tabbed-content">
+<div class="highlight"><pre><span></span><code><span class="nx">out</span> <span class="o">+=</span> <span class="sb">`const utils = require(&#39;utils&#39;);`</span><span class="p">;</span>
+<span class="k">if</span> <span class="p">(</span><span class="nx">root</span><span class="p">.</span><span class="nx">fields</span><span class="p">.</span><span class="nx">filter</span><span class="p">(</span><span class="nx">f</span> <span class="p">=&gt;</span> <span class="nx">f</span><span class="p">.</span><span class="nx">type</span> <span class="o">===</span> <span class="s1">&#39;entity&#39;</span><span class="p">).</span><span class="nx">length</span> <span class="o">&gt;</span> <span class="mf">0</span><span class="p">)</span> <span class="p">{</span>
+    <span class="nx">out</span> <span class="o">+=</span> <span class="sb">`</span><span class="err">\</span><span class="sb">nconst mongoDb = require(&#39;mongodb&#39;);`</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div>
+</div>
+</div>
+<p>Pour un modèle de données qui contient au moins un champ de type <code>entity</code>, le résultat sera le suivant :</p>
+<div class="highlight"><pre><span></span><code><span class="kr">const</span> <span class="nx">utils</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;utils&#39;</span><span class="p">);</span>
+<span class="kr">const</span> <span class="nx">mongoDb</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;mongodb&#39;</span><span class="p">);</span>
+</code></pre></div>
+<p>Pour un modèle qui ne contient pas de champ de type <code>entity</code>, le résultat sera le suivant :</p>
+<div class="highlight"><pre><span></span><code><span class="kr">const</span> <span class="nx">utils</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;utils&#39;</span><span class="p">);</span>
+</code></pre></div>
+<h4 id="sans-filtre">Sans filtre</h4>
+<p>Le filtrage des champs est optionnel.</p>
+<div class="tabbed-set" data-tabs="5:3"><input checked="checked" id="__tabbed_5_1" name="__tabbed_5" type="radio" /><label for="__tabbed_5_1">Hapify (long)</label><div class="tabbed-content">
+<div class="highlight"><pre><span></span><code><span class="o">&lt;&lt;if</span><span class="w"> </span><span class="n">Fields</span><span class="o">&gt;&gt;</span>
+<span class="w">    </span>//<span class="w"> </span>this<span class="w"> </span>model<span class="w"> </span>has<span class="w"> </span>at<span class="w"> </span>least<span class="w"> </span>one<span class="w"> </span>field
+<span class="o">&lt;&lt;endif&gt;&gt;</span>
+</code></pre></div>
+</div>
+<input id="__tabbed_5_2" name="__tabbed_5" type="radio" /><label for="__tabbed_5_2">Hapify (short)</label><div class="tabbed-content">
+<div class="highlight"><pre><span></span><code><span class="o">&lt;&lt;?</span><span class="w"> </span><span class="n">F</span><span class="o">&gt;&gt;</span>
+<span class="w">    </span>//<span class="w"> </span>this<span class="w"> </span>model<span class="w"> </span>has<span class="w"> </span>at<span class="w"> </span>least<span class="w"> </span>one<span class="w"> </span>field
+<span class="o">&lt;&lt;?&gt;&gt;</span>
+</code></pre></div>
+</div>
+<input id="__tabbed_5_3" name="__tabbed_5" type="radio" /><label for="__tabbed_5_3">Équivalent JavaScript</label><div class="tabbed-content">
+<div class="highlight"><pre><span></span><code><span class="k">if</span> <span class="p">(</span><span class="nx">root</span><span class="p">.</span><span class="nx">fields</span><span class="p">.</span><span class="nx">list</span><span class="p">.</span><span class="nx">length</span> <span class="o">&gt;</span> <span class="mf">0</span><span class="p">)</span> <span class="p">{</span>
+    <span class="nx">out</span> <span class="o">+=</span> <span class="s1">&#39;    // this model has at least one field&#39;</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div>
+</div>
+</div>
+<h3 id="conditions-alternatives">Conditions alternatives</h3>
+<div class="tabbed-set" data-tabs="6:3"><input checked="checked" id="__tabbed_6_1" name="__tabbed_6" type="radio" /><label for="__tabbed_6_1">Hapify (long)</label><div class="tabbed-content">
+<div class="highlight"><pre><span></span><code><span class="o">&lt;&lt;if</span><span class="w"> </span><span class="n">Fields</span><span class="w"> </span><span class="n">entity</span><span class="o">&gt;&gt;</span>
+<span class="w">  </span>//<span class="w"> </span>At<span class="w"> </span>least<span class="w"> </span>one<span class="w"> </span>entity<span class="w"> </span>field
+<span class="o">&lt;&lt;elseif</span><span class="w"> </span><span class="n">Fields</span><span class="w"> </span><span class="n">hidden</span><span class="o">&gt;&gt;</span>
+<span class="w">  </span>//<span class="w"> </span>No<span class="w"> </span>entity<span class="w"> </span>field<span class="w"> </span>and<span class="w"> </span>at<span class="w"> </span>least<span class="w"> </span>one<span class="w"> </span>hidden<span class="w"> </span>field
+<span class="o">&lt;&lt;else&gt;&gt;</span>
+<span class="w">  </span>//<span class="w"> </span>No<span class="w"> </span>entity<span class="w"> </span>field<span class="w"> </span>and<span class="w"> </span>no<span class="w"> </span>hidden<span class="w"> </span>field
+<span class="o">&lt;&lt;endif&gt;&gt;</span>
+</code></pre></div>
+</div>
+<input id="__tabbed_6_2" name="__tabbed_6" type="radio" /><label for="__tabbed_6_2">Hapify (short)</label><div class="tabbed-content">
+<div class="highlight"><pre><span></span><code><span class="o">&lt;&lt;?</span><span class="w"> </span><span class="n">F</span><span class="w"> </span><span class="n">tE</span><span class="o">&gt;&gt;</span>
+<span class="w">  </span>//<span class="w"> </span>At<span class="w"> </span>least<span class="w"> </span>one<span class="w"> </span>entity<span class="w"> </span>field
+<span class="o">&lt;&lt;??</span><span class="w"> </span><span class="n">F</span><span class="w"> </span><span class="n">hd</span><span class="o">&gt;&gt;</span>
+<span class="w">  </span>//<span class="w"> </span>No<span class="w"> </span>entity<span class="w"> </span>field<span class="w"> </span>and<span class="w"> </span>at<span class="w"> </span>least<span class="w"> </span>one<span class="w"> </span>hidden<span class="w"> </span>field
+<span class="o">&lt;&lt;??&gt;&gt;</span>
+<span class="w">  </span>//<span class="w"> </span>No<span class="w"> </span>entity<span class="w"> </span>field<span class="w"> </span>and<span class="w"> </span>no<span class="w"> </span>hidden<span class="w"> </span>field
+<span class="o">&lt;&lt;?&gt;&gt;</span>
+</code></pre></div>
+</div>
+<input id="__tabbed_6_3" name="__tabbed_6" type="radio" /><label for="__tabbed_6_3">Équivalent JavaScript</label><div class="tabbed-content">
+<div class="highlight"><pre><span></span><code><span class="k">if</span> <span class="p">(</span><span class="nx">root</span><span class="p">.</span><span class="nx">fields</span><span class="p">.</span><span class="nx">filter</span><span class="p">(</span><span class="nx">f</span> <span class="p">=&gt;</span> <span class="nx">f</span><span class="p">.</span><span class="nx">type</span> <span class="o">===</span> <span class="s1">&#39;entity&#39;</span><span class="p">).</span><span class="nx">length</span> <span class="o">&gt;</span> <span class="mf">0</span><span class="p">)</span> <span class="p">{</span>
+    <span class="nx">out</span> <span class="o">+=</span> <span class="s1">&#39;    // At least one entity field&#39;</span><span class="p">;</span>
+<span class="p">}</span> <span class="k">else</span> <span class="k">if</span> <span class="p">(</span><span class="nx">root</span><span class="p">.</span><span class="nx">fields</span><span class="p">.</span><span class="nx">filter</span><span class="p">(</span><span class="nx">f</span> <span class="p">=&gt;</span> <span class="nx">f</span><span class="p">.</span><span class="nx">hidden</span><span class="p">).</span><span class="nx">length</span> <span class="o">&gt;</span> <span class="mf">0</span><span class="p">)</span> <span class="p">{</span>
+    <span class="nx">out</span> <span class="o">+=</span> <span class="s1">&#39;    // No entity field and at least one hidden field&#39;</span><span class="p">;</span>
+<span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+    <span class="nx">out</span> <span class="o">+=</span> <span class="s1">&#39;    // No entity field and no hidden field&#39;</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div>
+</div>
+</div>
+<h3 id="conditions-complexes">Conditions complexes</h3>
+<h4 id="operateurs">Opérateurs</h4>
+<p>Les opérateurs disponibles pour écrire les conditions sont :</p>
+<ul>
+<li><code>and</code> - alias <code>*</code> ou <code>&amp;&amp;</code></li>
+<li><code>or</code> - alias <code>+</code> ou <code>||</code></li>
+<li><code>and not</code> - alias <code>andNot</code>, <code>/</code> ou <code>&amp;&amp; !</code></li>
+<li><code>or not</code> - alias <code>orNot</code>, <code>-</code> ou <code>|| !</code></li>
+</ul>
+<p><strong>Exemple</strong></p>
+<div class="tabbed-set" data-tabs="7:3"><input checked="checked" id="__tabbed_7_1" name="__tabbed_7" type="radio" /><label for="__tabbed_7_1">Hapify (long)</label><div class="tabbed-content">
+<div class="highlight"><pre><span></span><code><span class="o">&lt;&lt;if</span><span class="w"> </span><span class="n">Fields</span><span class="w"> </span><span class="p">(</span><span class="n">entity</span><span class="w"> </span><span class="k">and</span><span class="w"> </span><span class="n">hidden</span><span class="p">)</span><span class="w"> </span><span class="k">or</span><span class="w"> </span><span class="p">(</span><span class="n">unique</span><span class="w"> </span><span class="k">and</span><span class="w"> </span><span class="k">not</span><span class="w"> </span><span class="n">multiple</span><span class="p">)</span><span class="o">&gt;&gt;</span>
+<span class="w">  </span>//<span class="w"> </span>This<span class="w"> </span>code<span class="w"> </span>block<span class="w"> </span>is<span class="w"> </span>reached<span class="w"> </span>if<span class="w"> </span>the<span class="w"> </span>model<span class="w"> </span>has<span class="w"> </span>at<span class="w"> </span>least<span class="w"> </span>one<span class="w"> </span>field<span class="w"> </span>that<span class="w"> </span>validates<span class="w"> </span>this<span class="w"> </span>conditions:
+<span class="w">  </span>//<span class="w"> </span>(type<span class="w"> </span>entity<span class="w"> </span>AND<span class="w"> </span>hidden)<span class="w"> </span>OR<span class="w"> </span>(unique<span class="w"> </span>AND<span class="w"> </span>NOT<span class="w"> </span>multiple)
+<span class="o">&lt;&lt;endif&gt;&gt;</span>
+</code></pre></div>
+</div>
+<input id="__tabbed_7_2" name="__tabbed_7" type="radio" /><label for="__tabbed_7_2">Hapify (short)</label><div class="tabbed-content">
+<div class="highlight"><pre><span></span><code><span class="o">&lt;&lt;?</span><span class="w"> </span><span class="n">F</span><span class="w"> </span><span class="p">(</span><span class="n">tE</span><span class="k">*</span><span class="n">hd</span><span class="p">)</span><span class="k">+</span><span class="p">(</span><span class="n">un</span><span class="k">/</span><span class="n">ml</span><span class="p">)</span><span class="o">&gt;&gt;</span>
+<span class="w">  </span>//<span class="w"> </span>This<span class="w"> </span>code<span class="w"> </span>block<span class="w"> </span>is<span class="w"> </span>reached<span class="w"> </span>if<span class="w"> </span>the<span class="w"> </span>model<span class="w"> </span>has<span class="w"> </span>at<span class="w"> </span>least<span class="w"> </span>one<span class="w"> </span>field<span class="w"> </span>that<span class="w"> </span>validates<span class="w"> </span>this<span class="w"> </span>conditions:
+<span class="w">  </span>//<span class="w"> </span>(type<span class="w"> </span>entity<span class="w"> </span>AND<span class="w"> </span>hidden)<span class="w"> </span>OR<span class="w"> </span>(unique<span class="w"> </span>AND<span class="w"> </span>NOT<span class="w"> </span>multiple)
+<span class="o">&lt;&lt;?&gt;&gt;</span>
+</code></pre></div>
+</div>
+<input id="__tabbed_7_3" name="__tabbed_7" type="radio" /><label for="__tabbed_7_3">Équivalent JavaScript</label><div class="tabbed-content">
+<div class="highlight"><pre><span></span><code><span class="k">for</span> <span class="p">(</span><span class="kd">let</span> <span class="nx">field</span> <span class="k">of</span> <span class="nx">root</span><span class="p">.</span><span class="nx">fields</span><span class="p">.</span><span class="nx">filter</span><span class="p">(</span><span class="nx">f</span> <span class="p">=&gt;</span> <span class="p">(</span><span class="nx">f</span><span class="p">.</span><span class="nx">type</span> <span class="o">===</span> <span class="s1">&#39;entity&#39;</span> <span class="o">&amp;&amp;</span> <span class="nx">f</span><span class="p">.</span><span class="nx">hidden</span><span class="p">)</span> <span class="o">||</span> <span class="p">(</span><span class="nx">f</span><span class="p">.</span><span class="nx">unique</span> <span class="o">&amp;&amp;</span> <span class="o">!</span><span class="nx">f</span><span class="p">.</span><span class="nx">multiple</span><span class="p">)))</span> <span class="p">{</span>
+    <span class="nx">out</span> <span class="o">+=</span> <span class="s1">&#39;    // ...&#39;</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div>
+</div>
+</div>
+<p>Les conditions peuvent également être écrites avec des opérateurs natifs.
+Réécrivons la dernière condition :</p>
+<div class="tabbed-set" data-tabs="8:3"><input checked="checked" id="__tabbed_8_1" name="__tabbed_8" type="radio" /><label for="__tabbed_8_1">Hapify (long)</label><div class="tabbed-content">
+<div class="highlight"><pre><span></span><code><span class="o">&lt;&lt;if</span><span class="w"> </span><span class="n">Fields</span><span class="w"> </span><span class="p">(</span><span class="n">entity</span><span class="w"> </span><span class="n">&amp;&amp;</span><span class="w"> </span><span class="n">hidden</span><span class="p">)</span><span class="w"> </span><span class="n">||</span><span class="w"> </span><span class="p">(</span><span class="n">unique</span><span class="w"> </span><span class="n">&amp;&amp;</span><span class="w"> </span><span class="n">!multiple</span><span class="p">)</span><span class="w"> </span><span class="o">&gt;&gt;</span>
+<span class="w">  </span>//<span class="w"> </span>This<span class="w"> </span>code<span class="w"> </span>block<span class="w"> </span>is<span class="w"> </span>reached<span class="w"> </span>if<span class="w"> </span>the<span class="w"> </span>model<span class="w"> </span>has<span class="w"> </span>at<span class="w"> </span>least<span class="w"> </span>one<span class="w"> </span>field<span class="w"> </span>that<span class="w"> </span>validates<span class="w"> </span>this<span class="w"> </span>conditions:
+<span class="w">  </span>//<span class="w"> </span>(type<span class="w"> </span>entity<span class="w"> </span>AND<span class="w"> </span>hidden)<span class="w"> </span>OR<span class="w"> </span>(unique<span class="w"> </span>AND<span class="w"> </span>NOT<span class="w"> </span>multiple)
+<span class="o">&lt;&lt;endif&gt;&gt;</span>
+</code></pre></div>
+</div>
+<input id="__tabbed_8_2" name="__tabbed_8" type="radio" /><label for="__tabbed_8_2">Hapify (short)</label><div class="tabbed-content">
+<div class="highlight"><pre><span></span><code><span class="o">&lt;&lt;?</span><span class="w"> </span><span class="n">F</span><span class="w"> </span><span class="p">(</span><span class="n">tE</span><span class="w"> </span><span class="n">&amp;&amp;</span><span class="w"> </span><span class="n">hd</span><span class="p">)</span><span class="w"> </span><span class="n">||</span><span class="w"> </span><span class="p">(</span><span class="n">un</span><span class="w"> </span><span class="n">&amp;&amp;</span><span class="w"> </span><span class="n">!ml</span><span class="p">)</span><span class="w"> </span><span class="o">&gt;&gt;</span>
+<span class="w">  </span>//<span class="w"> </span>This<span class="w"> </span>code<span class="w"> </span>block<span class="w"> </span>is<span class="w"> </span>reached<span class="w"> </span>if<span class="w"> </span>the<span class="w"> </span>model<span class="w"> </span>has<span class="w"> </span>at<span class="w"> </span>least<span class="w"> </span>one<span class="w"> </span>field<span class="w"> </span>that<span class="w"> </span>validates<span class="w"> </span>this<span class="w"> </span>conditions:
+<span class="w">  </span>//<span class="w"> </span>(type<span class="w"> </span>entity<span class="w"> </span>AND<span class="w"> </span>hidden)<span class="w"> </span>OR<span class="w"> </span>(unique<span class="w"> </span>AND<span class="w"> </span>NOT<span class="w"> </span>multiple)
+<span class="o">&lt;&lt;?&gt;&gt;</span>
+</code></pre></div>
+</div>
+<input id="__tabbed_8_3" name="__tabbed_8" type="radio" /><label for="__tabbed_8_3">Équivalent JavaScript</label><div class="tabbed-content">
+<div class="highlight"><pre><span></span><code><span class="k">for</span> <span class="p">(</span><span class="kd">let</span> <span class="nx">field</span> <span class="k">of</span> <span class="nx">root</span><span class="p">.</span><span class="nx">fields</span><span class="p">.</span><span class="nx">filter</span><span class="p">(</span><span class="nx">f</span> <span class="p">=&gt;</span> <span class="p">(</span><span class="nx">f</span><span class="p">.</span><span class="nx">type</span> <span class="o">===</span> <span class="s1">&#39;entity&#39;</span> <span class="o">&amp;&amp;</span> <span class="nx">f</span><span class="p">.</span><span class="nx">hidden</span><span class="p">)</span> <span class="o">||</span> <span class="p">(</span><span class="nx">f</span><span class="p">.</span><span class="nx">unique</span> <span class="o">&amp;&amp;</span> <span class="o">!</span><span class="nx">f</span><span class="p">.</span><span class="nx">multiple</span><span class="p">)))</span> <span class="p">{</span>
+    <span class="nx">out</span> <span class="o">+=</span> <span class="s1">&#39;    // ...&#39;</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div>
+</div>
+</div>
+<h4 id="conditions-relatives-au-nombre-doccurrences">Conditions relatives au nombre d'occurrences</h4>
+<p>En précisant un nombre après le <code>if</code>, on peut ajouter une condition sur le nombre minimum d’éléments requis, ici les champs :</p>
+<div class="tabbed-set" data-tabs="9:3"><input checked="checked" id="__tabbed_9_1" name="__tabbed_9" type="radio" /><label for="__tabbed_9_1">Hapify (long)</label><div class="tabbed-content">
+<div class="highlight"><pre><span></span><code><span class="o">&lt;&lt;if</span><span class="m">4</span><span class="w"> </span><span class="n">Fields</span><span class="w"> </span><span class="n">hidden</span><span class="o">&gt;&gt;</span>
+<span class="w">    </span>//<span class="w"> </span>This<span class="w"> </span>model<span class="w"> </span>has<span class="w"> </span>at<span class="w"> </span>least<span class="w"> </span>4<span class="w"> </span>hidden<span class="w"> </span>fields
+<span class="o">&lt;&lt;elseif</span><span class="m">2</span><span class="w"> </span><span class="n">Fields</span><span class="w"> </span><span class="n">label</span><span class="w"> </span><span class="k">or</span><span class="w"> </span><span class="n">boolean</span><span class="o">&gt;&gt;</span>
+<span class="w">    </span>//<span class="w"> </span>This<span class="w"> </span>model<span class="w"> </span>has<span class="w"> </span>at<span class="w"> </span>least<span class="w"> </span>2<span class="w"> </span>label<span class="w"> </span>or<span class="w"> </span>boolean<span class="w"> </span>fields
+<span class="o">&lt;&lt;else&gt;&gt;</span>
+<span class="w">    </span>//<span class="w"> </span>Something<span class="w"> </span>else
+<span class="o">&lt;&lt;endif&gt;&gt;</span>
+</code></pre></div>
+</div>
+<input id="__tabbed_9_2" name="__tabbed_9" type="radio" /><label for="__tabbed_9_2">Hapify (short)</label><div class="tabbed-content">
+<div class="highlight"><pre><span></span><code><span class="o">&lt;&lt;?</span><span class="m">4</span><span class="w"> </span><span class="n">F</span><span class="w"> </span><span class="n">hd</span><span class="o">&gt;&gt;</span>
+<span class="w">    </span>//<span class="w"> </span>This<span class="w"> </span>model<span class="w"> </span>has<span class="w"> </span>at<span class="w"> </span>least<span class="w"> </span>4<span class="w"> </span>hidden<span class="w"> </span>fields
+<span class="o">&lt;&lt;??</span><span class="m">2</span><span class="w"> </span><span class="n">F</span><span class="w"> </span><span class="n">lb</span><span class="k">+</span><span class="n">tB</span><span class="o">&gt;&gt;</span>
+<span class="w">    </span>//<span class="w"> </span>This<span class="w"> </span>model<span class="w"> </span>has<span class="w"> </span>at<span class="w"> </span>least<span class="w"> </span>2<span class="w"> </span>label<span class="w"> </span>or<span class="w"> </span>boolean<span class="w"> </span>fields
+<span class="o">&lt;&lt;??&gt;&gt;</span>
+<span class="w">    </span>//<span class="w"> </span>Something<span class="w"> </span>else
+<span class="o">&lt;&lt;?&gt;&gt;</span>
+</code></pre></div>
+</div>
+<input id="__tabbed_9_3" name="__tabbed_9" type="radio" /><label for="__tabbed_9_3">Équivalent JavaScript</label><div class="tabbed-content">
+<div class="highlight"><pre><span></span><code><span class="k">if</span> <span class="p">(</span><span class="nx">root</span><span class="p">.</span><span class="nx">fields</span><span class="p">.</span><span class="nx">filter</span><span class="p">(</span><span class="nx">f</span> <span class="p">=&gt;</span> <span class="nx">f</span><span class="p">.</span><span class="nx">hidden</span><span class="p">).</span><span class="nx">length</span> <span class="o">&gt;=</span> <span class="mf">4</span><span class="p">)</span> <span class="p">{</span>
+    <span class="nx">out</span> <span class="o">+=</span> <span class="s1">&#39;    // This model has at least 4 hidden fields&#39;</span><span class="p">;</span>
+<span class="p">}</span> <span class="k">else</span> <span class="k">if</span> <span class="p">(</span><span class="nx">root</span><span class="p">.</span><span class="nx">fields</span><span class="p">.</span><span class="nx">filter</span><span class="p">(</span><span class="nx">f</span> <span class="p">=&gt;</span> <span class="nx">f</span><span class="p">.</span><span class="nx">label</span> <span class="o">||</span> <span class="nx">f</span><span class="p">.</span><span class="nx">type</span> <span class="o">===</span> <span class="s1">&#39;boolean&#39;</span><span class="p">).</span><span class="nx">length</span> <span class="o">&gt;=</span> <span class="mf">2</span><span class="p">)</span> <span class="p">{</span>
+    <span class="nx">out</span> <span class="o">+=</span> <span class="s1">&#39;    // This model has at least 2 label or boolean fields&#39;</span><span class="p">;</span>
+<span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+    <span class="nx">out</span> <span class="o">+=</span> <span class="s1">&#39;    // Something else&#39;</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div>
+</div>
+</div>
+<h3 id="conditions-sur-les-modeles-de-donnees">Conditions sur les modèles de données</h3>
+<h4 id="tester-un-seul-modele-de-donnees">Tester un seul modèle de données</h4>
+<p>Dans un template de type <code>one model</code> :</p>
+<div class="tabbed-set" data-tabs="10:3"><input checked="checked" id="__tabbed_10_1" name="__tabbed_10" type="radio" /><label for="__tabbed_10_1">Hapify (long)</label><div class="tabbed-content">
+<div class="highlight"><pre><span></span><code><span class="o">&lt;&lt;if</span><span class="w"> </span><span class="n">Model</span><span class="w"> </span><span class="n">isGeolocated</span><span class="o">&gt;&gt;</span>
+<span class="w">  </span>//<span class="w"> </span>This<span class="w"> </span>block<span class="w"> </span>is<span class="w"> </span>reached<span class="w"> </span>if<span class="w"> </span>the<span class="w"> </span>model<span class="w"> </span>is<span class="w"> </span>geolocated.
+<span class="w">  </span>//<span class="w"> </span>that&#39;s<span class="w"> </span>means<span class="w"> </span>it<span class="w"> </span>has<span class="w"> </span>at<span class="w"> </span>least<span class="w"> </span>one<span class="w"> </span>latitude<span class="w"> </span>field<span class="w"> </span>and<span class="w"> </span>one<span class="w"> </span>longitude<span class="w"> </span>field
+<span class="o">&lt;&lt;endif&gt;&gt;</span>
+</code></pre></div>
+</div>
+<input id="__tabbed_10_2" name="__tabbed_10" type="radio" /><label for="__tabbed_10_2">Hapify (short)</label><div class="tabbed-content">
+<div class="highlight"><pre><span></span><code><span class="o">&lt;&lt;?</span><span class="w"> </span><span class="n">M</span><span class="w"> </span><span class="n">pGeo</span><span class="o">&gt;&gt;</span>
+<span class="w">  </span>//<span class="w"> </span>This<span class="w"> </span>block<span class="w"> </span>is<span class="w"> </span>reached<span class="w"> </span>if<span class="w"> </span>the<span class="w"> </span>model<span class="w"> </span>is<span class="w"> </span>geolocated.
+<span class="w">  </span>//<span class="w"> </span>that&#39;s<span class="w"> </span>means<span class="w"> </span>it<span class="w"> </span>has<span class="w"> </span>at<span class="w"> </span>least<span class="w"> </span>one<span class="w"> </span>latitude<span class="w"> </span>field<span class="w"> </span>and<span class="w"> </span>one<span class="w"> </span>longitude<span class="w"> </span>field
+<span class="o">&lt;&lt;?&gt;&gt;</span>
+</code></pre></div>
+</div>
+<input id="__tabbed_10_3" name="__tabbed_10" type="radio" /><label for="__tabbed_10_3">Équivalent JavaScript</label><div class="tabbed-content">
+<div class="highlight"><pre><span></span><code><span class="k">if</span> <span class="p">(</span><span class="nx">root</span><span class="p">.</span><span class="nx">properties</span><span class="p">.</span><span class="nx">isGeolocated</span><span class="p">)</span> <span class="p">{</span>
+    <span class="nx">out</span> <span class="o">+=</span> <span class="s1">&#39;    // ...&#39;</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div>
+</div>
+</div>
+<h4 id="tester-une-liste-de-modeles-de-donnees">Tester une liste de modèles de données</h4>
+<p>Dans un template de type <code>all models</code> :</p>
+<div class="tabbed-set" data-tabs="11:3"><input checked="checked" id="__tabbed_11_1" name="__tabbed_11" type="radio" /><label for="__tabbed_11_1">Hapify (long)</label><div class="tabbed-content">
+<div class="highlight"><pre><span></span><code><span class="o">&lt;&lt;if</span><span class="w"> </span><span class="n">Models</span><span class="w"> </span><span class="k">not</span><span class="w"> </span><span class="n">onlyGuest</span><span class="o">&gt;&gt;</span>
+<span class="w">  </span>//<span class="w"> </span>This<span class="w"> </span>block<span class="w"> </span>is<span class="w"> </span>reached<span class="w"> </span>if<span class="w"> </span>at<span class="w"> </span>least<span class="w"> </span>one<span class="w"> </span>model<span class="w"> </span>has<span class="w"> </span>not<span class="w"> </span>only<span class="w"> </span>guest<span class="w"> </span>actions
+<span class="w">  </span>import<span class="w"> </span>&#39;session-service&#39;;
+<span class="o">&lt;&lt;endif&gt;&gt;</span>
+</code></pre></div>
+</div>
+<input id="__tabbed_11_2" name="__tabbed_11" type="radio" /><label for="__tabbed_11_2">Hapify (short)</label><div class="tabbed-content">
+<div class="highlight"><pre><span></span><code><span class="o">&lt;&lt;?</span><span class="w"> </span><span class="n">M</span><span class="w"> </span><span class="n">!pOGs</span><span class="o">&gt;&gt;</span>
+<span class="w">  </span>//<span class="w"> </span>This<span class="w"> </span>block<span class="w"> </span>is<span class="w"> </span>reached<span class="w"> </span>if<span class="w"> </span>at<span class="w"> </span>least<span class="w"> </span>one<span class="w"> </span>model<span class="w"> </span>has<span class="w"> </span>not<span class="w"> </span>only<span class="w"> </span>guest<span class="w"> </span>actions
+<span class="w">  </span>import<span class="w"> </span>&#39;session-service&#39;;
+<span class="o">&lt;&lt;?&gt;&gt;</span>
+</code></pre></div>
+</div>
+<input id="__tabbed_11_3" name="__tabbed_11" type="radio" /><label for="__tabbed_11_3">Équivalent JavaScript</label><div class="tabbed-content">
+<div class="highlight"><pre><span></span><code><span class="k">if</span> <span class="p">(</span><span class="nx">root</span><span class="p">.</span><span class="nx">filter</span><span class="p">(</span><span class="nx">m</span> <span class="p">=&gt;</span> <span class="o">!</span><span class="nx">m</span><span class="p">.</span><span class="nx">accesses</span><span class="p">.</span><span class="nx">properties</span><span class="p">.</span><span class="nx">onlyGuest</span><span class="p">).</span><span class="nx">length</span> <span class="o">&gt;</span> <span class="mf">0</span><span class="p">)</span> <span class="p">{</span>
+    <span class="nx">out</span> <span class="o">+=</span> <span class="s2">&quot;    import &#39;session-service&#39;;&quot;</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div>
+</div>
+</div>
+<h3 id="objets-et-filtres-disponibles">Objets et filtres disponibles</h3>
+<h4 id="objet-racine">Objet racine</h4>
+<p><code>Model</code> ou <code>Models</code> (abrégé : <code>M</code>) font référence à l'objet principal :</p>
+<ul>
+<li>le modèle de données dans un template de type <code>one model</code></li>
+<li>le tableau de modèles de données dans un template de type <code>all models</code></li>
+</ul>
+<h4 id="objets-filtrables-et-testables">Objets filtrables et testables</h4>
+<p>Dans le cas d'un template de type <code>one model</code> :</p>
+<ul>
+<li><code>Fields</code> (alias: <code>F</code>) est la liste des champs</li>
+<li><code>Dependencies</code> (alias: <code>D</code>) est la liste des dépendances (liste de modèles de données)</li>
+<li><code>ReferencedIn</code> (alias: <code>RefModels</code>, <code>R</code>) est la liste des modèles de données qui dépendent de celui-ci</li>
+<li><code>PrimaryField</code> (alias: <code>P</code>) est le champ primaire du modèle</li>
+<li><code>Accesses</code> (alias: <code>A</code>) est la liste des accès</li>
+<li><code>CreateAccess</code> (alias: <code>Ac</code>) est l'accès à l'action de création</li>
+<li><code>ReadAccess</code> (alias: <code>Ar</code>) est l'accès à l'action de lecture</li>
+<li><code>UpdateAccess</code> (alias: <code>Au</code>) est l'accès à l'action de mise à jour</li>
+<li><code>RemoveAccess</code> (alias: <code>Ad</code>) est l'accès à l'action de suppression</li>
+<li><code>SearchAccess</code> (alias: <code>As</code>) est l'accès à l'action de recherche</li>
+<li><code>CountAccess</code> (alias: <code>An</code>) est l'accès à l'action de comptage</li>
+</ul>
+<h4 id="filtrage-sur-les-attributs-de-champ">Filtrage sur les attributs de champ</h4>
+<p>Attributs disponibles pour un champ :</p>
+<ul>
+<li><code>primary</code> (alias: <code>pr</code>) pour le booléen <code>primary</code></li>
+<li><code>unique</code> (alias: <code>un</code>) pour le booléen <code>unique</code></li>
+<li><code>label</code> (alias: <code>lb</code>) pour le booléen <code>label</code></li>
+<li><code>nullable</code> (alias: <code>nu</code>) pour le booléen <code>nullable</code></li>
+<li><code>multiple</code> (alias: <code>ml</code>) pour le booléen <code>multiple</code></li>
+<li><code>embedded</code> (alias: <code>em</code>) pour le booléen <code>embedded</code></li>
+<li><code>searchable</code> (alias: <code>se</code>) pour le booléen <code>searchable</code></li>
+<li><code>sortable</code> (alias: <code>so</code>) pour le booléen <code>sortable</code></li>
+<li><code>hidden</code> (alias: <code>hd</code>) pour le booléen <code>hidden</code></li>
+<li><code>internal</code> (alias: <code>in</code>) pour le booléen <code>internal</code></li>
+<li><code>restricted</code> (alias: <code>rs</code>) pour le booléen <code>restricted</code></li>
+<li><code>ownership</code> (alias: <code>os</code>) pour le booléen <code>ownership</code></li>
+<li><code>string</code> (alias: <code>tS</code>) pour le type <code>string</code><ul>
+<li><code>email</code> (alias: <code>tSe</code>) pour le type <code>string</code> et le sous-type <code>email</code></li>
+<li><code>password</code> (alias: <code>tSp</code>) pour le type <code>string</code> et le sous-type <code>password</code></li>
+<li><code>url</code> (alias: <code>tSu</code>) pour le type <code>string</code> et le sous-type <code>url</code></li>
+<li><code>text</code> (alias: <code>tSt</code>) pour le type <code>string</code> et le sous-type <code>text</code></li>
+<li><code>richText</code> (alias: <code>rich</code>, <code>tSr</code>) pour le type <code>string</code> et le sous-type <code>rich</code></li>
+</ul>
+</li>
+<li><code>number</code> (alias: <code>tN</code>) pour le type <code>number</code><ul>
+<li><code>integer</code> (alias: <code>tNi</code>) pour le type <code>number</code> et le sous-type <code>integer</code></li>
+<li><code>float</code> (alias: <code>tNf</code>) pour le type <code>number</code> et le sous-type <code>float</code></li>
+<li><code>latitude</code> (alias: <code>tNt</code>) pour le type <code>number</code> et le sous-type <code>latitude</code></li>
+<li><code>longitude</code> (alias: <code>tNg</code>) pour le type <code>number</code> et le sous-type <code>longitude</code></li>
+</ul>
+</li>
+<li><code>boolean</code> (alias: <code>tB</code>) pour le type <code>boolean</code></li>
+<li><code>datetime</code> (alias: <code>tD</code>) pour le type <code>datetime</code><ul>
+<li><code>date</code> (alias: <code>tDd</code>) pour le type <code>datetime</code> et le sous-type <code>date</code></li>
+<li><code>time</code> (alias: <code>tDt</code>) pour le type <code>datetime</code> et le sous-type <code>time</code></li>
+</ul>
+</li>
+<li><code>enum</code> (alias: <code>tU</code>) pour le type <code>enum</code></li>
+<li><code>entity</code> (alias: <code>tE</code>) pour le type <code>entity</code><ul>
+<li><code>oneOne</code> (alias: <code>tEoo</code>) pour le type <code>entity</code> et le sous-type <code>oneOne</code></li>
+<li><code>oneMany</code> (alias: <code>tEom</code>) pour le type <code>entity</code> et le sous-type <code>oneMany</code></li>
+<li><code>manyOne</code> (alias: <code>tEmo</code>) pour le type <code>entity</code> et le sous-type <code>manyOne</code></li>
+<li><code>manyMany</code> (alias: <code>tEmm</code>) pour le type <code>entity</code> et le sous-type <code>manyMany</code></li>
+</ul>
+</li>
+<li><code>object</code> (alias: <code>tO</code>) pour le type <code>object</code></li>
+<li><code>file</code> (alias: <code>tF</code>) pour le type <code>file</code><ul>
+<li><code>image</code> (alias: <code>tFi</code>) pour le type <code>file</code> et le sous-type <code>image</code></li>
+<li><code>video</code> (alias: <code>tFv</code>) pour le type <code>file</code> et le sous-type <code>video</code></li>
+<li><code>audio</code> (alias: <code>tFa</code>) pour le type <code>file</code> et le sous-type <code>audio</code></li>
+<li><code>document</code> (alias: <code>tFd</code>) pour le type <code>file</code> et le sous-type <code>document</code></li>
+</ul>
+</li>
+</ul>
+<p><strong>Exemple</strong></p>
+<div class="tabbed-set" data-tabs="12:3"><input checked="checked" id="__tabbed_12_1" name="__tabbed_12" type="radio" /><label for="__tabbed_12_1">Hapify (long)</label><div class="tabbed-content">
+<div class="highlight"><pre><span></span><code><span class="o">&lt;&lt;if</span><span class="w"> </span><span class="n">Fields</span><span class="w"> </span><span class="p">(</span><span class="n">restricted</span><span class="w"> </span><span class="k">or</span><span class="w"> </span><span class="n">internal</span><span class="p">)</span><span class="w"> </span><span class="k">and</span><span class="w"> </span><span class="k">not</span><span class="w"> </span><span class="n">number</span><span class="o">&gt;&gt;</span>
+<span class="w">    </span>//<span class="w"> </span>Current<span class="w"> </span>model<span class="w"> </span>has<span class="w"> </span>at<span class="w"> </span>least<span class="w"> </span>one<span class="w"> </span>field<span class="w"> </span>matching<span class="w"> </span>to<span class="w"> </span>the<span class="w"> </span>condition
+<span class="o">&lt;&lt;endif&gt;&gt;</span>
+</code></pre></div>
+</div>
+<input id="__tabbed_12_2" name="__tabbed_12" type="radio" /><label for="__tabbed_12_2">Hapify (short)</label><div class="tabbed-content">
+<div class="highlight"><pre><span></span><code><span class="o">&lt;&lt;?</span><span class="w"> </span><span class="n">F</span><span class="w"> </span><span class="p">(</span><span class="n">rs</span><span class="k">+</span><span class="n">in</span><span class="p">)</span><span class="k">/</span><span class="n">tN</span><span class="o">&gt;&gt;</span>
+<span class="w">    </span>//<span class="w"> </span>Current<span class="w"> </span>model<span class="w"> </span>has<span class="w"> </span>at<span class="w"> </span>least<span class="w"> </span>one<span class="w"> </span>field<span class="w"> </span>matching<span class="w"> </span>to<span class="w"> </span>the<span class="w"> </span>condition
+<span class="o">&lt;&lt;?&gt;&gt;</span>
+</code></pre></div>
+</div>
+<input id="__tabbed_12_3" name="__tabbed_12" type="radio" /><label for="__tabbed_12_3">Équivalent JavaScript</label><div class="tabbed-content">
+<div class="highlight"><pre><span></span><code><span class="k">if</span> <span class="p">(</span><span class="nx">root</span><span class="p">.</span><span class="nx">fields</span><span class="p">.</span><span class="nx">filter</span><span class="p">(</span><span class="nx">f</span> <span class="p">=&gt;</span> <span class="p">(</span><span class="nx">f</span><span class="p">.</span><span class="nx">restricted</span> <span class="o">||</span> <span class="nx">f</span><span class="p">.</span><span class="nx">internal</span><span class="p">)</span> <span class="o">&amp;&amp;</span> <span class="o">!</span><span class="nx">f</span><span class="p">.</span><span class="nx">number</span><span class="p">).</span><span class="nx">length</span> <span class="o">&gt;</span> <span class="mf">0</span><span class="p">)</span> <span class="p">{</span>
+    <span class="nx">out</span> <span class="o">+=</span> <span class="s2">&quot;    // ...&quot;</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div>
+</div>
+</div>
+<h4 id="filtrage-sur-les-proprietes-du-modele-de-donnees">Filtrage sur les propriétés du modèle de données</h4>
+<p>Propriétés disponibles pour un modèle de données :</p>
+<ul>
+<li><code>mainlyHidden</code> (alias: <code>pMHd</code>) la majorité des champs sont <code>hidden</code> (strictement)</li>
+<li><code>mainlyInternal</code> (alias: <code>pMIn</code>) la majorité des champs sont <code>internal</code> (strictement)</li>
+<li><code>isGeolocated</code> (alias: <code>pGeo</code>) Le modèle de données contient au moins un champ <code>latitude</code> et un champ <code>longitude</code>.</li>
+<li><code>isGeoSearchable</code> (alias: <code>pGSe</code>) Le modèle de données contient au moins un champ <code>latitude</code> et un champ <code>longitude</code> recherchables.</li>
+</ul>
+<p><strong>Exemple</strong></p>
+<div class="tabbed-set" data-tabs="13:3"><input checked="checked" id="__tabbed_13_1" name="__tabbed_13" type="radio" /><label for="__tabbed_13_1">Hapify (long)</label><div class="tabbed-content">
+<div class="highlight"><pre><span></span><code><span class="o">&lt;&lt;if</span><span class="w"> </span><span class="n">Model</span><span class="w"> </span><span class="n">isGeolocated</span><span class="o">&gt;&gt;</span>
+<span class="w">    </span>//<span class="w"> </span>This<span class="w"> </span>model<span class="w"> </span>contains<span class="w"> </span>at<span class="w"> </span>least<span class="w"> </span>one<span class="w"> </span>latitude<span class="w"> </span>field<span class="w"> </span>and<span class="w"> </span>one<span class="w"> </span>longitude<span class="w"> </span>field.
+<span class="o">&lt;&lt;endif&gt;&gt;</span>
+</code></pre></div>
+</div>
+<input id="__tabbed_13_2" name="__tabbed_13" type="radio" /><label for="__tabbed_13_2">Hapify (short)</label><div class="tabbed-content">
+<div class="highlight"><pre><span></span><code><span class="o">&lt;&lt;?</span><span class="w"> </span><span class="n">M</span><span class="w"> </span><span class="n">pGeo</span><span class="o">&gt;&gt;</span>
+<span class="w">    </span>//<span class="w"> </span>This<span class="w"> </span>model<span class="w"> </span>contains<span class="w"> </span>at<span class="w"> </span>least<span class="w"> </span>one<span class="w"> </span>latitude<span class="w"> </span>field<span class="w"> </span>and<span class="w"> </span>one<span class="w"> </span>longitude<span class="w"> </span>field.
+<span class="o">&lt;&lt;?&gt;&gt;</span>
+</code></pre></div>
+</div>
+<input id="__tabbed_13_3" name="__tabbed_13" type="radio" /><label for="__tabbed_13_3">Équivalent JavaScript</label><div class="tabbed-content">
+<div class="highlight"><pre><span></span><code><span class="k">if</span> <span class="p">(</span><span class="nx">root</span><span class="p">.</span><span class="nx">properties</span><span class="p">.</span><span class="nx">isGeolocated</span><span class="p">)</span> <span class="p">{</span>
+    <span class="nx">out</span> <span class="o">+=</span> <span class="s2">&quot;    // ...&quot;</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div>
+</div>
+</div>
+<p>Propriétés d'accès disponibles pour un modèle de données :</p>
+<ul>
+<li><code>onlyAdmin</code> (alias: <code>pOAd</code>) Le modèle de données ne contient que des accès restreints à <code>admin</code></li>
+<li><code>onlyOwner</code> (alias: <code>pOOw</code>) Le modèle de données ne contient que des accès restreints à <code>owner</code></li>
+<li><code>onlyAuth</code> (alias: <code>pOAu</code>) Le modèle de données ne contient que des accès restreints à <code>authenticated</code></li>
+<li><code>onlyGuest</code> (alias: <code>pOGs</code>) Le modèle de données ne contient que des accès restreints à <code>guest</code></li>
+<li><code>maxAdmin</code> (alias: <code>pMAd</code>) L'accès le plus permissif est <code>admin</code></li>
+<li><code>maxOwner</code> (alias: <code>pMOw</code>) L'accès le plus permissif est <code>owner</code></li>
+<li><code>maxAuth</code> (alias: <code>pMAu</code>) L'accès le plus permissif est <code>authenticated</code></li>
+<li><code>maxGuest</code> (alias: <code>pMGs</code>) L'accès le plus permissif est <code>guest</code></li>
+<li><code>noAdmin</code> (alias: <code>pNAd</code>) Aucune action n'est restreinte à <code>admin</code></li>
+<li><code>noOwner</code> (alias: <code>pNOw</code>) Aucune action n'est restreinte à <code>owner</code></li>
+<li><code>noAuth</code> (alias: <code>pNAu</code>) Aucune action n'est restreinte à <code>authenticated</code></li>
+<li><code>noGuest</code> (alias: <code>pNGs</code>) Aucune action n'est restreinte à <code>guest</code></li>
+</ul>
+<p><strong>Exemple</strong></p>
+<div class="tabbed-set" data-tabs="14:3"><input checked="checked" id="__tabbed_14_1" name="__tabbed_14" type="radio" /><label for="__tabbed_14_1">Hapify (long)</label><div class="tabbed-content">
+<div class="highlight"><pre><span></span><code><span class="o">&lt;&lt;if</span><span class="w"> </span><span class="n">Model</span><span class="w"> </span><span class="n">onlyAdmin</span><span class="o">&gt;&gt;</span>
+<span class="w">    </span>//<span class="w"> </span>All<span class="w"> </span>actions<span class="w"> </span>on<span class="w"> </span>this<span class="w"> </span>model<span class="w"> </span>are<span class="w"> </span>restricted<span class="w"> </span>to<span class="w"> </span>admins
+<span class="o">&lt;&lt;endif&gt;&gt;</span>
+</code></pre></div>
+</div>
+<input id="__tabbed_14_2" name="__tabbed_14" type="radio" /><label for="__tabbed_14_2">Hapify (short)</label><div class="tabbed-content">
+<div class="highlight"><pre><span></span><code><span class="o">&lt;&lt;?</span><span class="w"> </span><span class="n">M</span><span class="w"> </span><span class="n">pOAd</span><span class="o">&gt;&gt;</span>
+<span class="w">    </span>//<span class="w"> </span>All<span class="w"> </span>actions<span class="w"> </span>on<span class="w"> </span>this<span class="w"> </span>model<span class="w"> </span>are<span class="w"> </span>restricted<span class="w"> </span>to<span class="w"> </span>admins
+<span class="o">&lt;&lt;?&gt;&gt;</span>
+</code></pre></div>
+</div>
+<input id="__tabbed_14_3" name="__tabbed_14" type="radio" /><label for="__tabbed_14_3">Équivalent JavaScript</label><div class="tabbed-content">
+<div class="highlight"><pre><span></span><code><span class="k">if</span> <span class="p">(</span><span class="nx">root</span><span class="p">.</span><span class="nx">accesses</span><span class="p">.</span><span class="nx">properties</span><span class="p">.</span><span class="nx">onlyAdmin</span><span class="p">)</span> <span class="p">{</span>
+    <span class="nx">out</span> <span class="o">+=</span> <span class="s2">&quot;    // ...&quot;</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div>
+</div>
+</div>
+<h4 id="filtrage-sur-les-acces-aux-modeles-de-donnees">Filtrage sur les accès aux modèles de données</h4>
+<div class="admonition info">
+<p class="admonition-title">Rappel</p>
+<p><code>guest</code> est l'accès le plus permissif et <code>admin</code> le moins permissif. Par conséquent <code>admin &lt; owner &lt; authenticated &lt; guest</code>.</p>
+</div>
+<p>Filtres disponibles pour l'accès à une action :</p>
+<ul>
+<li><code>admin</code> (alias: <code>ad</code>) l'accès est <code>admin</code></li>
+<li><code>owner</code> (alias: <code>ow</code>) l'accès est <code>owner</code></li>
+<li><code>auth</code> (alias: <code>au</code>) l'accès est <code>auth</code></li>
+<li><code>guest</code> (alias: <code>gs</code>) l'accès est <code>guest</code></li>
+<li><code>gteAdmin</code> (alias: <code>[ad</code>) l'accès est supérieur ou égal à <code>admin</code></li>
+<li><code>gteOwner</code> (alias: <code>[ow</code>) l'accès est supérieur ou égal à <code>owner</code></li>
+<li><code>gteAuth</code> (alias: <code>[au</code>) l'accès est supérieur ou égal à <code>auth</code></li>
+<li><code>gteGuest</code> (alias: <code>[gs</code>) l'accès est supérieur ou égal à <code>guest</code></li>
+<li><code>lteAdmin</code> (alias: <code>ad]</code>) l'accès est inférieur ou égal à <code>admin</code></li>
+<li><code>lteOwner</code> (alias: <code>ow]</code>) l'accès est inférieur ou égal à <code>owner</code></li>
+<li><code>lteAuth</code> (alias: <code>au]</code>) l'accès est inférieur ou égal à <code>auth</code></li>
+<li><code>lteGuest</code> (alias: <code>gs]</code>) l'accès est inférieur ou égal à <code>guest</code></li>
+</ul>
+<p><strong>Exemples</strong></p>
+<p>Teste l'accès pour une action précise :</p>
+<div class="tabbed-set" data-tabs="15:3"><input checked="checked" id="__tabbed_15_1" name="__tabbed_15" type="radio" /><label for="__tabbed_15_1">Hapify (long)</label><div class="tabbed-content">
+<div class="highlight"><pre><span></span><code><span class="o">&lt;&lt;if</span><span class="w"> </span><span class="n">ReadAccess</span><span class="w"> </span><span class="n">guest</span><span class="o">&gt;&gt;</span>
+<span class="w">    </span>//<span class="w"> </span>Anyone<span class="w"> </span>can<span class="w"> </span>read<span class="w"> </span>this<span class="w"> </span>model
+<span class="o">&lt;&lt;endif&gt;&gt;</span>
+</code></pre></div>
+</div>
+<input id="__tabbed_15_2" name="__tabbed_15" type="radio" /><label for="__tabbed_15_2">Hapify (short)</label><div class="tabbed-content">
+<div class="highlight"><pre><span></span><code><span class="o">&lt;&lt;?</span><span class="w"> </span><span class="n">Ar</span><span class="w"> </span><span class="n">gs</span><span class="o">&gt;&gt;</span>
+<span class="w">    </span>//<span class="w"> </span>Anyone<span class="w"> </span>can<span class="w"> </span>read<span class="w"> </span>this<span class="w"> </span>model
+<span class="o">&lt;&lt;?&gt;&gt;</span>
+</code></pre></div>
+</div>
+<input id="__tabbed_15_3" name="__tabbed_15" type="radio" /><label for="__tabbed_15_3">Équivalent JavaScript</label><div class="tabbed-content">
+<div class="highlight"><pre><span></span><code><span class="k">if</span> <span class="p">(</span><span class="nx">root</span><span class="p">.</span><span class="nx">accesses</span><span class="p">.</span><span class="nx">read</span><span class="p">.</span><span class="nx">guest</span><span class="p">)</span> <span class="p">{</span>
+    <span class="nx">out</span> <span class="o">+=</span> <span class="s1">&#39;    // ...&#39;</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div>
+</div>
+</div>
+<p>Teste si l'action de mise à jour est restreinte soit aux administrateurs soit au propriétaire :</p>
+<div class="tabbed-set" data-tabs="16:3"><input checked="checked" id="__tabbed_16_1" name="__tabbed_16" type="radio" /><label for="__tabbed_16_1">Hapify (long)</label><div class="tabbed-content">
+<div class="highlight"><pre><span></span><code><span class="o">&lt;&lt;if</span><span class="w"> </span><span class="n">UpdateAccess</span><span class="w"> </span><span class="n">admin</span><span class="w"> </span><span class="k">or</span><span class="w"> </span><span class="n">owner</span><span class="o">&gt;&gt;</span>
+<span class="w">    </span>//<span class="w"> </span>...
+<span class="o">&lt;&lt;endif&gt;&gt;</span>
+</code></pre></div>
+</div>
+<input id="__tabbed_16_2" name="__tabbed_16" type="radio" /><label for="__tabbed_16_2">Hapify (short)</label><div class="tabbed-content">
+<div class="highlight"><pre><span></span><code><span class="o">&lt;&lt;?</span><span class="w"> </span><span class="n">Au</span><span class="w"> </span><span class="n">ad</span><span class="k">+</span><span class="n">ow</span><span class="o">&gt;&gt;</span>
+<span class="w">    </span>//<span class="w"> </span>...
+<span class="o">&lt;&lt;?&gt;&gt;</span>
+</code></pre></div>
+</div>
+<input id="__tabbed_16_3" name="__tabbed_16" type="radio" /><label for="__tabbed_16_3">Équivalent JavaScript</label><div class="tabbed-content">
+<div class="highlight"><pre><span></span><code><span class="k">if</span> <span class="p">(</span><span class="nx">root</span><span class="p">.</span><span class="nx">accesses</span><span class="p">.</span><span class="nx">update</span><span class="p">.</span><span class="nx">admin</span> <span class="o">||</span> <span class="nx">root</span><span class="p">.</span><span class="nx">accesses</span><span class="p">.</span><span class="nx">update</span><span class="p">.</span><span class="nx">owner</span><span class="p">)</span> <span class="p">{</span>
+    <span class="nx">out</span> <span class="o">+=</span> <span class="s1">&#39;    // ...&#39;</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div>
+</div>
+</div>
+<p>Teste si au moins une action est restreinte à un utilisateur authentifié ou moins :</p>
+<div class="tabbed-set" data-tabs="17:3"><input checked="checked" id="__tabbed_17_1" name="__tabbed_17" type="radio" /><label for="__tabbed_17_1">Hapify (long)</label><div class="tabbed-content">
+<div class="highlight"><pre><span></span><code><span class="o">&lt;&lt;if</span><span class="w"> </span><span class="n">Accesses</span><span class="w"> </span><span class="n">lteAuth</span><span class="o">&gt;&gt;</span>
+<span class="w">    </span>//<span class="w"> </span>...
+<span class="o">&lt;&lt;endif&gt;&gt;</span>
+</code></pre></div>
+</div>
+<input id="__tabbed_17_2" name="__tabbed_17" type="radio" /><label for="__tabbed_17_2">Hapify (short)</label><div class="tabbed-content">
+<div class="highlight"><pre><span></span><code><span class="o">&lt;&lt;?</span><span class="w"> </span><span class="n">A</span><span class="w"> </span><span class="n">au]</span><span class="o">&gt;&gt;</span>
+<span class="w">    </span>//<span class="w"> </span>...
+<span class="o">&lt;&lt;?&gt;&gt;</span>
+</code></pre></div>
+</div>
+<input id="__tabbed_17_3" name="__tabbed_17" type="radio" /><label for="__tabbed_17_3">Équivalent JavaScript</label><div class="tabbed-content">
+<div class="highlight"><pre><span></span><code><span class="k">if</span> <span class="p">(</span><span class="nx">root</span><span class="p">.</span><span class="nx">accesses</span><span class="p">.</span><span class="nx">filter</span><span class="p">(</span><span class="nx">a</span> <span class="p">=&gt;</span> <span class="nx">a</span><span class="p">.</span><span class="nx">lteAuth</span><span class="p">).</span><span class="nx">length</span> <span class="o">&gt;</span> <span class="mf">0</span><span class="p">)</span> <span class="p">{</span>
+    <span class="nx">out</span> <span class="o">+=</span> <span class="s1">&#39;    // ...&#39;</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div>
+</div>
+</div>
+<div class="admonition tip">
+<p class="admonition-title">À savoir</p>
+<p>Les conditions peuvent être utilisées sur un objet ou un tableau d'objets.
+S'il est utilisé sur un tableau, il testera la longueur du tableau filtré par la condition fournie.
+Il peut être utilisé sur n'importe quel objet contenant une méthode <code>filter</code> qui reçoit un callback retournant un booléen.
+Par exemple, dans la structure du modèle de données, <code>root.dependencies</code> est un objet qui contient une méthode <code>filter</code>.
+Ainsi, cet opérateur peut tester si un modèle a des dépendances qui ont des champs avec une condition spécifique.</p>
+</div>
+<h2 id="iterations">Itérations</h2>
+<p>Les itérations utilisent les mêmes filtres et opérateurs que les conditions.</p>
+<h3 id="iteration-simple">Itération simple</h3>
+<p>Boucle sur tous les champs d'un modèle de données qui ne sont pas cachés et les assigne à la variable <code>field</code> :</p>
+<div class="tabbed-set" data-tabs="18:3"><input checked="checked" id="__tabbed_18_1" name="__tabbed_18" type="radio" /><label for="__tabbed_18_1">Hapify (long)</label><div class="tabbed-content">
+<div class="highlight"><pre><span></span><code>&lt;?php
+$fields<span class="w"> </span>=<span class="w"> </span>array(
+<span class="o">&lt;&lt;for</span><span class="w"> </span><span class="n">Fields</span><span class="w"> </span><span class="k">not</span><span class="w"> </span><span class="n">hidden</span><span class="w"> </span><span class="n">field</span><span class="o">&gt;&gt;</span>
+<span class="w">    </span>&#39;<span class="s">&lt;&lt;field camel&gt;&gt;</span>&#39;,
+<span class="o">&lt;&lt;endfor&gt;&gt;</span>
+);
+</code></pre></div>
+</div>
+<input id="__tabbed_18_2" name="__tabbed_18" type="radio" /><label for="__tabbed_18_2">Hapify (short)</label><div class="tabbed-content">
+<div class="highlight"><pre><span></span><code>&lt;?php
+$fields<span class="w"> </span>=<span class="w"> </span>array(
+<span class="o">&lt;&lt;@</span><span class="w"> </span><span class="n">F</span><span class="w"> </span><span class="n">!hd</span><span class="w"> </span><span class="n">f</span><span class="o">&gt;&gt;</span>
+<span class="w">    </span>&#39;<span class="s">&lt;&lt;f aA&gt;&gt;</span>&#39;,
+<span class="o">&lt;&lt;@&gt;&gt;</span>
+);
+</code></pre></div>
+</div>
+<input id="__tabbed_18_3" name="__tabbed_18" type="radio" /><label for="__tabbed_18_3">Équivalent JavaScript</label><div class="tabbed-content">
+<div class="highlight"><pre><span></span><code><span class="nx">out</span> <span class="o">+=</span> <span class="sb">`&lt;?php</span>
+<span class="sb">$fields = array(</span>
+<span class="sb">    </span><span class="si">${</span>
+    <span class="nx">root</span><span class="p">.</span><span class="nx">fields</span>
+        <span class="p">.</span><span class="nx">filter</span><span class="p">(</span><span class="nx">f</span> <span class="p">=&gt;</span> <span class="o">!</span><span class="nx">f</span><span class="p">.</span><span class="nx">hidden</span><span class="p">)</span>
+        <span class="p">.</span><span class="nx">map</span><span class="p">(</span><span class="nx">f</span> <span class="p">=&gt;</span> <span class="s2">&quot;&#39;&quot;</span><span class="o">+</span><span class="nx">f</span><span class="p">.</span><span class="nx">names</span><span class="p">.</span><span class="nx">camel</span><span class="o">+</span><span class="s2">&quot;&#39;&quot;</span><span class="p">)</span>
+        <span class="p">.</span><span class="nx">join</span><span class="p">(</span><span class="s2">&quot;,\n\t&quot;</span><span class="p">)</span>
+    <span class="si">}</span><span class="sb"></span>
+<span class="sb">);`</span><span class="p">;</span>
+</code></pre></div>
+</div>
+</div>
+<p>Exemple pour un modèle de données avec les champs <code>name</code>, <code>created at</code> et <code>role</code>, dont <code>role</code> est caché :</p>
+<div class="highlight"><pre><span></span><code><span class="cp">&lt;?php</span>
+<span class="nv">$fields</span> <span class="o">=</span> <span class="k">array</span><span class="p">(</span>
+    <span class="s1">&#39;name&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;createdAt&#39;</span><span class="p">,</span>
+<span class="p">);</span>
+</code></pre></div>
+<p>Boucle sur les champs de type <code>entity</code> et recherchables du modèle de données :</p>
+<div class="tabbed-set" data-tabs="19:3"><input checked="checked" id="__tabbed_19_1" name="__tabbed_19" type="radio" /><label for="__tabbed_19_1">Hapify (long)</label><div class="tabbed-content">
+<div class="highlight"><pre><span></span><code><span class="o">&lt;&lt;for</span><span class="w"> </span><span class="n">Fields</span><span class="w"> </span><span class="n">searchable</span><span class="w"> </span><span class="k">and</span><span class="w"> </span><span class="n">entity</span><span class="w"> </span><span class="n">field</span><span class="o">&gt;&gt;</span>
+<span class="w">    </span>//<span class="w"> </span>...
+<span class="o">&lt;&lt;endfor&gt;&gt;</span>
+</code></pre></div>
+</div>
+<input id="__tabbed_19_2" name="__tabbed_19" type="radio" /><label for="__tabbed_19_2">Hapify (short)</label><div class="tabbed-content">
+<div class="highlight"><pre><span></span><code><span class="o">&lt;&lt;@</span><span class="w"> </span><span class="n">F</span><span class="w"> </span><span class="n">se</span><span class="k">*</span><span class="n">tE</span><span class="w"> </span><span class="n">f</span><span class="o">&gt;&gt;</span>
+<span class="w">    </span>//<span class="w"> </span>...
+<span class="o">&lt;&lt;@&gt;&gt;</span>
+</code></pre></div>
+</div>
+<input id="__tabbed_19_3" name="__tabbed_19" type="radio" /><label for="__tabbed_19_3">Équivalent JavaScript</label><div class="tabbed-content">
+<div class="highlight"><pre><span></span><code><span class="k">for</span> <span class="p">(</span><span class="kd">let</span> <span class="nx">field</span> <span class="k">of</span> <span class="nx">root</span><span class="p">.</span><span class="nx">fields</span><span class="p">.</span><span class="nx">filter</span><span class="p">(</span><span class="nx">f</span> <span class="p">=&gt;</span> <span class="nx">f</span><span class="p">.</span><span class="nx">searchable</span> <span class="o">&amp;&amp;</span> <span class="nx">f</span><span class="p">.</span><span class="nx">type</span> <span class="o">===</span> <span class="s1">&#39;entity&#39;</span><span class="p">))</span> <span class="p">{</span>
+    <span class="nx">out</span> <span class="o">+=</span> <span class="s1">&#39;    // ...&#39;</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div>
+</div>
+</div>
+<h4 id="boucler-sans-filtrer">Boucler sans filtrer</h4>
+<p>Cette opération permet de passer en revue tous les champs :</p>
+<div class="tabbed-set" data-tabs="20:3"><input checked="checked" id="__tabbed_20_1" name="__tabbed_20" type="radio" /><label for="__tabbed_20_1">Hapify (long)</label><div class="tabbed-content">
+<div class="highlight"><pre><span></span><code><span class="o">&lt;&lt;for</span><span class="w"> </span><span class="n">Fields</span><span class="w"> </span><span class="n">field</span><span class="o">&gt;&gt;</span>
+<span class="w">    </span>//<span class="w"> </span>...
+<span class="o">&lt;&lt;endfor&gt;&gt;</span>
+</code></pre></div>
+</div>
+<input id="__tabbed_20_2" name="__tabbed_20" type="radio" /><label for="__tabbed_20_2">Hapify (short)</label><div class="tabbed-content">
+<div class="highlight"><pre><span></span><code><span class="o">&lt;&lt;@</span><span class="w"> </span><span class="n">F</span><span class="w"> </span><span class="n">f</span><span class="o">&gt;&gt;</span>
+<span class="w">    </span>//<span class="w"> </span>...
+<span class="o">&lt;&lt;@&gt;&gt;</span>
+</code></pre></div>
+</div>
+<input id="__tabbed_20_3" name="__tabbed_20" type="radio" /><label for="__tabbed_20_3">Équivalent JavaScript</label><div class="tabbed-content">
+<div class="highlight"><pre><span></span><code><span class="k">for</span> <span class="p">(</span><span class="kd">let</span> <span class="nx">field</span> <span class="k">of</span> <span class="nx">root</span><span class="p">.</span><span class="nx">fields</span><span class="p">.</span><span class="nx">list</span><span class="p">)</span> <span class="p">{</span>
+    <span class="nx">out</span> <span class="o">+=</span> <span class="s1">&#39;    // ...&#39;</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div>
+</div>
+</div>
+<h4 id="boucler-sur-les-modeles-de-donnees">Boucler sur les modèles de données</h4>
+<p>Dans un template de type <code>all models</code>, ceci boucle sur tous les modèles de données qui sont géo-localisés :</p>
+<div class="tabbed-set" data-tabs="21:3"><input checked="checked" id="__tabbed_21_1" name="__tabbed_21" type="radio" /><label for="__tabbed_21_1">Hapify (long)</label><div class="tabbed-content">
+<div class="highlight"><pre><span></span><code><span class="o">&lt;&lt;for</span><span class="w"> </span><span class="n">Models</span><span class="w"> </span><span class="n">isGeolocated</span><span class="w"> </span><span class="n">model</span><span class="o">&gt;&gt;</span>
+<span class="w">    </span>//<span class="w"> </span>...
+<span class="o">&lt;&lt;endfor&gt;&gt;</span>
+</code></pre></div>
+</div>
+<input id="__tabbed_21_2" name="__tabbed_21" type="radio" /><label for="__tabbed_21_2">Hapify (short)</label><div class="tabbed-content">
+<div class="highlight"><pre><span></span><code><span class="o">&lt;&lt;@</span><span class="w"> </span><span class="n">M</span><span class="w"> </span><span class="n">pGeo</span><span class="w"> </span><span class="n">m</span><span class="o">&gt;&gt;</span>
+<span class="w">    </span>//<span class="w"> </span>...
+<span class="o">&lt;&lt;@&gt;&gt;</span>
+</code></pre></div>
+</div>
+<input id="__tabbed_21_3" name="__tabbed_21" type="radio" /><label for="__tabbed_21_3">Équivalent JavaScript</label><div class="tabbed-content">
+<div class="highlight"><pre><span></span><code><span class="k">for</span> <span class="p">(</span><span class="kd">let</span> <span class="nx">model</span> <span class="k">of</span> <span class="nx">root</span><span class="p">.</span><span class="nx">filter</span><span class="p">(</span><span class="nx">i</span> <span class="p">=&gt;</span> <span class="nx">i</span><span class="p">.</span><span class="nx">properties</span><span class="p">.</span><span class="nx">isGeolocated</span><span class="p">))</span> <span class="p">{</span>
+    <span class="nx">out</span> <span class="o">+=</span> <span class="s1">&#39;    // ...&#39;</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div>
+</div>
+</div>
+<h4 id="boucler-sur-les-dependances">Boucler sur les dépendances</h4>
+<p>Dans un template de type <code>one model</code>, ceci boucle sur les dépendances dont le champ référent est recherchable :</p>
+<div class="tabbed-set" data-tabs="22:3"><input checked="checked" id="__tabbed_22_1" name="__tabbed_22" type="radio" /><label for="__tabbed_22_1">Hapify (long)</label><div class="tabbed-content">
+<div class="highlight"><pre><span></span><code><span class="o">&lt;&lt;for</span><span class="w"> </span><span class="n">Dependencies</span><span class="w"> </span><span class="n">searchable</span><span class="w"> </span><span class="n">dep</span><span class="o">&gt;&gt;</span>
+<span class="w">    </span>//<span class="w"> </span>...
+<span class="o">&lt;&lt;endfor&gt;&gt;</span>
+</code></pre></div>
+</div>
+<input id="__tabbed_22_2" name="__tabbed_22" type="radio" /><label for="__tabbed_22_2">Hapify (short)</label><div class="tabbed-content">
+<div class="highlight"><pre><span></span><code><span class="o">&lt;&lt;@</span><span class="w"> </span><span class="n">D</span><span class="w"> </span><span class="n">se</span><span class="w"> </span><span class="n">d</span><span class="o">&gt;&gt;</span>
+<span class="w">    </span>//<span class="w"> </span>...
+<span class="o">&lt;&lt;@&gt;&gt;</span>
+</code></pre></div>
+</div>
+<input id="__tabbed_22_3" name="__tabbed_22" type="radio" /><label for="__tabbed_22_3">Équivalent JavaScript</label><div class="tabbed-content">
+<div class="highlight"><pre><span></span><code><span class="k">for</span> <span class="p">(</span><span class="kd">let</span> <span class="nx">dep</span> <span class="k">of</span> <span class="nx">root</span><span class="p">.</span><span class="nx">dependencies</span><span class="p">.</span><span class="nx">filter</span><span class="p">(</span><span class="nx">f</span> <span class="p">=&gt;</span> <span class="nx">f</span><span class="p">.</span><span class="nx">searchable</span><span class="p">))</span> <span class="p">{</span>
+    <span class="nx">out</span> <span class="o">+=</span> <span class="s1">&#39;    // ...&#39;</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div>
+</div>
+</div>
+<div class="admonition tip">
+<p class="admonition-title">À savoir</p>
+<p>Dans le cas d'un modèle de données qui se réfère à lui-même, <code>Dependencies</code> exclue cette auto-dépendance.
+Pour l'inclure utilisez le code suivant:
+<div class="highlight"><pre><span></span><code>&lt;&lt;&lt;<span class="w"> </span>for<span class="w"> </span>(let<span class="w"> </span>dep<span class="w"> </span>of<span class="w"> </span>root.dependencies.filter(f<span class="w"> </span>=&gt;<span class="w"> </span>f,<span class="w"> </span>false))<span class="w"> </span>{<span class="w"> </span>&gt;&gt;&gt;
+<span class="w">    </span>//<span class="w"> </span>...
+<span class="c">&lt;&lt;&lt; } &gt;&gt;&gt;</span>
+</code></pre></div></p>
+</div>
+<div class="admonition warning">
+<p class="admonition-title">Attention</p>
+<p>Le filtrage de <code>Dependencies</code> ne s'effectue que sur les champs du modèle de données courant qui portent la référence.
+Le filtrage ne s'effectue <strong>pas</strong> sur les champs du modèle de données cible.</p>
+</div>
+<h4 id="boucler-sur-les-modeles-de-donnees-referents">Boucler sur les modèles de données référents</h4>
+<p>Dans un template de type <code>one model</code>, ceci boucle sur les modèles de données ayant une dépendance envers celui-ci et qui sont géo-localisés :</p>
+<div class="tabbed-set" data-tabs="23:3"><input checked="checked" id="__tabbed_23_1" name="__tabbed_23" type="radio" /><label for="__tabbed_23_1">Hapify (long)</label><div class="tabbed-content">
+<div class="highlight"><pre><span></span><code><span class="o">&lt;&lt;for</span><span class="w"> </span><span class="n">ReferencedIn</span><span class="w"> </span><span class="n">isGeolocated</span><span class="w"> </span><span class="n">referrer</span><span class="o">&gt;&gt;</span>
+<span class="w">    </span>//<span class="w"> </span>...
+<span class="o">&lt;&lt;endfor&gt;&gt;</span>
+</code></pre></div>
+</div>
+<input id="__tabbed_23_2" name="__tabbed_23" type="radio" /><label for="__tabbed_23_2">Hapify (short)</label><div class="tabbed-content">
+<div class="highlight"><pre><span></span><code><span class="o">&lt;&lt;@</span><span class="w"> </span><span class="n">R</span><span class="w"> </span><span class="n">pGeo</span><span class="w"> </span><span class="n">r</span><span class="o">&gt;&gt;</span>
+<span class="w">    </span>//<span class="w"> </span>...
+<span class="o">&lt;&lt;@&gt;&gt;</span>
+</code></pre></div>
+</div>
+<input id="__tabbed_23_3" name="__tabbed_23" type="radio" /><label for="__tabbed_23_3">Équivalent JavaScript</label><div class="tabbed-content">
+<div class="highlight"><pre><span></span><code><span class="k">for</span> <span class="p">(</span><span class="kd">let</span> <span class="nx">referrer</span> <span class="k">of</span> <span class="nx">root</span><span class="p">.</span><span class="nx">referencedIn</span><span class="p">.</span><span class="nx">filter</span><span class="p">(</span><span class="nx">m</span> <span class="p">=&gt;</span> <span class="nx">m</span><span class="p">.</span><span class="nx">properties</span><span class="p">.</span><span class="nx">isGeolocated</span><span class="p">))</span> <span class="p">{</span>
+    <span class="nx">out</span> <span class="o">+=</span> <span class="s1">&#39;    // ...&#39;</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div>
+</div>
+</div>
+<div class="admonition tip">
+<p class="admonition-title">À savoir</p>
+<p>Le filtre est optionnel. Vous pouvez obtenir tous les modèles de données référents comme ceci :
+<div class="highlight"><pre><span></span><code><span class="o">&lt;&lt;for</span><span class="w"> </span><span class="n">ReferencedIn</span><span class="w"> </span><span class="n">referrer</span><span class="o">&gt;&gt;</span>
+<span class="w">    </span>//<span class="w"> </span>...
+<span class="o">&lt;&lt;endfor&gt;&gt;</span>
+</code></pre></div></p>
+</div>
+<div class="admonition warning">
+<p class="admonition-title">Attention</p>
+<p>Seuls les champs de type entité faisant référence sont définis dans ces modèles de données référents.</p>
+</div>
+<h4 id="boucler-sur-les-acces-du-modele-de-donnees">Boucler sur les accès du modèle de données</h4>
+<p>Boucle sur tous les accès restreints à un administrateur ou au propriétaire et affiche le nom de l'action :</p>
+<div class="tabbed-set" data-tabs="24:3"><input checked="checked" id="__tabbed_24_1" name="__tabbed_24" type="radio" /><label for="__tabbed_24_1">Hapify (long)</label><div class="tabbed-content">
+<div class="highlight"><pre><span></span><code><span class="o">&lt;&lt;for</span><span class="w"> </span><span class="n">Accesses</span><span class="w"> </span><span class="n">admin</span><span class="w"> </span><span class="k">or</span><span class="w"> </span><span class="n">owner</span><span class="w"> </span><span class="n">access</span><span class="o">&gt;&gt;</span>
+<span class="w">    </span><span class="s">&lt;&lt;=access.action&gt;&gt;</span>
+<span class="o">&lt;&lt;endfor&gt;&gt;</span>
+</code></pre></div>
+</div>
+<input id="__tabbed_24_2" name="__tabbed_24" type="radio" /><label for="__tabbed_24_2">Hapify (short)</label><div class="tabbed-content">
+<div class="highlight"><pre><span></span><code><span class="o">&lt;&lt;@</span><span class="w"> </span><span class="n">A</span><span class="w"> </span><span class="n">ad</span><span class="k">+</span><span class="n">ow</span><span class="w"> </span><span class="n">a</span><span class="o">&gt;&gt;</span>
+<span class="w">    </span><span class="s">&lt;&lt;=a.action&gt;&gt;</span>
+<span class="o">&lt;&lt;@&gt;&gt;</span>
+</code></pre></div>
+</div>
+<input id="__tabbed_24_3" name="__tabbed_24" type="radio" /><label for="__tabbed_24_3">Équivalent JavaScript</label><div class="tabbed-content">
+<div class="highlight"><pre><span></span><code><span class="k">for</span> <span class="p">(</span><span class="kd">let</span> <span class="nx">access</span> <span class="k">of</span> <span class="nx">root</span><span class="p">.</span><span class="nx">accesses</span><span class="p">.</span><span class="nx">filter</span><span class="p">(</span><span class="nx">a</span> <span class="p">=&gt;</span> <span class="nx">a</span><span class="p">.</span><span class="nx">admin</span> <span class="o">||</span> <span class="nx">a</span><span class="p">.</span><span class="nx">owner</span><span class="p">))</span> <span class="p">{</span>
+    <span class="nx">out</span> <span class="o">+=</span> <span class="sb">`    </span><span class="si">${</span><span class="nx">access</span><span class="p">.</span><span class="nx">action</span><span class="si">}</span><span class="err">\</span><span class="sb">n`</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div>
+</div>
+</div>
+<h3 id="iteration-raccourcie">Itération raccourcie</h3>
+<p>Boucle sur les 2 premiers champs d'un modèle de données :</p>
+<div class="tabbed-set" data-tabs="25:3"><input checked="checked" id="__tabbed_25_1" name="__tabbed_25" type="radio" /><label for="__tabbed_25_1">Hapify (long)</label><div class="tabbed-content">
+<div class="highlight"><pre><span></span><code>&lt;?php
+$fields<span class="w"> </span>=<span class="w"> </span>array(
+<span class="o">&lt;&lt;for</span><span class="m">2</span><span class="w"> </span><span class="n">Fields</span><span class="w"> </span><span class="n">field</span><span class="o">&gt;&gt;</span>
+<span class="w">    </span>&#39;<span class="s">&lt;&lt;field camel&gt;&gt;</span>&#39;,
+<span class="o">&lt;&lt;endfor&gt;&gt;</span>
+);
+</code></pre></div>
+</div>
+<input id="__tabbed_25_2" name="__tabbed_25" type="radio" /><label for="__tabbed_25_2">Hapify (short)</label><div class="tabbed-content">
+<div class="highlight"><pre><span></span><code>&lt;?php
+$fields<span class="w"> </span>=<span class="w"> </span>array(
+<span class="o">&lt;&lt;@</span><span class="m">2</span><span class="w"> </span><span class="n">F</span><span class="w"> </span><span class="n">f</span><span class="o">&gt;&gt;</span>
+<span class="w">    </span>&#39;<span class="s">&lt;&lt;f aA&gt;&gt;</span>&#39;,
+<span class="o">&lt;&lt;@&gt;&gt;</span>
+);
+</code></pre></div>
+</div>
+<input id="__tabbed_25_3" name="__tabbed_25" type="radio" /><label for="__tabbed_25_3">Équivalent JavaScript</label><div class="tabbed-content">
+<div class="highlight"><pre><span></span><code><span class="nx">out</span> <span class="o">+=</span> <span class="sb">`&lt;?php</span>
+<span class="sb">$fields = array(</span>
+<span class="sb">    </span><span class="si">${</span>
+    <span class="nx">root</span><span class="p">.</span><span class="nx">fields</span><span class="p">.</span><span class="nx">list</span>
+        <span class="p">.</span><span class="nx">slice</span><span class="p">(</span><span class="mf">0</span><span class="p">,</span> <span class="mf">2</span><span class="p">)</span>
+        <span class="p">.</span><span class="nx">map</span><span class="p">(</span><span class="nx">f</span> <span class="p">=&gt;</span> <span class="s2">&quot;&#39;&quot;</span><span class="o">+</span><span class="nx">f</span><span class="p">.</span><span class="nx">names</span><span class="p">.</span><span class="nx">camel</span><span class="o">+</span><span class="s2">&quot;&#39;&quot;</span><span class="p">)</span>
+        <span class="p">.</span><span class="nx">join</span><span class="p">(</span><span class="s2">&quot;,\n\t&quot;</span><span class="p">)</span>
+    <span class="si">}</span><span class="sb"></span>
+<span class="sb">);`</span><span class="p">;</span>
+</code></pre></div>
+</div>
+</div>
+<p>Pour un modèle de données avec les champs <code>name</code>, <code>email</code> et <code>role</code> :</p>
+<div class="highlight"><pre><span></span><code><span class="cp">&lt;?php</span>
+<span class="nv">$fields</span> <span class="o">=</span> <span class="k">array</span><span class="p">(</span>
+    <span class="s1">&#39;name&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;email&#39;</span><span class="p">,</span>
+<span class="p">);</span>
+</code></pre></div>
+<h3 id="iterations-imbriquees">Itérations imbriquées</h3>
+<h4 id="boucle-sur-les-enum">Boucle sur les enum</h4>
+<p>Dans un template de type <code>one model</code>, ce bloc définit un type TypeScript contenant les énumérations d'un champ :</p>
+<div class="tabbed-set" data-tabs="26:4"><input checked="checked" id="__tabbed_26_1" name="__tabbed_26" type="radio" /><label for="__tabbed_26_1">Hapify (long)</label><div class="tabbed-content">
+<div class="highlight"><pre><span></span><code><span class="o">&lt;&lt;for</span><span class="w"> </span><span class="n">Fields</span><span class="w"> </span><span class="n">enum</span><span class="w"> </span><span class="n">field</span><span class="o">&gt;&gt;</span>
+type<span class="w"> </span><span class="s">&lt;&lt;field pascal&gt;&gt;</span><span class="w"> </span>=<span class="o">&lt;&lt;for</span><span class="w"> </span><span class="n">field</span><span class="p">.</span><span class="n">enum</span><span class="w"> </span><span class="n">e</span><span class="o">&gt;&gt;</span><span class="w"> </span><span class="n">|</span><span class="w"> </span><span class="n">&#39;&lt;&lt;e</span><span class="w"> </span><span class="n">snake</span><span class="o">&gt;&gt;</span><span class="n">&#39;&lt;&lt;endfor</span><span class="o">&gt;&gt;</span><span class="n">;</span>
+<span class="o">&lt;&lt;endfor&gt;&gt;</span>
+</code></pre></div>
+</div>
+<input id="__tabbed_26_2" name="__tabbed_26" type="radio" /><label for="__tabbed_26_2">Hapify (short)</label><div class="tabbed-content">
+<div class="highlight"><pre><span></span><code><span class="o">&lt;&lt;@</span><span class="w"> </span><span class="n">F</span><span class="w"> </span><span class="n">tU</span><span class="w"> </span><span class="n">f</span><span class="o">&gt;&gt;</span>
+type<span class="w"> </span><span class="s">&lt;&lt;f AA&gt;&gt;</span><span class="w"> </span>=<span class="o">&lt;&lt;@</span><span class="w"> </span><span class="n">f</span><span class="p">.</span><span class="n">e</span><span class="w"> </span><span class="n">e</span><span class="o">&gt;&gt;</span><span class="w"> </span><span class="n">|</span><span class="w"> </span><span class="n">&#39;&lt;&lt;e</span><span class="w"> </span><span class="n">a_a</span><span class="o">&gt;&gt;</span><span class="n">&#39;&lt;&lt;@</span><span class="o">&gt;&gt;</span><span class="n">;</span>
+<span class="o">&lt;&lt;@&gt;&gt;</span>
+</code></pre></div>
+</div>
+<input id="__tabbed_26_3" name="__tabbed_26" type="radio" /><label for="__tabbed_26_3">Équivalent JavaScript</label><div class="tabbed-content">
+<div class="highlight"><pre><span></span><code><span class="k">for</span> <span class="p">(</span><span class="kd">let</span> <span class="nx">field</span> <span class="k">of</span> <span class="nx">root</span><span class="p">.</span><span class="nx">fields</span><span class="p">.</span><span class="nx">filter</span><span class="p">(</span><span class="nx">f</span> <span class="p">=&gt;</span> <span class="nx">f</span><span class="p">.</span><span class="nx">type</span> <span class="o">===</span> <span class="s1">&#39;enum&#39;</span><span class="p">))</span> <span class="p">{</span>
+    <span class="nx">out</span> <span class="o">+=</span> <span class="sb">`type </span><span class="si">${</span><span class="nx">field</span><span class="p">.</span><span class="nx">names</span><span class="p">.</span><span class="nx">pascal</span><span class="si">}</span><span class="sb"> = </span><span class="si">${</span><span class="nx">field</span><span class="p">.</span><span class="kr">enum</span><span class="p">.</span><span class="nx">map</span><span class="p">(</span><span class="nx">e</span> <span class="p">=&gt;</span> <span class="s2">&quot;&#39;&quot;</span><span class="o">+</span><span class="nx">e</span><span class="p">.</span><span class="nx">names</span><span class="p">.</span><span class="nx">snake</span><span class="o">+</span><span class="s2">&quot;&#39;&quot;</span><span class="p">).</span><span class="nx">join</span><span class="p">(</span><span class="s1">&#39; | &#39;</span><span class="p">)</span><span class="si">}</span><span class="sb">;`</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div>
+</div>
+<input id="__tabbed_26_4" name="__tabbed_26" type="radio" /><label for="__tabbed_26_4">Sortie</label><div class="tabbed-content">
+<div class="highlight"><pre><span></span><code><span class="nx">type</span> <span class="nx">Role</span> <span class="o">=</span> <span class="o">|</span> <span class="s1">&#39;admin&#39;</span> <span class="o">|</span> <span class="s1">&#39;user&#39;</span> <span class="o">|</span> <span class="s1">&#39;customer&#39;</span><span class="p">;</span>
+</code></pre></div>
+</div>
+</div>
+<h4 id="boucler-sur-les-champs-de-tous-les-modeles-de-donnees">Boucler sur les champs de tous les modèles de données</h4>
+<p>Dans un template de type <code>all models</code>, ce bloc permet de passer en revue tous les champs de tous les modèles de données :</p>
+<div class="tabbed-set" data-tabs="27:3"><input checked="checked" id="__tabbed_27_1" name="__tabbed_27" type="radio" /><label for="__tabbed_27_1">Hapify (long)</label><div class="tabbed-content">
+<div class="highlight"><pre><span></span><code>const<span class="w"> </span>models<span class="w"> </span>=<span class="w"> </span>{
+<span class="o">&lt;&lt;for</span><span class="w"> </span><span class="n">Models</span><span class="w"> </span><span class="n">model</span><span class="o">&gt;&gt;</span>
+<span class="w">    </span><span class="s">&lt;&lt;m camel&gt;&gt;</span>:<span class="w"> </span>[
+<span class="w">    </span><span class="o">&lt;&lt;for</span><span class="w"> </span><span class="n">model</span><span class="p">.</span><span class="n">fields</span><span class="w"> </span><span class="n">field</span><span class="o">&gt;&gt;</span>
+<span class="w">        </span>&#39;<span class="s">&lt;&lt;field camel&gt;&gt;</span>&#39;,
+<span class="w">    </span><span class="o">&lt;&lt;endfor&gt;&gt;</span>
+<span class="w">    </span>],
+<span class="o">&lt;&lt;endfor&gt;&gt;</span>
+}
+</code></pre></div>
+</div>
+<input id="__tabbed_27_2" name="__tabbed_27" type="radio" /><label for="__tabbed_27_2">Hapify (short)</label><div class="tabbed-content">
+<div class="highlight"><pre><span></span><code>const<span class="w"> </span>models<span class="w"> </span>=<span class="w"> </span>{
+<span class="o">&lt;&lt;@</span><span class="w"> </span><span class="n">M</span><span class="w"> </span><span class="n">m</span><span class="o">&gt;&gt;</span>
+<span class="w">    </span><span class="s">&lt;&lt;m aA&gt;&gt;</span>:<span class="w"> </span>[
+<span class="w">    </span><span class="o">&lt;&lt;@</span><span class="w"> </span><span class="n">m</span><span class="p">.</span><span class="n">f</span><span class="w"> </span><span class="n">f</span><span class="o">&gt;&gt;</span>
+<span class="w">        </span>&#39;<span class="s">&lt;&lt;f aA&gt;&gt;</span>&#39;,
+<span class="w">    </span><span class="o">&lt;&lt;@&gt;&gt;</span>
+<span class="w">    </span>],
+<span class="o">&lt;&lt;@&gt;&gt;</span>
+}
+</code></pre></div>
+</div>
+<input id="__tabbed_27_3" name="__tabbed_27" type="radio" /><label for="__tabbed_27_3">Sortie</label><div class="tabbed-content">
+<div class="highlight"><pre><span></span><code><span class="kr">const</span> <span class="nx">models</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="nx">user</span><span class="o">:</span> <span class="p">[</span>
+        <span class="s1">&#39;id&#39;</span><span class="p">,</span>
+        <span class="s1">&#39;createdAt&#39;</span><span class="p">,</span>
+        <span class="s1">&#39;email&#39;</span><span class="p">,</span>
+        <span class="s1">&#39;name&#39;</span><span class="p">,</span>
+    <span class="p">],</span>
+    <span class="nx">place</span><span class="o">:</span> <span class="p">[</span>
+        <span class="s1">&#39;id&#39;</span><span class="p">,</span>
+        <span class="s1">&#39;name&#39;</span><span class="p">,</span>
+        <span class="s1">&#39;category&#39;</span><span class="p">,</span>
+    <span class="p">],</span>
+    <span class="nx">placeCategory</span><span class="o">:</span> <span class="p">[</span>
+        <span class="s1">&#39;id&#39;</span><span class="p">,</span>
+        <span class="s1">&#39;createdAt&#39;</span><span class="p">,</span>
+        <span class="s1">&#39;email&#39;</span><span class="p">,</span>
+        <span class="s1">&#39;name&#39;</span><span class="p">,</span>
+    <span class="p">],</span>
+<span class="p">}</span>
+</code></pre></div>
+</div>
+</div>
+<h2 id="entrees-brutes-et-interpolation">Entrées brutes et interpolation</h2>
+<p>Cet opérateur vous permet d'écrire du JavaScript pur.</p>
+<h3 id="variable-personnalisee">Variable personnalisée</h3>
+<p>Définit une variable personnalisée et l'ajoute à la sortie :</p>
+<div class="highlight"><pre><span></span><code><span class="c">&lt;&lt;&lt; const length = root.fields.length; &gt;&gt;&gt;</span>
+
+//<span class="w"> </span>This<span class="w"> </span>model<span class="w"> </span>has<span class="w"> </span><span class="s">&lt;&lt;=length&gt;&gt;</span><span class="w"> </span>fields
+</code></pre></div>
+<h3 id="fonction-personnalisee">Fonction personnalisée</h3>
+<p>Définit une fonction personnalisée et l'appelle :</p>
+<div class="tabbed-set" data-tabs="28:3"><input checked="checked" id="__tabbed_28_1" name="__tabbed_28" type="radio" /><label for="__tabbed_28_1">Hapify (long)</label><div class="tabbed-content">
+<div class="highlight"><pre><span></span><code><span class="c">&lt;&lt;&lt;</span>
+<span class="c">function fieldName(field) {</span>
+<span class="c">    return field.names.snake.replace(&#39;_&#39;, &#39;:&#39;);</span>
+<span class="c">}</span>
+<span class="c">&gt;&gt;&gt;</span>
+<span class="o">&lt;&lt;for</span><span class="w"> </span><span class="n">Fields</span><span class="w"> </span><span class="n">field</span><span class="o">&gt;&gt;</span>
+<span class="s">&lt;&lt;=fieldName(field)&gt;&gt;</span>
+<span class="o">&lt;&lt;endfor&gt;&gt;</span>
+</code></pre></div>
+</div>
+<input id="__tabbed_28_2" name="__tabbed_28" type="radio" /><label for="__tabbed_28_2">Hapify (short)</label><div class="tabbed-content">
+<div class="highlight"><pre><span></span><code><span class="c">&lt;&lt;&lt;</span>
+<span class="c">function fieldName(f) {</span>
+<span class="c">    return f.names.snake.replace(&#39;_&#39;, &#39;:&#39;);</span>
+<span class="c">}</span>
+<span class="c">&gt;&gt;&gt;</span>
+<span class="o">&lt;&lt;@</span><span class="w"> </span><span class="n">F</span><span class="w"> </span><span class="n">f</span><span class="o">&gt;&gt;</span>
+<span class="s">&lt;&lt;=fieldName(f)&gt;&gt;</span>
+<span class="o">&lt;&lt;@&gt;&gt;</span>
+</code></pre></div>
+</div>
+<input id="__tabbed_28_3" name="__tabbed_28" type="radio" /><label for="__tabbed_28_3">Sortie</label><div class="tabbed-content">
+<div class="highlight"><pre><span></span><code>id
+created:at
+place:category
+</code></pre></div>
+</div>
+</div>
+<h3 id="condition-ou-iteration-personnalisee">Condition ou itération personnalisée</h3>
+<p>Ce bloc permet d'écrire une condition non gérée par la syntaxe Hapify :</p>
+<div class="highlight"><pre><span></span><code><span class="c">&lt;&lt;&lt; if (root.fields.hidden.length &lt; 3 || root.properties.mainlyInternal) { &gt;&gt;&gt;</span>
+//<span class="w"> </span>...
+<span class="c">&lt;&lt;&lt; } &gt;&gt;&gt;</span>
+</code></pre></div>
+<div class="admonition tip">
+<p class="admonition-title">À savoir</p>
+<p>Dans un template Hapify de type <code>one model</code>, la variable <code>root</code> pointe vers le modèle de données.
+Dans un template Hapify de type <code>all models</code>, la variable <code>root</code> pointe vers le tableau de modèles de données.</p>
+</div>
+<div class="admonition seealso">
+<p class="admonition-title">Voir aussi</p>
+<p>Pour connaitre en détail la structure du modèle de données, reportez-vous à <a href="../model-object/">l'objet modèle</a>.</p>
+</div>
+<h2 id="erreur">Erreur</h2>
+<p>N'écrivez pas ceci : <code class="highlight"><span class="s">&lt;&lt;= JSON.stringify(root) &gt;&gt;</span></code>.
+L'objet <code>root</code> a des propriétés récursives. Par conséquent, cette commande conduira à une boucle infinie.</p>
+<h2 id="commentaires">Commentaires</h2>
+<p>Cette syntaxe écrit un commentaire dans le template sans aucune sortie dans le fichier généré.</p>
+<div class="highlight"><pre><span></span><code><span class="c">&lt;&lt;# This is just a comment&gt;&gt;</span>
+</code></pre></div>
+<h2 id="echappement_1">Échappement</h2>
+<p>Il est possible d'échapper les balises de la syntaxe Hapify avec le caractère <code>\</code> :</p>
+<div class="tabbed-set" data-tabs="29:2"><input checked="checked" id="__tabbed_29_1" name="__tabbed_29" type="radio" /><label for="__tabbed_29_1">Hapify</label><div class="tabbed-content">
+<div class="highlight"><pre><span></span><code>$val<span class="w"> </span>=<span class="w"> </span>4;
+$res<span class="w"> </span>=<span class="w"> </span>$val<span class="w"> </span>\&lt;\&lt;<span class="w"> </span>3;
+$res<span class="w"> </span>=<span class="w"> </span>4<span class="w"> </span>\&gt;\&gt;<span class="w"> </span>$val;
+</code></pre></div>
+</div>
+<input id="__tabbed_29_2" name="__tabbed_29" type="radio" /><label for="__tabbed_29_2">Sortie</label><div class="tabbed-content">
+<div class="highlight"><pre><span></span><code><span class="x">$val = 4;</span>
+<span class="x">$res = $val &lt;&lt; 3;</span>
+<span class="x">$res = 4 &gt;&gt; $val;</span>
+</code></pre></div>
+</div>
+</div>
+<h2 id="formatage">Formatage</h2>
+<p>Les lignes vides ou ne contenant que du méta-code de type condition ou itération sont automatiquement supprimées suite à la génération.
+Pour forcer le générateur à garder une ligne vide, insérez un ou plusieurs espaces au début de celle-ci.</p>
+<div class="admonition warning">
+<p class="admonition-title">Attention</p>
+<p>Hapify ne formate pas le code généré, car les règles de mise en forme sont spécifiques à chaque langage voire chaque framework.
+Nous vous recommandons vivement d'utiliser un formateur de code suite à la génération.</p>
+</div>
+<h2 id="mots-reserves">Mots réservés</h2>
+<p>La liste suivante de mots ne peut pas être utilisée pour nommer des variables.</p>
+<p><code>A</code>, <code>Ac</code>, <code>Accesses</code>, <code>Ad</code>, <code>An</code>, <code>Ar</code>, <code>As</code>, <code>Au</code>, <code>CountAccess</code>, <code>CreateAccess</code>, <code>D</code>, <code>Dependencies</code>, <code>F</code>, <code>Fields</code>, <code>M</code>, <code>Model</code>, <code>Models</code>, <code>P</code>, <code>PrimaryField</code>, <code>R</code>, <code>ReadAccess</code>, <code>RefModels</code>, <code>ReferencedIn</code>, <code>RemoveAccess</code>, <code>SearchAccess</code>, <code>UpdateAccess</code>, <code>ad</code>, <code>admin</code>, <code>and</code>, <code>andNot</code>, <code>au</code>, <code>audio</code>, <code>auth</code>, <code>boolean</code>, <code>date</code>, <code>datetime</code>, <code>document</code>, <code>else</code>, <code>elseif</code>, <code>em</code>, <code>email</code>, <code>embedded</code>, <code>endfor</code>, <code>endif</code>, <code>entity</code>, <code>enum</code>, <code>file</code>, <code>float</code>, <code>for</code>, <code>gs</code>, <code>gteAdmin</code>, <code>gteAuth</code>, <code>gteGuest</code>, <code>gteOwner</code>, <code>guest</code>, <code>hd</code>, <code>hidden</code>, <code>if</code>, <code>image</code>, <code>in</code>, <code>integer</code>, <code>internal</code>, <code>isGeoSearchable</code>, <code>isGeolocated</code>, <code>label</code>, <code>latitude</code>, <code>lb</code>, <code>longitude</code>, <code>lteAdmin</code>, <code>lteAuth</code>, <code>lteGuest</code>, <code>lteOwner</code>, <code>mainlyHidden</code>, <code>mainlyInternal</code>, <code>manyMany</code>, <code>manyOne</code>, <code>maxAdmin</code>, <code>maxAuth</code>, <code>maxGuest</code>, <code>maxOwner</code>, <code>ml</code>, <code>multiple</code>, <code>noAdmin</code>, <code>noAuth</code>, <code>noGuest</code>, <code>noOwner</code>, <code>not</code>, <code>nu</code>, <code>nullable</code>, <code>number</code>, <code>object</code>, <code>oneMany</code>, <code>oneOne</code>, <code>onlyAdmin</code>, <code>onlyAuth</code>, <code>onlyGuest</code>, <code>onlyOwner</code>, <code>or</code>, <code>orNot</code>, <code>os</code>, <code>out</code>, <code>ow</code>, <code>owner</code>, <code>ownership</code>, <code>pGSe</code>, <code>pGeo</code>, <code>pMAd</code>, <code>pMAu</code>, <code>pMGs</code>, <code>pMHd</code>, <code>pMIn</code>, <code>pMOw</code>, <code>pNAd</code>, <code>pNAu</code>, <code>pNGs</code>, <code>pNOw</code>, <code>pOAd</code>, <code>pOAu</code>, <code>pOGs</code>, <code>pOOw</code>, <code>password</code>, <code>pr</code>, <code>primary</code>, <code>restricted</code>, <code>rich</code>, <code>richText</code>, <code>root</code>, <code>rs</code>, <code>se</code>, <code>searchable</code>, <code>so</code>, <code>sortable</code>, <code>string</code>, <code>tB</code>, <code>tD</code>, <code>tDd</code>, <code>tDt</code>, <code>tE</code>, <code>tEmm</code>, <code>tEom</code>, <code>tEoo</code>, <code>tF</code>, <code>tFa</code>, <code>tFd</code>, <code>tFi</code>, <code>tFv</code>, <code>tN</code>, <code>tNf</code>, <code>tNg</code>, <code>tNi</code>, <code>tNt</code>, <code>tO</code>, <code>tS</code>, <code>tSe</code>, <code>tSp</code>, <code>tSr</code>, <code>tSt</code>, <code>tSu</code>, <code>tU</code>, <code>text</code>, <code>time</code>, <code>un</code>, <code>unique</code>, <code>url</code>, <code>video</code>.</p>
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <nav class="md-footer__inner md-grid" aria-label="Footer">
+      
+        <a href="../cli/" class="md-footer__link md-footer__link--prev" rel="prev">
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+          </div>
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Précédent
+              </span>
+              CLI
+            </div>
+          </div>
+        </a>
+      
+      
+        <a href="../ejs-javascript/" class="md-footer__link md-footer__link--next" rel="next">
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Suivant
+              </span>
+              EJS & JavaScript
+            </div>
+          </div>
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
+          </div>
+        </a>
+      
+    </nav>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+        Made with
+        <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+          Material for MkDocs
+        </a>
+      </div>
+      
+  <div class="md-footer-social">
+    
+      
+      
+        
+        
+      
+      <a href="https://www.hapify.io/" target="_blank" rel="noopener" title="www.hapify.io" class="md-footer-social__link">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><path d="M336.5 160C322 70.7 287.8 8 248 8s-74 62.7-88.5 152h177zM152 256c0 22.2 1.2 43.5 3.3 64h185.3c2.1-20.5 3.3-41.8 3.3-64s-1.2-43.5-3.3-64H155.3c-2.1 20.5-3.3 41.8-3.3 64zm324.7-96c-28.6-67.9-86.5-120.4-158-141.6 24.4 33.8 41.2 84.7 50 141.6h108zM177.2 18.4C105.8 39.6 47.8 92.1 19.3 160h108c8.7-56.9 25.5-107.8 49.9-141.6zM487.4 192H372.7c2.1 21 3.3 42.5 3.3 64s-1.2 43-3.3 64h114.6c5.5-20.5 8.6-41.8 8.6-64s-3.1-43.5-8.5-64zM120 256c0-21.5 1.2-43 3.3-64H8.6C3.2 212.5 0 233.8 0 256s3.2 43.5 8.6 64h114.6c-2-21-3.2-42.5-3.2-64zm39.5 96c14.5 89.3 48.7 152 88.5 152s74-62.7 88.5-152h-177zm159.3 141.6c71.4-21.2 129.4-73.7 158-141.6h-108c-8.8 56.9-25.6 107.8-50 141.6zM19.3 352c28.6 67.9 86.5 120.4 158 141.6-24.4-33.8-41.2-84.7-50-141.6h-108z"/></svg>
+      </a>
+    
+      
+      
+        
+        
+      
+      <a href="https://github.com/hapify" target="_blank" rel="noopener" title="github.com" class="md-footer-social__link">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+      </a>
+    
+      
+      
+        
+        
+      
+      <a href="https://hub.docker.com/u/hapify" target="_blank" rel="noopener" title="hub.docker.com" class="md-footer-social__link">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512"><path d="M349.9 236.3h-66.1v-59.4h66.1v59.4zm0-204.3h-66.1v60.7h66.1V32zm78.2 144.8H362v59.4h66.1v-59.4zm-156.3-72.1h-66.1v60.1h66.1v-60.1zm78.1 0h-66.1v60.1h66.1v-60.1zm276.8 100c-14.4-9.7-47.6-13.2-73.1-8.4-3.3-24-16.7-44.9-41.1-63.7l-14-9.3-9.3 14c-18.4 27.8-23.4 73.6-3.7 103.8-8.7 4.7-25.8 11.1-48.4 10.7H2.4c-8.7 50.8 5.8 116.8 44 162.1 37.1 43.9 92.7 66.2 165.4 66.2 157.4 0 273.9-72.5 328.4-204.2 21.4.4 67.6.1 91.3-45.2 1.5-2.5 6.6-13.2 8.5-17.1l-13.3-8.9zm-511.1-27.9h-66v59.4h66.1v-59.4zm78.1 0h-66.1v59.4h66.1v-59.4zm78.1 0h-66.1v59.4h66.1v-59.4zm-78.1-72.1h-66.1v60.1h66.1v-60.1z"/></svg>
+      </a>
+    
+      
+      
+        
+        
+      
+      <a href="https://hapify.slack.com/" target="_blank" rel="noopener" title="hapify.slack.com" class="md-footer-social__link">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M94.12 315.1c0 25.9-21.16 47.06-47.06 47.06S0 341 0 315.1c0-25.9 21.16-47.06 47.06-47.06h47.06v47.06zm23.72 0c0-25.9 21.16-47.06 47.06-47.06s47.06 21.16 47.06 47.06v117.84c0 25.9-21.16 47.06-47.06 47.06s-47.06-21.16-47.06-47.06V315.1zm47.06-188.98c-25.9 0-47.06-21.16-47.06-47.06S139 32 164.9 32s47.06 21.16 47.06 47.06v47.06H164.9zm0 23.72c25.9 0 47.06 21.16 47.06 47.06s-21.16 47.06-47.06 47.06H47.06C21.16 243.96 0 222.8 0 196.9s21.16-47.06 47.06-47.06H164.9zm188.98 47.06c0-25.9 21.16-47.06 47.06-47.06 25.9 0 47.06 21.16 47.06 47.06s-21.16 47.06-47.06 47.06h-47.06V196.9zm-23.72 0c0 25.9-21.16 47.06-47.06 47.06-25.9 0-47.06-21.16-47.06-47.06V79.06c0-25.9 21.16-47.06 47.06-47.06 25.9 0 47.06 21.16 47.06 47.06V196.9zM283.1 385.88c25.9 0 47.06 21.16 47.06 47.06 0 25.9-21.16 47.06-47.06 47.06-25.9 0-47.06-21.16-47.06-47.06v-47.06h47.06zm0-23.72c-25.9 0-47.06-21.16-47.06-47.06 0-25.9 21.16-47.06 47.06-47.06h117.84c25.9 0 47.06 21.16 47.06 47.06 0 25.9-21.16 47.06-47.06 47.06H283.1z"/></svg>
+      </a>
+    
+  </div>
+
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.tabs", "navigation.tabs.sticky", "navigation.sections", "navigation.indexes", "navigation.instant"], "translations": {"clipboard.copy": "Copier dans le presse-papier", "clipboard.copied": "Copi\u00e9 dans le presse-papier", "search.config.lang": "fr", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Rechercher", "search.result.placeholder": "Taper pour d\u00e9marrer la recherche", "search.result.none": "Aucun document trouv\u00e9", "search.result.one": "1 document trouv\u00e9", "search.result.other": "# documents trouv\u00e9s", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing"}, "search": "../../assets/javascripts/workers/search.fb4a9340.min.js", "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.ca5457b8.min.js"></script>
+      
+    
+  </body>
+</html>
