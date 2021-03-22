@@ -321,32 +321,20 @@
   
   
   
-    <li class="md-nav__item">
-      <a href="../../getting-started/terminology/" class="md-nav__link">
-        Terminologie
-      </a>
-    </li>
-  
-
-          
-            
-  
-  
-  
     
       
     
     <li class="md-nav__item md-nav__item--section md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_3" type="checkbox" id="__nav_2_3" >
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_2" type="checkbox" id="__nav_2_2" >
       
-      <label class="md-nav__link" for="__nav_2_3">
+      <label class="md-nav__link" for="__nav_2_2">
         Utiliser un boilerplate existant
         <span class="md-nav__icon md-icon"></span>
       </label>
       <nav class="md-nav" aria-label="Utiliser un boilerplate existant" data-md-level="2">
-        <label class="md-nav__title" for="__nav_2_3">
+        <label class="md-nav__title" for="__nav_2_2">
           <span class="md-nav__icon md-icon"></span>
           Utiliser un boilerplate existant
         </label>
@@ -428,14 +416,14 @@
     <li class="md-nav__item md-nav__item--section md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_4" type="checkbox" id="__nav_2_4" >
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_3" type="checkbox" id="__nav_2_3" >
       
-      <label class="md-nav__link" for="__nav_2_4">
+      <label class="md-nav__link" for="__nav_2_3">
         Créer votre propre boilerplate
         <span class="md-nav__icon md-icon"></span>
       </label>
       <nav class="md-nav" aria-label="Créer votre propre boilerplate" data-md-level="2">
-        <label class="md-nav__title" for="__nav_2_4">
+        <label class="md-nav__title" for="__nav_2_3">
           <span class="md-nav__icon md-icon"></span>
           Créer votre propre boilerplate
         </label>
@@ -529,18 +517,30 @@
     <li class="md-nav__item md-nav__item--section md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_5" type="checkbox" id="__nav_2_5" >
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_4" type="checkbox" id="__nav_2_4" >
       
-      <label class="md-nav__link" for="__nav_2_5">
+      <label class="md-nav__link" for="__nav_2_4">
         Concepts
         <span class="md-nav__icon md-icon"></span>
       </label>
       <nav class="md-nav" aria-label="Concepts" data-md-level="2">
-        <label class="md-nav__title" for="__nav_2_5">
+        <label class="md-nav__title" for="__nav_2_4">
           <span class="md-nav__icon md-icon"></span>
           Concepts
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../getting-started/concepts/terminology/" class="md-nav__link">
+        Terminologie
+      </a>
+    </li>
+  
+
           
             
   
@@ -1075,7 +1075,7 @@ Si le fichier n'existe pas, il sera automatiquement créé.</p>
 </code></pre></div>
 <p>Alias : <code>hpf ls</code></p>
 <p>Cette commande affiche ce qui est visible pour le CLI à partir du répertoire courant.
-Elle affiche la liste des <a href="../../getting-started/terminology/">channels</a> et la liste des modèles de données utilisés par ces channels.</p>
+Elle affiche la liste des <a href="../../getting-started/concepts/terminology/">channels</a> et la liste des modèles de données utilisés par ces channels.</p>
 <p>Le CLI recherche les fichiers <code>hapify.json</code> afin de détecter automatiquement les channels.
 Il réitère sur les sous-répertoires. La profondeur par défaut est de <code>2</code>.
 Pour modifier cette valeur, utilisez l'option <code>depth</code>.</p>
@@ -1117,7 +1117,7 @@ Vous pouvez définir un chemin personnalisé avec cette option : <code>-o, --out
 <div class="highlight"><pre><span></span><code>hpf import
 </code></pre></div>
 <p>Alias : <code>hpf m</code></p>
-<p>Utilisez cette commande pour importer des modèles de données prédéfinis depuis Hapify Cloud (appelés <a href="../../getting-started/terminology/">presets</a>).</p>
+<p>Utilisez cette commande pour importer des modèles de données prédéfinis depuis Hapify Cloud (appelés <a href="../../getting-started/concepts/terminology/">presets</a>).</p>
 <p><em>Importer des presets à partir d'ID</em></p>
 <p>Vous pouvez également importer des préréglages à partir de leurs ID (visibles sur <a href="https://hub.hapify.io/">Hapify Hub</a>)</p>
 <div class="highlight"><pre><span></span><code>hpf import --preset ab123 --preset bd456
@@ -1131,7 +1131,7 @@ Elle vous demandera de :</p>
 <ul>
 <li>sélectionner un boilerplate</li>
 <li>sélectionner ou créer le projet à utiliser</li>
-<li>sélectionner des <a href="../../getting-started/terminology/">presets</a> de modèles de données à importer</li>
+<li>sélectionner des <a href="../../getting-started/concepts/terminology/">presets</a> de modèles de données à importer</li>
 </ul>
 <p><em>Options</em></p>
 <ul>
@@ -1164,7 +1164,7 @@ Elle vous demandera de sélectionner ou de créer un projet.</p>
 <div class="highlight"><pre><span></span><code>hpf use
 </code></pre></div>
 <p>Alias : <code>hpf u</code></p>
-<p>Change le projet utilisé par un ou plusieurs <a href="../../getting-started/terminology/">channels</a> existants.
+<p>Change le projet utilisé par un ou plusieurs <a href="../../getting-started/concepts/terminology/">channels</a> existants.
 Change l'ID du projet dans le fichier <code>hapify.json</code> pour chaque channel trouvé.
 Elle vous demandera de sélectionner ou de créer le projet à utiliser.</p>
 <p><em>Options</em></p>
