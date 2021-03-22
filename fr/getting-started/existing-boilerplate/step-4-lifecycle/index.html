@@ -877,7 +877,7 @@
 Cette fonctionnalité se base sur les commandes <code>git format-patch</code> et <code>git am</code>.
 Vous pouvez ainsi utiliser Hapify tout au long de votre projet et non pas en démarrage seulement.</p>
 <h3 id="preparation-du-depot">Préparation du dépôt</h3>
-<p>Pour pouvoir utiliser correctement <a href="../../../reference/cli/#appliquer-un-patch-au-code-source-avec-de-nouveaux-modeles-de-donnees">la commande</a> <code>hpf patch</code>, vous devez lancer la génération sur une branche séparée.
+<p>Pour pouvoir utiliser correctement <a href="../../../reference/cli/#patch">la commande</a> <code>hpf patch</code>, vous devez lancer la génération sur une branche séparée.
 Par exemple, créez une branche nommée <code>hapify</code>.</p>
 <h3 id="premiere-generation">Première génération</h3>
 <p>Allez sur cette nouvelle branche <code>hapify</code>.
@@ -885,7 +885,7 @@ Exécutez votre première génération en utilisant <code>hpf generate</code>.</
 <p>Si vous utilisez un formateur de code, exécutez le après chaque génération.</p>
 <p>Commitez ceci. Appelons-le <code>Génération 1</code>.</p>
 <p>Fusionnez la branche <code>hapify</code> dans votre branche de travail, disons <code>develop</code>.</p>
-<p>Maintenant vous pouvez commencer à travailler sur <code>develop</code> et personnaliser le code cible généré.</p>
+<p>Maintenant vous pouvez commencer à travailler sur <code>develop</code> et personnaliser le code généré.</p>
 <h3 id="deuxieme-generation">Deuxième génération</h3>
 <p>Oh non ! Vous avez oublié quelque chose dans vos modèles de données, les spécifications du projet ont changé, ou vous voulez modifier quelques lignes dans vos templates.</p>
 <p>Si vous utilisez un formateur de code, lancez-le dans votre branche de travail (<code>develop</code> par exemple).</p>

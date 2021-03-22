@@ -1274,7 +1274,7 @@ ce bloc importe le composant de sélection de la position sur la carte.</p>
 </div>
 </div>
 <h4 id="obtenir-des-relations-basees-sur-la-cardinalite">Obtenir des relations basées sur la cardinalité</h4>
-<p>Cet exemple crée une méthode récupérant des entités dans un magasin, selon le type de relation : <code>one-to-one</code>, <code>one-to-many</code> ou <code>many-to-many</code></p>
+<p>Cet exemple crée une méthode récupérant des entités dans un magasin, selon le type de relation : <code>one-to-one</code>, <code>one-to-many</code> ou <code>many-to-many</code>.</p>
 <div class="tabbed-set" data-tabs="5:5"><input checked="checked" id="__tabbed_5_1" name="__tabbed_5" type="radio" /><label for="__tabbed_5_1">Hapify (long)</label><div class="tabbed-content">
 <div class="highlight"><pre><span></span><code>class<span class="w"> </span><span class="s">&lt;&lt;Model pascal&gt;&gt;</span><span class="w"> </span>extends<span class="w"> </span>BaseModel<span class="w"> </span>{
 <span class="o">&lt;&lt;for</span><span class="w"> </span><span class="n">Fields</span><span class="w"> </span><span class="n">entity</span><span class="w"> </span><span class="n">field</span><span class="o">&gt;&gt;</span>
@@ -1405,7 +1405,7 @@ ce bloc importe le composant de sélection de la position sur la carte.</p>
 </div>
 </div>
 <h4 id="creer-un-tableau-contenant-toutes-les-valeurs-possibles-dune-enumeration">Créer un tableau contenant toutes les valeurs possibles d'une énumération</h4>
-<p>Dans un template de type <code>one model</code>, ce bloc définit les valeurs d'énumération sous forme de tableaux (en casse <code>constant</code>) :</p>
+<p>Dans un template de type <code>one model</code>, ce bloc définit les valeurs d'énumération sous forme de tableaux (en casse <code>constant</code>).</p>
 <div class="tabbed-set" data-tabs="7:5"><input checked="checked" id="__tabbed_7_1" name="__tabbed_7" type="radio" /><label for="__tabbed_7_1">Hapify (long)</label><div class="tabbed-content">
 <div class="highlight"><pre><span></span><code><span class="o">&lt;&lt;for</span><span class="w"> </span><span class="n">Fields</span><span class="w"> </span><span class="n">enum</span><span class="w"> </span><span class="n">field</span><span class="o">&gt;&gt;</span>
 const<span class="w"> </span><span class="s">&lt;&lt;field camel&gt;&gt;</span>Values<span class="w"> </span>=<span class="w"> </span>[
@@ -1609,7 +1609,7 @@ $default<span class="s">&lt;&lt;f AA&gt;&gt;</span><span class="w"> </span>=<spa
 </div>
 <h4 id="importer-toutes-les-dependances">Importer toutes les dépendances</h4>
 <p>Dans un template de type <code>one model</code>, ce bloc importe d'autres modèles de données pointés par des champs de type entité.
-Si le modèle a une auto-dépendance, il ne sera pas inclus dans la boucle.</p>
+Si le modèle de données a une auto-dépendance, il ne sera pas inclus dans la boucle.</p>
 <div class="tabbed-set" data-tabs="11:5"><input checked="checked" id="__tabbed_11_1" name="__tabbed_11" type="radio" /><label for="__tabbed_11_1">Hapify (long)</label><div class="tabbed-content">
 <div class="highlight"><pre><span></span><code><span class="o">&lt;&lt;for</span><span class="w"> </span><span class="n">Dependencies</span><span class="w"> </span><span class="n">dep</span><span class="o">&gt;&gt;</span>
 import<span class="w"> </span>{<span class="s">&lt;&lt;dep pascal&gt;&gt;</span>}<span class="w"> </span>from<span class="w"> </span>&#39;../<span class="s">&lt;&lt;dep kebab&gt;&gt;</span>&#39;;
@@ -1645,7 +1645,7 @@ import<span class="w"> </span>{<span class="s">&lt;&lt;d AA&gt;&gt;</span>}<span
 </div>
 </div>
 <p>Vous pouvez également filtrer par attributs de champ référent.
-Ce bloc exclut les modèles dont les champs référents sont cachés :</p>
+Ce bloc exclut les modèles de données dont les champs référents sont cachés :</p>
 <div class="tabbed-set" data-tabs="12:5"><input checked="checked" id="__tabbed_12_1" name="__tabbed_12" type="radio" /><label for="__tabbed_12_1">Hapify (long)</label><div class="tabbed-content">
 <div class="highlight"><pre><span></span><code><span class="o">&lt;&lt;for</span><span class="w"> </span><span class="n">Dependencies</span><span class="w"> </span><span class="k">not</span><span class="w"> </span><span class="n">hidden</span><span class="w"> </span><span class="n">dep</span><span class="o">&gt;&gt;</span>
 import<span class="w"> </span>{<span class="s">&lt;&lt;dep pascal&gt;&gt;</span>}<span class="w"> </span>from<span class="w"> </span>&#39;../<span class="s">&lt;&lt;dep kebab&gt;&gt;</span>&#39;;
@@ -1684,7 +1684,7 @@ import<span class="w"> </span>{<span class="s">&lt;&lt;d AA&gt;&gt;</span>}<span
 La première itération boucle sur tous les modèles de données qui ont une dépendance à celui-ci.
 La deuxième itération boucle sur toutes les relations d'entités contenues dans ces modèles de données dépendants.</p>
 <div class="admonition note">
-<p class="admonition-title">Notes</p>
+<p class="admonition-title">Note</p>
 <p>Le tableau <code>ReferencedIn</code> contient tous les modèles de données qui se réfèrent au modèle de données courant à travers des champs de type entité.
 Seuls les champs de type entité faisant référence sont définis dans ces modèles de données référents.
 Par conséquent, si vous bouclez sur les champs des modèles de données référents, vous ne serez pas brouillés par d'autres champs.</p>
@@ -1736,7 +1736,7 @@ await<span class="w"> </span>db.collection(&#39;<span class="s">&lt;&lt;m AA&gt;
 </div>
 </div>
 <h2 id="exclusion-de-fichiers-generes">Exclusion de fichiers générés</h2>
-<p>Lors de la génération il est possible d'exclure certain fichier de la génération.
+<p>Il est possible d'exclure certain fichier de la génération.
 Si le template retourne une chaine vide ou ne contenant que des espaces, alors aucun fichier ne sera généré pour ce couple template/modèle de données.</p>
                 
               

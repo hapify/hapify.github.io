@@ -520,6 +520,13 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#champs-par-defaut" class="md-nav__link">
+    Champs par défaut
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -815,6 +822,13 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#champs-par-defaut" class="md-nav__link">
+    Champs par défaut
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -837,15 +851,47 @@ Afin de créer un nouveau template, vous devez d'abord créer quelques modèles 
 <div class="highlight"><pre><span></span><code>hpf serve
 </code></pre></div>
 <h3 id="ajouter-des-modeles-de-donnees">Ajouter des modèles de données</h3>
-<p>Créez ou importez des templates pour votre projet.
+<p>Créez ou importez des modèles de données pour votre projet.
 Cette étape est obligatoire pour l'étape suivante afin de valider que vos templates fonctionnent.</p>
-<p>Nous vous recommandons d'ajouter les templates qui couvriront les cas d'utilisation que vous souhaitez traiter.</p>
+<p>Nous vous recommandons d'ajouter les modèles de données qui couvriront les cas d'utilisation que vous souhaitez traiter.</p>
 <p>Par exemple, si vous prévoyez de traiter la <code>latitude</code> et la <code>longitude</code> dans vos templates, ajoutez alors au moins un modèle de données qui comporte ces champs.</p>
 <p>Un autre cas fréquent est celui des relations entre les modèles de données.
 Nous vous recommandons d'ajouter plusieurs relations entre vos modèles de données, même une relation d'auto-référence.</p>
 <div class="admonition seealso">
 <p class="admonition-title">Voir aussi</p>
 <p>Pour en savoir plus sur la gestion des modèles de données, veuillez vous référer à <a href="../../existing-boilerplate/step-2-edit-models/">édition des modèles de données</a>.</p>
+</div>
+<h2 id="champs-par-defaut">Champs par défaut</h2>
+<p>Vous pouvez définir des champs par défaut qui seront ajoutés à tout nouveau modèle de données.
+Ce champ ne sont pas contraignants, l'utilisateur pourra les modifier ou les supprimer s'il le souhaite.
+Ceci est utile pour définir la clé primaire de vos modèles de données par exemple.</p>
+<p>Les champs par défaut sont définis dans le fichier <code>hapify.json</code>:</p>
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
+  <span class="nt">&quot;defaultFields&quot;</span><span class="p">:</span> <span class="p">[</span>
+    <span class="p">{</span>
+      <span class="nt">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;Id&quot;</span><span class="p">,</span>
+      <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;string&quot;</span><span class="p">,</span>
+      <span class="nt">&quot;properties&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;primary&quot;</span><span class="p">,</span> <span class="s2">&quot;internal&quot;</span><span class="p">]</span>
+    <span class="p">}</span>
+  <span class="p">]</span>
+<span class="p">}</span>
+</code></pre></div>
+<p>Pour obtenir ces champs par défaut, vous pouvez créer un modèle de données qui ne contient que les champs par défaut voulus.
+Ouvrez ensuite le fichier <code>hapify-models.json</code>, et copiez les champs du modèle de données en question:</p>
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
+  <span class="nt">&quot;fields&quot;</span><span class="p">:</span> <span class="p">[</span>
+    <span class="p">{</span>
+      <span class="nt">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;id&quot;</span><span class="p">,</span>
+      <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;number&quot;</span><span class="p">,</span>
+      <span class="nt">&quot;properties&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;primary&quot;</span><span class="p">,</span> <span class="s2">&quot;internal&quot;</span><span class="p">]</span>
+    <span class="p">}</span>
+  <span class="p">]</span>
+<span class="p">}</span>
+</code></pre></div>
+<p>Enfin, collez cela dans le fichier <code>hapify.json</code> à l'entrée <code>defaultFields</code>.</p>
+<div class="admonition warning">
+<p class="admonition-title">Attention</p>
+<p>Les modifications du fichier <code>hapify.json</code> ne sont pas prises en compte à la volée. Vous devez relancer la commande <code>hpf serve</code>.</p>
 </div>
                 
               
