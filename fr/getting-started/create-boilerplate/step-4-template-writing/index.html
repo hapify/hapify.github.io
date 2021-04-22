@@ -669,6 +669,13 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#notes" class="md-nav__link">
+    Notes
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#exclusion-de-fichiers-generes" class="md-nav__link">
     Exclusion de fichiers générés
   </a>
@@ -1091,6 +1098,13 @@
         
       </ul>
     </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#notes" class="md-nav__link">
+    Notes
+  </a>
   
 </li>
       
@@ -1734,6 +1748,68 @@ await<span class="w"> </span>db.collection(&#39;<span class="s">&lt;&lt;m AA&gt;
 <span class="nx">await</span> <span class="nx">db</span><span class="p">.</span><span class="nx">collection</span><span class="p">(</span><span class="s1">&#39;ConversationReport&#39;</span><span class="p">).</span><span class="nx">deleteMany</span><span class="p">({</span> <span class="nx">defendant</span><span class="o">:</span> <span class="nx">id</span> <span class="p">});</span>
 </code></pre></div>
 </div>
+</div>
+<h2 id="notes">Notes</h2>
+<p>Il est possible d'ajouter des notes au niveau d'un champ ou bien d'un modèle.
+Voici comment les retrouver dans les templates:</p>
+<div class="tabbed-set" data-tabs="14:5"><input checked="checked" id="__tabbed_14_1" name="__tabbed_14" type="radio" /><label for="__tabbed_14_1">Hapify (long)</label><div class="tabbed-content">
+<div class="highlight"><pre><span></span><code><span class="o">&lt;&lt;if</span><span class="w"> </span><span class="n">Model</span><span class="w"> </span><span class="n">hasNotes</span><span class="o">&gt;&gt;</span><span class="k">//</span><span class="w"> </span><span class="n">&lt;&lt;!</span><span class="w"> </span><span class="n">Model</span><span class="o">&gt;&gt;</span><span class="n">&lt;&lt;endif</span><span class="o">&gt;&gt;</span>
+export<span class="w"> </span>class<span class="w"> </span><span class="s">&lt;&lt;Model pascal&gt;&gt;</span><span class="w"> </span>{
+<span class="w">    </span><span class="o">&lt;&lt;for</span><span class="w"> </span><span class="n">Fields</span><span class="w"> </span><span class="n">field</span><span class="o">&gt;&gt;</span>
+<span class="w">    </span>public<span class="w"> </span><span class="s">&lt;&lt;field camel&gt;&gt;</span>;<span class="w"> </span><span class="o">&lt;&lt;if</span><span class="w"> </span><span class="n">field</span><span class="w"> </span><span class="n">hasNotes</span><span class="o">&gt;&gt;</span><span class="k">//</span><span class="w"> </span><span class="n">&lt;&lt;!</span><span class="w"> </span><span class="n">field</span><span class="o">&gt;&gt;</span><span class="n">&lt;&lt;endif</span><span class="o">&gt;&gt;</span>
+<span class="w">    </span><span class="o">&lt;&lt;endfor&gt;&gt;</span>
+}
+</code></pre></div>
+</div>
+<input id="__tabbed_14_2" name="__tabbed_14" type="radio" /><label for="__tabbed_14_2">Hapify (short)</label><div class="tabbed-content">
+<div class="highlight"><pre><span></span><code><span class="o">&lt;&lt;?</span><span class="w"> </span><span class="n">M</span><span class="w"> </span><span class="n">hN</span><span class="o">&gt;&gt;</span><span class="k">//</span><span class="w"> </span><span class="n">&lt;&lt;!</span><span class="w"> </span><span class="n">M</span><span class="o">&gt;&gt;</span><span class="n">&lt;&lt;?</span><span class="o">&gt;&gt;</span>
+export<span class="w"> </span>class<span class="w"> </span><span class="s">&lt;&lt;M AA&gt;&gt;</span><span class="w"> </span>{
+<span class="w">    </span><span class="o">&lt;&lt;@</span><span class="w"> </span><span class="n">F</span><span class="w"> </span><span class="n">f</span><span class="o">&gt;&gt;</span>
+<span class="w">    </span>public<span class="w"> </span><span class="s">&lt;&lt;f aA&gt;&gt;</span>;<span class="w"> </span><span class="o">&lt;&lt;?</span><span class="w"> </span><span class="n">f</span><span class="w"> </span><span class="n">hN</span><span class="o">&gt;&gt;</span><span class="k">//</span><span class="w"> </span><span class="n">&lt;&lt;!</span><span class="w"> </span><span class="n">f</span><span class="o">&gt;&gt;</span><span class="n">&lt;&lt;?</span><span class="o">&gt;&gt;</span>
+<span class="w">    </span><span class="o">&lt;&lt;@&gt;&gt;</span>
+}
+</code></pre></div>
+</div>
+<input id="__tabbed_14_3" name="__tabbed_14" type="radio" /><label for="__tabbed_14_3">EJS</label><div class="tabbed-content">
+<div class="highlight"><pre><span></span><code><span class="o">&lt;%</span> <span class="k">if</span> <span class="p">(</span><span class="nx">model</span><span class="p">.</span><span class="nx">hasNotes</span><span class="p">)</span> <span class="p">{</span> <span class="o">%&gt;</span><span class="c1">// &lt;%= model.notes %&gt;&lt;% } %&gt;</span>
+<span class="kr">export</span> <span class="kr">class</span> <span class="o">&lt;%=</span> <span class="nx">model</span><span class="p">.</span><span class="nx">names</span><span class="p">.</span><span class="nx">pascal</span> <span class="o">%&gt;</span> <span class="p">{</span>
+<span class="o">&lt;%</span> <span class="k">for</span> <span class="p">(</span><span class="kr">const</span> <span class="nx">field</span> <span class="k">of</span> <span class="nx">model</span><span class="p">.</span><span class="nx">fields</span><span class="p">.</span><span class="nx">list</span><span class="p">)</span> <span class="p">{</span> <span class="o">-%&gt;</span>
+    <span class="kr">public</span> <span class="o">&lt;%=</span> <span class="nx">field</span><span class="p">.</span><span class="nx">names</span><span class="p">.</span><span class="nx">camel</span> <span class="o">%&gt;</span><span class="p">;</span> <span class="o">&lt;%</span> <span class="k">if</span> <span class="p">(</span><span class="nx">field</span><span class="p">.</span><span class="nx">hasNotes</span><span class="p">)</span> <span class="p">{</span> <span class="o">%&gt;</span><span class="c1">// &lt;%= field.notes %&gt;&lt;% } %&gt;</span>
+<span class="o">&lt;%</span> <span class="p">}</span> <span class="o">%&gt;</span>
+<span class="p">}</span>
+</code></pre></div>
+</div>
+<input id="__tabbed_14_4" name="__tabbed_14" type="radio" /><label for="__tabbed_14_4">JavaScript</label><div class="tabbed-content">
+<div class="highlight"><pre><span></span><code><span class="kd">let</span> <span class="nx">output</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span><span class="p">;</span>
+<span class="k">if</span> <span class="p">(</span><span class="nx">model</span><span class="p">.</span><span class="nx">hasNotes</span><span class="p">)</span> <span class="p">{</span> <span class="nx">output</span> <span class="o">+=</span> <span class="sb">`// </span><span class="si">${</span><span class="nx">model</span><span class="p">.</span><span class="nx">notes</span><span class="si">}</span><span class="err">\</span><span class="sb">n`</span><span class="p">;</span> <span class="p">}</span>
+<span class="nx">output</span> <span class="o">+=</span> <span class="sb">`export class </span><span class="si">${</span><span class="nx">model</span><span class="p">.</span><span class="nx">names</span><span class="p">.</span><span class="nx">pascal</span><span class="si">}</span><span class="sb"> {</span>
+<span class="si">${</span><span class="nx">getFields</span><span class="p">()</span><span class="si">}</span><span class="sb">}`</span><span class="p">;</span>
+
+<span class="kd">function</span> <span class="nx">getFields</span><span class="p">()</span> <span class="p">{</span>
+    <span class="kd">let</span> <span class="nx">fields</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span><span class="p">;</span>
+    <span class="k">for</span> <span class="p">(</span><span class="kr">const</span> <span class="nx">field</span> <span class="k">of</span> <span class="nx">model</span><span class="p">.</span><span class="nx">fields</span><span class="p">.</span><span class="nx">list</span><span class="p">)</span> <span class="p">{</span>
+        <span class="nx">fields</span> <span class="o">+=</span> <span class="sb">`    public </span><span class="si">${</span><span class="nx">field</span><span class="p">.</span><span class="nx">names</span><span class="p">.</span><span class="nx">camel</span><span class="si">}</span><span class="sb">;`</span><span class="p">;</span>
+        <span class="k">if</span> <span class="p">(</span><span class="nx">field</span><span class="p">.</span><span class="nx">hasNotes</span><span class="p">)</span> <span class="p">{</span> <span class="nx">fields</span> <span class="o">+=</span> <span class="sb">` // </span><span class="si">${</span><span class="nx">field</span><span class="p">.</span><span class="nx">notes</span><span class="si">}</span><span class="sb">`</span><span class="p">;</span> <span class="p">}</span>
+        <span class="nx">fields</span> <span class="o">+=</span> <span class="sb">`</span><span class="err">\</span><span class="sb">n`</span><span class="p">;</span>
+    <span class="p">}</span>
+    <span class="k">return</span> <span class="nx">fields</span><span class="p">;</span>
+<span class="p">}</span>
+<span class="k">return</span> <span class="nx">output</span><span class="p">;</span>
+</code></pre></div>
+</div>
+<input id="__tabbed_14_5" name="__tabbed_14" type="radio" /><label for="__tabbed_14_5">Sortie</label><div class="tabbed-content">
+<div class="highlight"><pre><span></span><code><span class="c1">// A user can only list its own bookmarks</span>
+<span class="kr">export</span> <span class="kr">class</span> <span class="nx">Bookmark</span> <span class="p">{</span>
+    <span class="kr">public</span> <span class="nx">id</span><span class="p">;</span>
+    <span class="kr">public</span> <span class="nx">owner</span><span class="p">;</span> <span class="c1">// Current user when creating the bookmark</span>
+    <span class="kr">public</span> <span class="nx">place</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div>
+</div>
+</div>
+<div class="admonition tip">
+<p class="admonition-title">À savoir</p>
+<p>Avec la syntaxe Hapify il est également possible d'afficher les notes en utilisant l'interpolation : <code class="highlight"><span class="s">&lt;&lt;= root.notes &gt;&gt;</span></code> ou <code class="highlight"><span class="s">&lt;&lt;= model.notes &gt;&gt;</span></code> pour un modèle ou bien <code class="highlight"><span class="s">&lt;&lt;= field.notes &gt;&gt;</span></code> pour un champ.</p>
 </div>
 <h2 id="exclusion-de-fichiers-generes">Exclusion de fichiers générés</h2>
 <p>Il est possible d'exclure certain fichier de la génération.

@@ -1005,6 +1005,13 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#notes" class="md-nav__link">
+    Notes
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#error" class="md-nav__link">
     Error
   </a>
@@ -1495,6 +1502,13 @@
         
       </ul>
     </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#notes" class="md-nav__link">
+    Notes
+  </a>
   
 </li>
       
@@ -2493,6 +2507,56 @@ In a Hapify template of type <code>all models</code>, the <code>root</code> vari
 <p class="admonition-title">See also</p>
 <p>For detailed information on the structure of the data model, see <a href="../model-object/">the model object</a>.</p>
 </div>
+<h2 id="notes">Notes</h2>
+<p>You can retrieve notes left by the user on a field or model:</p>
+<div class="tabbed-set" data-tabs="29:3"><input checked="checked" id="__tabbed_29_1" name="__tabbed_29" type="radio" /><label for="__tabbed_29_1">Hapify (long)</label><div class="tabbed-content">
+<div class="highlight"><pre><span></span><code><span class="o">&lt;&lt;if</span><span class="w"> </span><span class="n">Model</span><span class="w"> </span><span class="n">hasNotes</span><span class="o">&gt;&gt;</span><span class="k">//</span><span class="w"> </span><span class="n">&lt;&lt;!</span><span class="w"> </span><span class="n">Model</span><span class="o">&gt;&gt;</span><span class="n">&lt;&lt;endif</span><span class="o">&gt;&gt;</span>
+export<span class="w"> </span>class<span class="w"> </span><span class="s">&lt;&lt;Model pascal&gt;&gt;</span><span class="w"> </span>{
+<span class="w">    </span><span class="o">&lt;&lt;for</span><span class="w"> </span><span class="n">Fields</span><span class="w"> </span><span class="n">field</span><span class="o">&gt;&gt;</span>
+<span class="w">    </span>public<span class="w"> </span><span class="s">&lt;&lt;field camel&gt;&gt;</span>;<span class="w"> </span><span class="o">&lt;&lt;if</span><span class="w"> </span><span class="n">field</span><span class="w"> </span><span class="n">hasNotes</span><span class="o">&gt;&gt;</span><span class="k">//</span><span class="w"> </span><span class="n">&lt;&lt;!</span><span class="w"> </span><span class="n">field</span><span class="o">&gt;&gt;</span><span class="n">&lt;&lt;endif</span><span class="o">&gt;&gt;</span>
+<span class="w">    </span><span class="o">&lt;&lt;endfor&gt;&gt;</span>
+}
+</code></pre></div>
+</div>
+<input id="__tabbed_29_2" name="__tabbed_29" type="radio" /><label for="__tabbed_29_2">Hapify (short)</label><div class="tabbed-content">
+<div class="highlight"><pre><span></span><code><span class="o">&lt;&lt;?</span><span class="w"> </span><span class="n">M</span><span class="w"> </span><span class="n">hN</span><span class="o">&gt;&gt;</span><span class="k">//</span><span class="w"> </span><span class="n">&lt;&lt;!</span><span class="w"> </span><span class="n">M</span><span class="o">&gt;&gt;</span><span class="n">&lt;&lt;?</span><span class="o">&gt;&gt;</span>
+export<span class="w"> </span>class<span class="w"> </span><span class="s">&lt;&lt;M AA&gt;&gt;</span><span class="w"> </span>{
+<span class="w">    </span><span class="o">&lt;&lt;@</span><span class="w"> </span><span class="n">F</span><span class="w"> </span><span class="n">f</span><span class="o">&gt;&gt;</span>
+<span class="w">    </span>public<span class="w"> </span><span class="s">&lt;&lt;f aA&gt;&gt;</span>;<span class="w"> </span><span class="o">&lt;&lt;?</span><span class="w"> </span><span class="n">f</span><span class="w"> </span><span class="n">hN</span><span class="o">&gt;&gt;</span><span class="k">//</span><span class="w"> </span><span class="n">&lt;&lt;!</span><span class="w"> </span><span class="n">f</span><span class="o">&gt;&gt;</span><span class="n">&lt;&lt;?</span><span class="o">&gt;&gt;</span>
+<span class="w">    </span><span class="o">&lt;&lt;@&gt;&gt;</span>
+}
+</code></pre></div>
+</div>
+<input id="__tabbed_29_3" name="__tabbed_29" type="radio" /><label for="__tabbed_29_3">Output</label><div class="tabbed-content">
+<div class="highlight"><pre><span></span><code><span class="c1">// A user can only list its own bookmarks</span>
+<span class="kr">export</span> <span class="kr">class</span> <span class="nx">Bookmark</span> <span class="p">{</span>
+    <span class="kr">public</span> <span class="nx">id</span><span class="p">;</span>
+    <span class="kr">public</span> <span class="nx">owner</span><span class="p">;</span> <span class="c1">// Current user when creating the bookmark</span>
+    <span class="kr">public</span> <span class="nx">place</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div>
+</div>
+</div>
+<p>It is also possible to use interpolation to display the notes:</p>
+<div class="tabbed-set" data-tabs="30:2"><input checked="checked" id="__tabbed_30_1" name="__tabbed_30" type="radio" /><label for="__tabbed_30_1">Hapify (long)</label><div class="tabbed-content">
+<div class="highlight"><pre><span></span><code><span class="o">&lt;&lt;if</span><span class="w"> </span><span class="n">Model</span><span class="w"> </span><span class="n">hasNotes</span><span class="o">&gt;&gt;</span><span class="k">//</span><span class="w"> </span><span class="n">&lt;&lt;=root</span><span class="p">.</span><span class="n">notes</span><span class="o">&gt;&gt;</span><span class="n">&lt;&lt;endif</span><span class="o">&gt;&gt;</span>
+export<span class="w"> </span>class<span class="w"> </span><span class="s">&lt;&lt;Model pascal&gt;&gt;</span><span class="w"> </span>{
+<span class="w">    </span><span class="o">&lt;&lt;for</span><span class="w"> </span><span class="n">Fields</span><span class="w"> </span><span class="n">field</span><span class="o">&gt;&gt;</span>
+<span class="w">    </span>public<span class="w"> </span><span class="s">&lt;&lt;field camel&gt;&gt;</span>;<span class="w"> </span><span class="o">&lt;&lt;if</span><span class="w"> </span><span class="n">field</span><span class="w"> </span><span class="n">hasNotes</span><span class="o">&gt;&gt;</span><span class="k">//</span><span class="w"> </span><span class="n">&lt;&lt;=field</span><span class="p">.</span><span class="n">notes</span><span class="o">&gt;&gt;</span><span class="n">&lt;&lt;endif</span><span class="o">&gt;&gt;</span>
+<span class="w">    </span><span class="o">&lt;&lt;endfor&gt;&gt;</span>
+}
+</code></pre></div>
+</div>
+<input id="__tabbed_30_2" name="__tabbed_30" type="radio" /><label for="__tabbed_30_2">Hapify (short)</label><div class="tabbed-content">
+<div class="highlight"><pre><span></span><code><span class="o">&lt;&lt;?</span><span class="w"> </span><span class="n">M</span><span class="w"> </span><span class="n">hN</span><span class="o">&gt;&gt;</span><span class="k">//</span><span class="w"> </span><span class="n">&lt;&lt;=root</span><span class="p">.</span><span class="n">notes</span><span class="o">&gt;&gt;</span><span class="n">&lt;&lt;?</span><span class="o">&gt;&gt;</span>
+export<span class="w"> </span>class<span class="w"> </span><span class="s">&lt;&lt;M AA&gt;&gt;</span><span class="w"> </span>{
+<span class="w">    </span><span class="o">&lt;&lt;@</span><span class="w"> </span><span class="n">F</span><span class="w"> </span><span class="n">f</span><span class="o">&gt;&gt;</span>
+<span class="w">    </span>public<span class="w"> </span><span class="s">&lt;&lt;f aA&gt;&gt;</span>;<span class="w"> </span><span class="o">&lt;&lt;?</span><span class="w"> </span><span class="n">f</span><span class="w"> </span><span class="n">hN</span><span class="o">&gt;&gt;</span><span class="k">//</span><span class="w"> </span><span class="n">&lt;&lt;=field</span><span class="p">.</span><span class="n">notes</span><span class="o">&gt;&gt;</span><span class="n">&lt;&lt;?</span><span class="o">&gt;&gt;</span>
+<span class="w">    </span><span class="o">&lt;&lt;@&gt;&gt;</span>
+}
+</code></pre></div>
+</div>
+</div>
 <h2 id="error">Error</h2>
 <p>Do not write this: <code class="highlight"><span class="s">&lt;&lt;= JSON.stringify(root) &gt;&gt;</span></code>.
 The <code>root</code> object has recursive properties. Therefore, this command will lead to an infinite loop.</p>
@@ -2502,13 +2566,13 @@ The <code>root</code> object has recursive properties. Therefore, this command w
 </code></pre></div>
 <h2 id="escaping_1">Escaping</h2>
 <p>It is possible to escape the tags of the Hapify syntax with the character <code>\</code>:</p>
-<div class="tabbed-set" data-tabs="29:2"><input checked="checked" id="__tabbed_29_1" name="__tabbed_29" type="radio" /><label for="__tabbed_29_1">Hapify</label><div class="tabbed-content">
+<div class="tabbed-set" data-tabs="31:2"><input checked="checked" id="__tabbed_31_1" name="__tabbed_31" type="radio" /><label for="__tabbed_31_1">Hapify</label><div class="tabbed-content">
 <div class="highlight"><pre><span></span><code>$val<span class="w"> </span>=<span class="w"> </span>4;
 $res<span class="w"> </span>=<span class="w"> </span>$val<span class="w"> </span>\&lt;\&lt;<span class="w"> </span>3;
 $res<span class="w"> </span>=<span class="w"> </span>4<span class="w"> </span>\&gt;\&gt;<span class="w"> </span>$val;
 </code></pre></div>
 </div>
-<input id="__tabbed_29_2" name="__tabbed_29" type="radio" /><label for="__tabbed_29_2">Output</label><div class="tabbed-content">
+<input id="__tabbed_31_2" name="__tabbed_31" type="radio" /><label for="__tabbed_31_2">Output</label><div class="tabbed-content">
 <div class="highlight"><pre><span></span><code><span class="x">$val = 4;</span>
 <span class="x">$res = $val &lt;&lt; 3;</span>
 <span class="x">$res = 4 &gt;&gt; $val;</span>
@@ -2525,7 +2589,7 @@ We strongly recommend you to use a code formatter after the generation.</p>
 </div>
 <h2 id="reserved-words">Reserved words</h2>
 <p>The following list of words cannot be used to name variables.</p>
-<p><code>A</code>, <code>Ac</code>, <code>Accesses</code>, <code>Ad</code>, <code>An</code>, <code>Ar</code>, <code>As</code>, <code>Au</code>, <code>CountAccess</code>, <code>CreateAccess</code>, <code>D</code>, <code>Dependencies</code>, <code>F</code>, <code>Fields</code>, <code>M</code>, <code>Model</code>, <code>Models</code>, <code>P</code>, <code>PrimaryField</code>, <code>R</code>, <code>ReadAccess</code>, <code>RefModels</code>, <code>ReferencedIn</code>, <code>RemoveAccess</code>, <code>SearchAccess</code>, <code>UpdateAccess</code>, <code>ad</code>, <code>admin</code>, <code>and</code>, <code>andNot</code>, <code>au</code>, <code>audio</code>, <code>auth</code>, <code>boolean</code>, <code>date</code>, <code>datetime</code>, <code>document</code>, <code>else</code>, <code>elseif</code>, <code>em</code>, <code>email</code>, <code>embedded</code>, <code>endfor</code>, <code>endif</code>, <code>entity</code>, <code>enum</code>, <code>file</code>, <code>float</code>, <code>for</code>, <code>gs</code>, <code>gteAdmin</code>, <code>gteAuth</code>, <code>gteGuest</code>, <code>gteOwner</code>, <code>guest</code>, <code>hd</code>, <code>hidden</code>, <code>if</code>, <code>image</code>, <code>in</code>, <code>integer</code>, <code>internal</code>, <code>isGeoSearchable</code>, <code>isGeolocated</code>, <code>label</code>, <code>latitude</code>, <code>lb</code>, <code>longitude</code>, <code>lteAdmin</code>, <code>lteAuth</code>, <code>lteGuest</code>, <code>lteOwner</code>, <code>mainlyHidden</code>, <code>mainlyInternal</code>, <code>manyMany</code>, <code>manyOne</code>, <code>maxAdmin</code>, <code>maxAuth</code>, <code>maxGuest</code>, <code>maxOwner</code>, <code>ml</code>, <code>multiple</code>, <code>noAdmin</code>, <code>noAuth</code>, <code>noGuest</code>, <code>noOwner</code>, <code>not</code>, <code>nu</code>, <code>nullable</code>, <code>number</code>, <code>object</code>, <code>oneMany</code>, <code>oneOne</code>, <code>onlyAdmin</code>, <code>onlyAuth</code>, <code>onlyGuest</code>, <code>onlyOwner</code>, <code>or</code>, <code>orNot</code>, <code>os</code>, <code>out</code>, <code>ow</code>, <code>owner</code>, <code>ownership</code>, <code>pGSe</code>, <code>pGeo</code>, <code>pMAd</code>, <code>pMAu</code>, <code>pMGs</code>, <code>pMHd</code>, <code>pMIn</code>, <code>pMOw</code>, <code>pNAd</code>, <code>pNAu</code>, <code>pNGs</code>, <code>pNOw</code>, <code>pOAd</code>, <code>pOAu</code>, <code>pOGs</code>, <code>pOOw</code>, <code>password</code>, <code>pr</code>, <code>primary</code>, <code>restricted</code>, <code>rich</code>, <code>richText</code>, <code>root</code>, <code>rs</code>, <code>se</code>, <code>searchable</code>, <code>so</code>, <code>sortable</code>, <code>string</code>, <code>tB</code>, <code>tD</code>, <code>tDd</code>, <code>tDt</code>, <code>tE</code>, <code>tEmm</code>, <code>tEom</code>, <code>tEoo</code>, <code>tF</code>, <code>tFa</code>, <code>tFd</code>, <code>tFi</code>, <code>tFv</code>, <code>tN</code>, <code>tNf</code>, <code>tNg</code>, <code>tNi</code>, <code>tNt</code>, <code>tO</code>, <code>tS</code>, <code>tSe</code>, <code>tSp</code>, <code>tSr</code>, <code>tSt</code>, <code>tSu</code>, <code>tU</code>, <code>text</code>, <code>time</code>, <code>un</code>, <code>unique</code>, <code>url</code>, <code>video</code>.</p>
+<p><code>A</code>, <code>Ac</code>, <code>Accesses</code>, <code>ad</code>, <code>Ad</code>, <code>admin</code>, <code>An</code>, <code>and</code>, <code>andNot</code>, <code>Ar</code>, <code>As</code>, <code>au</code>, <code>Au</code>, <code>audio</code>, <code>auth</code>, <code>boolean</code>, <code>CountAccess</code>, <code>CreateAccess</code>, <code>D</code>, <code>date</code>, <code>datetime</code>, <code>Dependencies</code>, <code>document</code>, <code>else</code>, <code>elseif</code>, <code>em</code>, <code>email</code>, <code>embedded</code>, <code>endfor</code>, <code>endif</code>, <code>entity</code>, <code>enum</code>, <code>F</code>, <code>Fields</code>, <code>file</code>, <code>float</code>, <code>for</code>, <code>gs</code>, <code>gteAdmin</code>, <code>gteAuth</code>, <code>gteGuest</code>, <code>gteOwner</code>, <code>guest</code>, <code>hasNotes</code>, <code>hd</code>, <code>hidden</code>, <code>hN</code>, <code>if</code>, <code>image</code>, <code>in</code>, <code>integer</code>, <code>internal</code>, <code>isGeolocated</code>, <code>isGeoSearchable</code>, <code>label</code>, <code>latitude</code>, <code>lb</code>, <code>longitude</code>, <code>lteAdmin</code>, <code>lteAuth</code>, <code>lteGuest</code>, <code>lteOwner</code>, <code>M</code>, <code>mainlyHidden</code>, <code>mainlyInternal</code>, <code>manyMany</code>, <code>manyOne</code>, <code>maxAdmin</code>, <code>maxAuth</code>, <code>maxGuest</code>, <code>maxOwner</code>, <code>ml</code>, <code>Model</code>, <code>Models</code>, <code>multiple</code>, <code>noAdmin</code>, <code>noAuth</code>, <code>noGuest</code>, <code>noOwner</code>, <code>not</code>, <code>nu</code>, <code>nullable</code>, <code>number</code>, <code>object</code>, <code>oneMany</code>, <code>oneOne</code>, <code>onlyAdmin</code>, <code>onlyAuth</code>, <code>onlyGuest</code>, <code>onlyOwner</code>, <code>or</code>, <code>orNot</code>, <code>os</code>, <code>out</code>, <code>ow</code>, <code>owner</code>, <code>ownership</code>, <code>P</code>, <code>password</code>, <code>pGeo</code>, <code>pGSe</code>, <code>pMAd</code>, <code>pMAu</code>, <code>pMGs</code>, <code>pMHd</code>, <code>pMIn</code>, <code>pMOw</code>, <code>pNAd</code>, <code>pNAu</code>, <code>pNGs</code>, <code>pNOw</code>, <code>pOAd</code>, <code>pOAu</code>, <code>pOGs</code>, <code>pOOw</code>, <code>pr</code>, <code>primary</code>, <code>PrimaryField</code>, <code>R</code>, <code>ReadAccess</code>, <code>ReferencedIn</code>, <code>RefModels</code>, <code>RemoveAccess</code>, <code>restricted</code>, <code>rich</code>, <code>richText</code>, <code>root</code>, <code>rs</code>, <code>se</code>, <code>searchable</code>, <code>SearchAccess</code>, <code>so</code>, <code>sortable</code>, <code>string</code>, <code>tB</code>, <code>tD</code>, <code>tDd</code>, <code>tDt</code>, <code>tE</code>, <code>tEmm</code>, <code>tEmo</code>, <code>tEom</code>, <code>tEoo</code>, <code>text</code>, <code>tF</code>, <code>tFa</code>, <code>tFd</code>, <code>tFi</code>, <code>tFv</code>, <code>time</code>, <code>tN</code>, <code>tNf</code>, <code>tNg</code>, <code>tNi</code>, <code>tNt</code>, <code>tO</code>, <code>tS</code>, <code>tSe</code>, <code>tSp</code>, <code>tSr</code>, <code>tSt</code>, <code>tSu</code>, <code>tU</code>, <code>un</code>, <code>unique</code>, <code>UpdateAccess</code>, <code>url</code>, <code>video</code>.</p>
                 
               
               

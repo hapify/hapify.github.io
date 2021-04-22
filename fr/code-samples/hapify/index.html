@@ -831,9 +831,15 @@ import<span class="w"> </span>{<span class="s">&lt;&lt;dep pascal&gt;&gt;</span>
 export<span class="w"> </span>type<span class="w"> </span><span class="s">&lt;&lt;Model pascal&gt;&gt;&lt;&lt;field pascal&gt;&gt;</span>Enum<span class="w"> </span>=<span class="o">&lt;&lt;for</span><span class="w"> </span><span class="n">field</span><span class="p">.</span><span class="n">enum</span><span class="w"> </span><span class="n">e</span><span class="o">&gt;&gt;</span><span class="w"> </span><span class="n">|</span><span class="w"> </span><span class="n">&#39;&lt;&lt;e</span><span class="w"> </span><span class="n">snake</span><span class="o">&gt;&gt;</span><span class="n">&#39;&lt;&lt;endfor</span><span class="o">&gt;&gt;</span><span class="n">;</span>
 <span class="o">&lt;&lt;endfor&gt;&gt;</span>
 
+<span class="o">&lt;&lt;if</span><span class="w"> </span><span class="n">Model</span><span class="w"> </span><span class="n">hasNotes</span><span class="o">&gt;&gt;</span>
+/**<span class="w"> </span><span class="s">&lt;&lt;! Model&gt;&gt;</span><span class="w"> </span>*/
+<span class="o">&lt;&lt;endif&gt;&gt;</span>
 export<span class="w"> </span>class<span class="w"> </span><span class="s">&lt;&lt;Model pascal&gt;&gt;</span><span class="w"> </span>{
 
 <span class="w">    </span><span class="o">&lt;&lt;for</span><span class="w"> </span><span class="n">Fields</span><span class="w"> </span><span class="k">not</span><span class="w"> </span><span class="n">primary</span><span class="w"> </span><span class="n">field</span><span class="o">&gt;&gt;</span>
+<span class="w">        </span><span class="o">&lt;&lt;if</span><span class="w"> </span><span class="n">field</span><span class="w"> </span><span class="n">hasNotes</span><span class="o">&gt;&gt;</span>
+<span class="w">    </span>/**<span class="w"> </span><span class="s">&lt;&lt;! field&gt;&gt;</span><span class="w"> </span>*/
+<span class="w">        </span><span class="o">&lt;&lt;endif&gt;&gt;</span>
 <span class="w">        </span><span class="o">&lt;&lt;if</span><span class="w"> </span><span class="n">field</span><span class="w"> </span><span class="n">entity</span><span class="o">&gt;&gt;</span>
 <span class="w">    </span>private<span class="w"> </span><span class="s">&lt;&lt;field camel&gt;&gt;</span>:<span class="w"> </span>number<span class="o">&lt;&lt;if</span><span class="w"> </span><span class="n">field</span><span class="w"> </span><span class="n">multiple</span><span class="o">&gt;&gt;</span><span class="n">[]&lt;&lt;endif</span><span class="o">&gt;&gt;</span><span class="n">;</span>
 <span class="w">        </span><span class="o">&lt;&lt;elseif</span><span class="w"> </span><span class="n">field</span><span class="w"> </span><span class="n">enum</span><span class="o">&gt;&gt;</span>
@@ -876,9 +882,9 @@ export<span class="w"> </span>class<span class="w"> </span><span class="s">&lt;&
 
 &lt;&lt;&lt;
 function<span class="w"> </span>labels()<span class="w"> </span>{
-<span class="w">    </span>return<span class="w"> </span>root.fields.label
-<span class="w">        </span>.map(label<span class="w"> </span>=&gt;<span class="w"> </span>&quot;${this.&quot;+label.names.snake+&quot;}&quot;)
-<span class="w">        </span>.join(&#39;<span class="w"> </span>&#39;);
+return<span class="w"> </span>root.fields.label
+.map(label<span class="w"> </span>=&gt;<span class="w"> </span>&quot;${this.&quot;+label.names.snake+&quot;}&quot;)
+.join(&#39;<span class="w"> </span>&#39;);
 }
 &gt;&gt;&gt;
 </code></pre></div>
@@ -888,7 +894,7 @@ function<span class="w"> </span>labels()<span class="w"> </span>{
 <span class="kr">import</span> <span class="p">{</span><span class="nx">Service</span><span class="p">}</span> <span class="nx">from</span> <span class="s1">&#39;./Service&#39;</span><span class="p">;</span>
 <span class="kr">import</span> <span class="p">{</span><span class="nx">User</span><span class="p">}</span> <span class="nx">from</span> <span class="s1">&#39;./User&#39;</span><span class="p">;</span>
 
-
+<span class="cm">/** Represent a restaurant */</span>
 <span class="kr">export</span> <span class="kr">class</span> <span class="nx">Place</span> <span class="p">{</span>
 
     <span class="kr">public</span> <span class="nx">name</span>: <span class="kt">string</span><span class="p">;</span>
@@ -896,7 +902,9 @@ function<span class="w"> </span>labels()<span class="w"> </span>{
     <span class="kr">private</span> <span class="nx">categories</span>: <span class="kt">number</span><span class="p">[];</span>
     <span class="kr">public</span> <span class="nx">address1</span>: <span class="kt">string</span><span class="p">;</span>
     <span class="kr">public</span> <span class="nx">address2</span>: <span class="kt">string</span><span class="p">;</span>
+    <span class="cm">/** Inferred from address fields */</span>
     <span class="kr">public</span> <span class="nx">latitude</span>: <span class="kt">number</span><span class="p">;</span>
+    <span class="cm">/** Inferred from address fields */</span>
     <span class="kr">public</span> <span class="nx">longitude</span>: <span class="kt">number</span><span class="p">;</span>
     <span class="kr">public</span> <span class="nx">phone</span>: <span class="kt">string</span><span class="p">;</span>
     <span class="kr">public</span> <span class="nx">websiteUrl</span>: <span class="kt">string</span><span class="p">;</span>
@@ -932,12 +940,15 @@ function<span class="w"> </span>labels()<span class="w"> </span>{
 <input id="__tabbed_1_3" name="__tabbed_1" type="radio" /><label for="__tabbed_1_3">Sortie 2</label><div class="tabbed-content">
 <div class="highlight"><pre><span></span><code><span class="kr">export</span> <span class="nx">type</span> <span class="nx">UserRoleEnum</span> <span class="o">=</span> <span class="o">|</span> <span class="s1">&#39;admin&#39;</span> <span class="o">|</span> <span class="s1">&#39;user&#39;</span><span class="p">;</span>
 
+<span class="cm">/** Represent a customer */</span>
 <span class="kr">export</span> <span class="kr">class</span> <span class="nx">User</span> <span class="p">{</span>
 
     <span class="kr">public</span> <span class="nx">name</span>: <span class="kt">string</span><span class="p">;</span>
     <span class="kr">public</span> <span class="nx">email</span>: <span class="kt">string</span><span class="p">;</span>
+    <span class="cm">/** Hashed using BCrpyt */</span>
     <span class="kr">public</span> <span class="nx">password</span>: <span class="kt">string</span><span class="p">;</span>
     <span class="kr">public</span> <span class="nx">role</span>: <span class="kt">UserRoleEnum</span><span class="p">;</span>
+    <span class="cm">/** Allow admins to disable this user */</span>
     <span class="kr">public</span> <span class="nx">banned</span>: <span class="kt">boolean</span><span class="p">;</span>
     <span class="kr">public</span> <span class="nx">lastConnectedAt</span>: <span class="kt">Date</span><span class="p">;</span>
 
