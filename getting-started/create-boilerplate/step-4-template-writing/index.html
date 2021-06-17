@@ -676,6 +676,26 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#meta-data" class="md-nav__link">
+    Meta-data
+  </a>
+  
+    <nav class="md-nav" aria-label="Meta-data">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#test-if-a-meta-data-is-defined" class="md-nav__link">
+    Test if a meta-data is defined
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#exclusion-of-generated-files" class="md-nav__link">
     Exclusion of generated files
   </a>
@@ -1105,6 +1125,26 @@
   <a href="#notes" class="md-nav__link">
     Notes
   </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#meta-data" class="md-nav__link">
+    Meta-data
+  </a>
+  
+    <nav class="md-nav" aria-label="Meta-data">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#test-if-a-meta-data-is-defined" class="md-nav__link">
+    Test if a meta-data is defined
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -1810,6 +1850,77 @@ export<span class="w"> </span>class<span class="w"> </span><span class="s">&lt;&
 <div class="admonition tip">
 <p class="admonition-title">Tip</p>
 <p>With the Hapify syntax it is also possible to display notes using interpolation: <code class="highlight"><span class="s">&lt;&lt;= root.notes &gt;&gt;</span></code> or <code class="highlight"><span class="s">&lt;&lt;= model.notes &gt;&gt;</span></code> for a model or <code class="highlight"><span class="s">&lt;&lt;= field.notes &gt;&gt;</span></code> for a field.</p>
+</div>
+<h2 id="meta-data">Meta-data</h2>
+<p>It is possible to add meta-data to a field or a model.
+Here is how to find them in the templates:</p>
+<div class="tabbed-set" data-tabs="15:5"><input checked="checked" id="__tabbed_15_1" name="__tabbed_15" type="radio" /><label for="__tabbed_15_1">Hapify (long)</label><div class="tabbed-content">
+<div class="highlight"><pre><span></span><code>//<span class="w"> </span>The<span class="w"> </span>model&#39;s<span class="w"> </span>plural<span class="w"> </span>name<span class="w"> </span>is<span class="w"> </span><span class="s">&lt;&lt;-Model plural camel&gt;&gt;</span>
+</code></pre></div>
+</div>
+<input id="__tabbed_15_2" name="__tabbed_15" type="radio" /><label for="__tabbed_15_2">Hapify (short)</label><div class="tabbed-content">
+<div class="highlight"><pre><span></span><code>//<span class="w"> </span>The<span class="w"> </span>model&#39;s<span class="w"> </span>plural<span class="w"> </span>name<span class="w"> </span>is<span class="w"> </span><span class="s">&lt;&lt;-M plural aA&gt;&gt;</span>
+</code></pre></div>
+</div>
+<input id="__tabbed_15_3" name="__tabbed_15" type="radio" /><label for="__tabbed_15_3">EJS</label><div class="tabbed-content">
+<div class="highlight"><pre><span></span><code><span class="c1">// The model&#39;s plural name is &lt;%=model.meta.plural.camel%&gt;</span>
+</code></pre></div>
+</div>
+<input id="__tabbed_15_4" name="__tabbed_15" type="radio" /><label for="__tabbed_15_4">JavaScript</label><div class="tabbed-content">
+<div class="highlight"><pre><span></span><code><span class="nx">output</span> <span class="o">=</span> <span class="sb">`// The model&#39;s plural name is </span><span class="si">${</span><span class="nx">model</span><span class="p">.</span><span class="nx">meta</span><span class="p">.</span><span class="nx">plural</span><span class="p">.</span><span class="nx">camel</span><span class="si">}</span><span class="sb">`</span><span class="p">;</span>
+<span class="k">return</span> <span class="nx">output</span><span class="p">;</span>
+</code></pre></div>
+</div>
+<input id="__tabbed_15_5" name="__tabbed_15" type="radio" /><label for="__tabbed_15_5">Output</label><div class="tabbed-content">
+<div class="highlight"><pre><span></span><code><span class="c1">// The model&#39;s plural name is bookmarks</span>
+</code></pre></div>
+</div>
+</div>
+<h3 id="test-if-a-meta-data-is-defined">Test if a meta-data is defined</h3>
+<p>It is also possible to test if a metadata exists before using it:</p>
+<div class="tabbed-set" data-tabs="16:5"><input checked="checked" id="__tabbed_16_1" name="__tabbed_16" type="radio" /><label for="__tabbed_16_1">Hapify (long)</label><div class="tabbed-content">
+<div class="highlight"><pre><span></span><code><span class="o">&lt;&lt;for</span><span class="w"> </span><span class="n">Fields</span><span class="w"> </span><span class="n">field</span><span class="o">&gt;&gt;</span>
+<span class="w">    </span><span class="c">&lt;&lt;&lt; if (field.meta.plural) { &gt;&gt;&gt;</span>
+//<span class="w"> </span>Plural<span class="w"> </span>of<span class="w"> </span><span class="s">&lt;&lt;field camel&gt;&gt;</span><span class="w"> </span>is<span class="w"> </span><span class="s">&lt;&lt;-field plural camel&gt;&gt;</span>
+<span class="w">    </span><span class="c">&lt;&lt;&lt; } &gt;&gt;&gt;</span>
+<span class="o">&lt;&lt;endfor&gt;&gt;</span>
+</code></pre></div>
+</div>
+<input id="__tabbed_16_2" name="__tabbed_16" type="radio" /><label for="__tabbed_16_2">Hapify (short)</label><div class="tabbed-content">
+<div class="highlight"><pre><span></span><code><span class="o">&lt;&lt;@</span><span class="w"> </span><span class="n">F</span><span class="w"> </span><span class="n">f</span><span class="o">&gt;&gt;</span>
+<span class="w">    </span><span class="c">&lt;&lt;&lt; if (f.meta.plural) { &gt;&gt;&gt;</span>
+//<span class="w"> </span>Plural<span class="w"> </span>of<span class="w"> </span><span class="s">&lt;&lt;f aA&gt;&gt;</span><span class="w"> </span>is<span class="w"> </span><span class="s">&lt;&lt;-f plural aA&gt;&gt;</span>
+<span class="w">    </span><span class="c">&lt;&lt;&lt; } &gt;&gt;&gt;</span>
+<span class="o">&lt;&lt;@&gt;&gt;</span>
+</code></pre></div>
+</div>
+<input id="__tabbed_16_3" name="__tabbed_16" type="radio" /><label for="__tabbed_16_3">EJS</label><div class="tabbed-content">
+<div class="highlight"><pre><span></span><code><span class="o">&lt;%</span> <span class="k">for</span><span class="p">(</span><span class="kr">const</span> <span class="nx">field</span> <span class="k">of</span> <span class="nx">model</span><span class="p">.</span><span class="nx">fields</span><span class="p">.</span><span class="nx">list</span><span class="p">)</span> <span class="p">{</span> <span class="o">-%&gt;</span>
+    <span class="o">&lt;%</span> <span class="k">if</span> <span class="p">(</span><span class="nx">field</span><span class="p">.</span><span class="nx">meta</span><span class="p">.</span><span class="nx">plural</span><span class="p">)</span> <span class="p">{</span> <span class="o">-%&gt;</span>
+<span class="c1">// Plural of &lt;%=field.names.camel%&gt; is &lt;%=field.meta.plural.camel%&gt;</span>
+    <span class="o">&lt;%</span> <span class="p">}</span> <span class="o">-%&gt;</span>
+<span class="o">&lt;%</span> <span class="p">}</span> <span class="o">-%&gt;</span>
+</code></pre></div>
+</div>
+<input id="__tabbed_16_4" name="__tabbed_16" type="radio" /><label for="__tabbed_16_4">JavaScript</label><div class="tabbed-content">
+<div class="highlight"><pre><span></span><code><span class="nx">output</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span><span class="p">;</span>
+    <span class="k">for</span> <span class="p">(</span><span class="kr">const</span> <span class="nx">field</span> <span class="k">of</span> <span class="nx">model</span><span class="p">.</span><span class="nx">fields</span><span class="p">.</span><span class="nx">list</span><span class="p">)</span> <span class="p">{</span>
+        <span class="k">if</span> <span class="p">(</span><span class="nx">field</span><span class="p">.</span><span class="nx">meta</span><span class="p">.</span><span class="nx">plural</span><span class="p">)</span> <span class="p">{</span>
+            <span class="nx">output</span> <span class="o">+=</span> <span class="sb">`// Plural of </span><span class="si">${</span><span class="nx">field</span><span class="p">.</span><span class="nx">names</span><span class="p">.</span><span class="nx">camel</span><span class="si">}</span><span class="sb"> is </span><span class="si">${</span><span class="nx">field</span><span class="p">.</span><span class="nx">meta</span><span class="p">.</span><span class="nx">plural</span><span class="p">.</span><span class="nx">camel</span><span class="si">}</span><span class="err">\</span><span class="sb">n`</span><span class="p">;</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+<span class="k">return</span> <span class="nx">output</span><span class="p">;</span>
+</code></pre></div>
+</div>
+<input id="__tabbed_16_5" name="__tabbed_16" type="radio" /><label for="__tabbed_16_5">Output</label><div class="tabbed-content">
+<div class="highlight"><pre><span></span><code><span class="c1">// Plural of owner is owners</span>
+<span class="c1">// Plural of place is places</span>
+</code></pre></div>
+</div>
+</div>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>You can force the insertion of meta for fields or models by setting <a href="../step-5-models-validator/">a model validator</a>.</p>
 </div>
 <h2 id="exclusion-of-generated-files">Exclusion of generated files</h2>
 <p>It is possible to exclude some files from the generation.

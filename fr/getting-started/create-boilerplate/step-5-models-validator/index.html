@@ -961,6 +961,12 @@ La variable <code>model</code> est structurée comme ceci :</p>
     <span class="nx">errors</span><span class="p">.</span><span class="nx">push</span><span class="p">(</span><span class="s1">&#39;Primary key is required&#39;</span><span class="p">);</span>
 <span class="p">}</span>
 
+<span class="c1">// -----------------------------</span>
+<span class="c1">// Meta values</span>
+<span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="nx">model</span><span class="p">.</span><span class="nx">meta</span><span class="p">.</span><span class="nx">plural</span><span class="p">)</span> <span class="p">{</span>
+    <span class="nx">errors</span><span class="p">.</span><span class="nx">push</span><span class="p">(</span><span class="s1">&#39;Plural name is required&#39;</span><span class="p">);</span>
+<span class="p">}</span>
+
 <span class="k">return</span> <span class="p">{</span>
     <span class="nx">errors</span><span class="p">,</span>
     <span class="nx">warnings</span><span class="p">,</span>
