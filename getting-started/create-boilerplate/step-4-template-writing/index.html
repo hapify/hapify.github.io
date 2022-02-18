@@ -10,7 +10,7 @@
       
       
       <link rel="shortcut icon" href="../../../assets/icon-192x192.png">
-      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-7.0.3">
+      <meta name="generator" content="mkdocs-1.2.3, mkdocs-material-7.0.3">
     
     
       
@@ -1204,7 +1204,7 @@ This feature is intentionally disabled so that templates do not have access to y
 </code></pre></div>
 </div>
 <input id="__tabbed_1_3" name="__tabbed_1" type="radio" /><label for="__tabbed_1_3">EJS</label><div class="tabbed-content">
-<div class="highlight"><pre><span></span><code><span class="kr">class</span> <span class="o">&lt;%=</span> <span class="nx">model</span><span class="p">.</span><span class="nx">names</span><span class="p">.</span><span class="nx">pascal</span> <span class="o">%&gt;</span> <span class="p">{</span>
+<div class="highlight"><pre><span></span><code><span class="kd">class</span> <span class="o">&lt;%=</span> <span class="nx">model</span><span class="p">.</span><span class="nx">names</span><span class="p">.</span><span class="nx">pascal</span> <span class="o">%&gt;</span> <span class="p">{</span>
     <span class="kr">private</span> <span class="nx">primaryKey</span> <span class="o">=</span> <span class="s1">&#39;&lt;%= model.fields.primary.names.snake %&gt;&#39;</span><span class="p">;</span>
 <span class="p">}</span>
 </code></pre></div>
@@ -1216,8 +1216,8 @@ This feature is intentionally disabled so that templates do not have access to y
 </code></pre></div>
 </div>
 <input id="__tabbed_1_5" name="__tabbed_1" type="radio" /><label for="__tabbed_1_5">Output</label><div class="tabbed-content">
-<div class="highlight"><pre><span></span><code><span class="kr">class</span> <span class="nx">Place</span> <span class="p">{</span>
-    <span class="kr">private</span> <span class="nx">primaryKey</span> <span class="o">=</span> <span class="s1">&#39;_id&#39;</span><span class="p">;</span>
+<div class="highlight"><pre><span></span><code><span class="kd">class</span> <span class="nx">Place</span> <span class="p">{</span>
+    <span class="k">private</span> <span class="nx">primaryKey</span> <span class="o">=</span> <span class="s1">&#39;_id&#39;</span><span class="p">;</span>
 <span class="p">}</span>
 </code></pre></div>
 </div>
@@ -1239,7 +1239,7 @@ const<span class="w"> </span>mongoDb<span class="w"> </span>=<span class="w"> </
 </div>
 <input id="__tabbed_2_3" name="__tabbed_2" type="radio" /><label for="__tabbed_2_3">EJS</label><div class="tabbed-content">
 <div class="highlight"><pre><span></span><code><span class="o">&lt;%</span> <span class="k">if</span> <span class="p">(</span><span class="nx">model</span><span class="p">.</span><span class="nx">fields</span><span class="p">.</span><span class="nx">filter</span><span class="p">(</span><span class="nx">f</span> <span class="p">=&gt;</span> <span class="nx">f</span><span class="p">.</span><span class="nx">type</span> <span class="o">===</span> <span class="s1">&#39;entity&#39;</span><span class="p">).</span><span class="nx">length</span> <span class="o">&gt;</span> <span class="mf">0</span><span class="p">)</span> <span class="p">{</span> <span class="o">-%&gt;</span>
-<span class="kr">const</span> <span class="nx">mongoDb</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;mongodb&#39;</span><span class="p">);</span>
+<span class="kd">const</span> <span class="nx">mongoDb</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;mongodb&#39;</span><span class="p">);</span>
 <span class="o">&lt;%</span> <span class="p">}</span> <span class="o">-%&gt;</span>
 </code></pre></div>
 </div>
@@ -1252,7 +1252,7 @@ const<span class="w"> </span>mongoDb<span class="w"> </span>=<span class="w"> </
 </code></pre></div>
 </div>
 <input id="__tabbed_2_5" name="__tabbed_2" type="radio" /><label for="__tabbed_2_5">Output</label><div class="tabbed-content">
-<div class="highlight"><pre><span></span><code><span class="kr">const</span> <span class="nx">mongoDb</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;mongodb&#39;</span><span class="p">);</span>
+<div class="highlight"><pre><span></span><code><span class="kd">const</span> <span class="nx">mongoDb</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;mongodb&#39;</span><span class="p">);</span>
 </code></pre></div>
 </div>
 </div>
@@ -1276,7 +1276,7 @@ const<span class="w"> </span>user<span class="w"> </span>=<span class="w"> </spa
 </div>
 <input id="__tabbed_3_3" name="__tabbed_3" type="radio" /><label for="__tabbed_3_3">EJS</label><div class="tabbed-content">
 <div class="highlight"><pre><span></span><code><span class="o">&lt;%</span> <span class="k">if</span> <span class="p">(</span><span class="nx">model</span><span class="p">.</span><span class="nx">accesses</span><span class="p">.</span><span class="nx">create</span><span class="p">.</span><span class="nx">lteAuth</span><span class="p">)</span> <span class="p">{</span> <span class="o">-%&gt;</span>
-<span class="kr">const</span> <span class="nx">user</span> <span class="o">=</span> <span class="nx">Session</span><span class="p">.</span><span class="nx">getCurrent</span><span class="p">();</span>
+<span class="kd">const</span> <span class="nx">user</span> <span class="o">=</span> <span class="nx">Session</span><span class="p">.</span><span class="nx">getCurrent</span><span class="p">();</span>
 <span class="o">&lt;%</span> <span class="p">}</span> <span class="o">-%&gt;</span>
 </code></pre></div>
 </div>
@@ -1289,7 +1289,7 @@ const<span class="w"> </span>user<span class="w"> </span>=<span class="w"> </spa
 </code></pre></div>
 </div>
 <input id="__tabbed_3_5" name="__tabbed_3" type="radio" /><label for="__tabbed_3_5">Output</label><div class="tabbed-content">
-<div class="highlight"><pre><span></span><code><span class="kr">const</span> <span class="nx">user</span> <span class="o">=</span> <span class="nx">Session</span><span class="p">.</span><span class="nx">getCurrent</span><span class="p">();</span>
+<div class="highlight"><pre><span></span><code><span class="kd">const</span> <span class="nx">user</span> <span class="o">=</span> <span class="nx">Session</span><span class="p">.</span><span class="nx">getCurrent</span><span class="p">();</span>
 </code></pre></div>
 </div>
 </div>
@@ -1358,7 +1358,7 @@ this block imports the map position selection component.</p>
 </code></pre></div>
 </div>
 <input id="__tabbed_5_3" name="__tabbed_5" type="radio" /><label for="__tabbed_5_3">EJS</label><div class="tabbed-content">
-<div class="highlight"><pre><span></span><code><span class="kr">class</span> <span class="o">&lt;%=</span> <span class="nx">model</span><span class="p">.</span><span class="nx">names</span><span class="p">.</span><span class="nx">pascal</span> <span class="o">%&gt;</span> <span class="kr">extends</span> <span class="nx">BaseModel</span> <span class="p">{</span>
+<div class="highlight"><pre><span></span><code><span class="kd">class</span> <span class="o">&lt;%=</span> <span class="nx">model</span><span class="p">.</span><span class="nx">names</span><span class="p">.</span><span class="nx">pascal</span> <span class="o">%&gt;</span> <span class="k">extends</span> <span class="nx">BaseModel</span> <span class="p">{</span>
 <span class="o">&lt;%</span> <span class="k">for</span> <span class="p">(</span><span class="kd">let</span> <span class="nx">field</span> <span class="k">of</span> <span class="nx">model</span><span class="p">.</span><span class="nx">fields</span><span class="p">.</span><span class="nx">filter</span><span class="p">(</span><span class="nx">f</span> <span class="p">=&gt;</span> <span class="nx">f</span><span class="p">.</span><span class="nx">type</span> <span class="o">===</span> <span class="s1">&#39;entity&#39;</span><span class="p">))</span> <span class="p">{</span> <span class="o">-%&gt;</span>
     <span class="nx">get</span><span class="o">&lt;%=</span> <span class="nx">field</span><span class="p">.</span><span class="nx">names</span><span class="p">.</span><span class="nx">pascal</span> <span class="o">%&gt;</span><span class="p">()</span> <span class="p">{</span>
     <span class="o">&lt;%</span> <span class="k">if</span> <span class="p">(</span><span class="nx">field</span><span class="p">.</span><span class="nx">subtype</span> <span class="o">===</span> <span class="s1">&#39;oneOne&#39;</span> <span class="o">||</span> <span class="nx">field</span><span class="p">.</span><span class="nx">subtype</span> <span class="o">===</span> <span class="s1">&#39;oneMany&#39;</span><span class="p">)</span> <span class="p">{</span> <span class="o">-%&gt;</span>
@@ -1401,11 +1401,11 @@ this block imports the map position selection component.</p>
 </code></pre></div>
 </div>
 <input id="__tabbed_5_5" name="__tabbed_5" type="radio" /><label for="__tabbed_5_5">Output</label><div class="tabbed-content">
-<div class="highlight"><pre><span></span><code><span class="kr">class</span> <span class="nx">User</span> <span class="kr">extends</span> <span class="nx">BaseModel</span> <span class="p">{</span>
-    <span class="nx">getAvatar() {</span>
+<div class="highlight"><pre><span></span><code><span class="kd">class</span> <span class="nx">User</span> <span class="k">extends</span> <span class="nx">BaseModel</span> <span class="p">{</span>
+    <span class="nx">getAvatar</span><span class="p">()</span> <span class="p">{</span>
         <span class="k">return</span> <span class="k">this</span><span class="p">.</span><span class="nx">avatarStore</span><span class="p">.</span><span class="nx">findOne</span><span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="nx">properties</span><span class="p">.</span><span class="nx">avatar</span><span class="p">);</span>
     <span class="p">}</span>
-    <span class="nx">getBookmarks() {</span>
+    <span class="nx">getBookmarks</span><span class="p">()</span> <span class="p">{</span>
         <span class="k">return</span> <span class="k">this</span><span class="p">.</span><span class="nx">placeStore</span><span class="p">.</span><span class="nx">findMany</span><span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="nx">properties</span><span class="p">.</span><span class="nx">bookmarks</span><span class="p">);</span>
     <span class="p">}</span>
 <span class="p">}</span>
@@ -1432,7 +1432,7 @@ this block imports the map position selection component.</p>
 </code></pre></div>
 </div>
 <input id="__tabbed_6_3" name="__tabbed_6" type="radio" /><label for="__tabbed_6_3">EJS</label><div class="tabbed-content">
-<div class="highlight"><pre><span></span><code><span class="kr">const</span> <span class="nx">hiddenFields</span> <span class="o">=</span> <span class="p">[</span>
+<div class="highlight"><pre><span></span><code><span class="kd">const</span> <span class="nx">hiddenFields</span> <span class="o">=</span> <span class="p">[</span>
 <span class="o">&lt;%</span> <span class="k">for</span> <span class="p">(</span><span class="kd">let</span> <span class="nx">field</span> <span class="k">of</span> <span class="nx">model</span><span class="p">.</span><span class="nx">fields</span><span class="p">.</span><span class="nx">filter</span><span class="p">(</span><span class="nx">f</span> <span class="p">=&gt;</span> <span class="nx">f</span><span class="p">.</span><span class="nx">hidden</span><span class="p">))</span> <span class="p">{</span> <span class="o">-%&gt;</span>
     <span class="s1">&#39;&lt;%= field.names.camel %&gt;&#39;</span><span class="p">,</span>
 <span class="o">&lt;%</span> <span class="p">}</span> <span class="o">-%&gt;</span>
@@ -1441,7 +1441,7 @@ this block imports the map position selection component.</p>
 </div>
 <input id="__tabbed_6_4" name="__tabbed_6" type="radio" /><label for="__tabbed_6_4">JavaScript</label><div class="tabbed-content">
 <div class="highlight"><pre><span></span><code><span class="kd">let</span> <span class="nx">output</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span><span class="p">;</span>
-<span class="kr">const</span> <span class="nx">hiddenFieldsNames</span> <span class="o">=</span> <span class="nx">model</span><span class="p">.</span><span class="nx">fields</span>
+<span class="kd">const</span> <span class="nx">hiddenFieldsNames</span> <span class="o">=</span> <span class="nx">model</span><span class="p">.</span><span class="nx">fields</span>
     <span class="p">.</span><span class="nx">filter</span><span class="p">(</span><span class="nx">f</span> <span class="p">=&gt;</span> <span class="nx">f</span><span class="p">.</span><span class="nx">hidden</span><span class="p">)</span>
     <span class="p">.</span><span class="nx">map</span><span class="p">(</span><span class="nx">f</span> <span class="p">=&gt;</span> <span class="sb">`&#39;</span><span class="si">${</span><span class="nx">f</span><span class="p">.</span><span class="nx">names</span><span class="p">.</span><span class="nx">camel</span><span class="si">}</span><span class="sb">&#39;`</span><span class="p">);</span>
 <span class="nx">output</span> <span class="o">+=</span> <span class="sb">`const hiddenFields = [</span>
@@ -1451,7 +1451,7 @@ this block imports the map position selection component.</p>
 </code></pre></div>
 </div>
 <input id="__tabbed_6_5" name="__tabbed_6" type="radio" /><label for="__tabbed_6_5">Output</label><div class="tabbed-content">
-<div class="highlight"><pre><span></span><code><span class="kr">const</span> <span class="nx">hiddenFields</span> <span class="o">=</span> <span class="p">[</span>
+<div class="highlight"><pre><span></span><code><span class="kd">const</span> <span class="nx">hiddenFields</span> <span class="o">=</span> <span class="p">[</span>
     <span class="s1">&#39;password&#39;</span><span class="p">,</span>
     <span class="s1">&#39;token&#39;</span><span class="p">,</span>
 <span class="p">];</span>
@@ -1482,7 +1482,7 @@ const<span class="w"> </span><span class="s">&lt;&lt;f aA&gt;&gt;</span>Values<s
 </div>
 <input id="__tabbed_7_3" name="__tabbed_7" type="radio" /><label for="__tabbed_7_3">EJS</label><div class="tabbed-content">
 <div class="highlight"><pre><span></span><code><span class="o">&lt;%</span> <span class="k">for</span> <span class="p">(</span><span class="kd">let</span> <span class="nx">field</span> <span class="k">of</span> <span class="nx">model</span><span class="p">.</span><span class="nx">fields</span><span class="p">.</span><span class="nx">filter</span><span class="p">(</span><span class="nx">f</span> <span class="p">=&gt;</span> <span class="nx">f</span><span class="p">.</span><span class="nx">type</span> <span class="o">===</span> <span class="s1">&#39;enum&#39;</span><span class="p">))</span> <span class="p">{</span> <span class="o">-%&gt;</span>
-<span class="kr">const</span> <span class="o">&lt;%=</span> <span class="nx">field</span><span class="p">.</span><span class="nx">names</span><span class="p">.</span><span class="nx">camel</span> <span class="o">%&gt;</span><span class="nx">Values</span> <span class="o">=</span> <span class="p">[</span>
+<span class="kd">const</span> <span class="o">&lt;%=</span> <span class="nx">field</span><span class="p">.</span><span class="nx">names</span><span class="p">.</span><span class="nx">camel</span> <span class="o">%&gt;</span><span class="nx">Values</span> <span class="o">=</span> <span class="p">[</span>
     <span class="o">&lt;%</span> <span class="k">for</span> <span class="p">(</span><span class="kd">let</span> <span class="nx">e</span> <span class="k">of</span> <span class="nx">field</span><span class="p">.</span><span class="kr">enum</span><span class="p">)</span> <span class="p">{</span> <span class="o">-%&gt;</span>
     <span class="s1">&#39;&lt;%= e.names.constant %&gt;&#39;</span><span class="p">,</span>
     <span class="o">&lt;%</span> <span class="p">}</span> <span class="o">-%&gt;</span>
@@ -1493,7 +1493,7 @@ const<span class="w"> </span><span class="s">&lt;&lt;f aA&gt;&gt;</span>Values<s
 <input id="__tabbed_7_4" name="__tabbed_7" type="radio" /><label for="__tabbed_7_4">JavaScript</label><div class="tabbed-content">
 <div class="highlight"><pre><span></span><code><span class="kd">let</span> <span class="nx">output</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span><span class="p">;</span>
 <span class="k">for</span> <span class="p">(</span><span class="kd">let</span> <span class="nx">field</span> <span class="k">of</span> <span class="nx">model</span><span class="p">.</span><span class="nx">fields</span><span class="p">.</span><span class="nx">filter</span><span class="p">(</span><span class="nx">f</span> <span class="p">=&gt;</span> <span class="nx">f</span><span class="p">.</span><span class="nx">type</span> <span class="o">===</span> <span class="s1">&#39;enum&#39;</span><span class="p">))</span> <span class="p">{</span>
-    <span class="kr">const</span> <span class="nx">enums</span> <span class="o">=</span> <span class="nx">field</span><span class="p">.</span><span class="kr">enum</span><span class="p">.</span><span class="nx">map</span><span class="p">(</span><span class="nx">e</span> <span class="p">=&gt;</span> <span class="sb">`&#39;</span><span class="si">${</span><span class="nx">e</span><span class="p">.</span><span class="nx">names</span><span class="p">.</span><span class="nx">constant</span><span class="si">}</span><span class="sb">&#39;`</span><span class="p">);</span>
+    <span class="kd">const</span> <span class="nx">enums</span> <span class="o">=</span> <span class="nx">field</span><span class="p">.</span><span class="kr">enum</span><span class="p">.</span><span class="nx">map</span><span class="p">(</span><span class="nx">e</span> <span class="p">=&gt;</span> <span class="sb">`&#39;</span><span class="si">${</span><span class="nx">e</span><span class="p">.</span><span class="nx">names</span><span class="p">.</span><span class="nx">constant</span><span class="si">}</span><span class="sb">&#39;`</span><span class="p">);</span>
     <span class="nx">output</span> <span class="o">+=</span> <span class="sb">`const </span><span class="si">${</span><span class="nx">field</span><span class="p">.</span><span class="nx">names</span><span class="p">.</span><span class="nx">camel</span><span class="si">}</span><span class="sb">Values = [</span>
 <span class="sb">    </span><span class="si">${</span><span class="nx">enums</span><span class="p">.</span><span class="nx">join</span><span class="p">(</span><span class="s1">&#39;,\n\t&#39;</span><span class="p">)</span><span class="si">}</span><span class="sb"></span>
 <span class="sb">];`</span><span class="p">;</span>
@@ -1502,12 +1502,12 @@ const<span class="w"> </span><span class="s">&lt;&lt;f aA&gt;&gt;</span>Values<s
 </code></pre></div>
 </div>
 <input id="__tabbed_7_5" name="__tabbed_7" type="radio" /><label for="__tabbed_7_5">Output</label><div class="tabbed-content">
-<div class="highlight"><pre><span></span><code><span class="kr">const</span> <span class="nx">roleValues</span> <span class="o">=</span> <span class="p">[</span>
+<div class="highlight"><pre><span></span><code><span class="kd">const</span> <span class="nx">roleValues</span> <span class="o">=</span> <span class="p">[</span>
     <span class="s1">&#39;ADMIN&#39;</span><span class="p">,</span>
     <span class="s1">&#39;USER&#39;</span><span class="p">,</span>
     <span class="s1">&#39;CUSTOMER&#39;</span><span class="p">,</span>
 <span class="p">];</span>
-<span class="kr">const</span> <span class="nx">statusValues</span> <span class="o">=</span> <span class="p">[</span>
+<span class="kd">const</span> <span class="nx">statusValues</span> <span class="o">=</span> <span class="p">[</span>
     <span class="s1">&#39;BUSY&#39;</span><span class="p">,</span>
     <span class="s1">&#39;AVAILABLE&#39;</span><span class="p">,</span>
     <span class="s1">&#39;OUT_OF_OFFICE&#39;</span><span class="p">,</span>
@@ -1538,7 +1538,7 @@ require_once(&#39;./<span class="s">&lt;&lt;m a-a&gt;&gt;</span>.php&#39;);
 <input id="__tabbed_8_4" name="__tabbed_8" type="radio" /><label for="__tabbed_8_4">JavaScript</label><div class="tabbed-content">
 <div class="highlight"><pre><span></span><code><span class="kd">let</span> <span class="nx">output</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span><span class="p">;</span>
 <span class="k">for</span> <span class="p">(</span><span class="kd">let</span> <span class="nx">model</span> <span class="k">of</span> <span class="nx">models</span><span class="p">)</span> <span class="p">{</span>
-    <span class="nx">output</span> <span class="o">+=</span> <span class="sb">`require_once(&#39;./</span><span class="si">${</span><span class="nx">model</span><span class="p">.</span><span class="nx">names</span><span class="p">.</span><span class="nx">kebab</span><span class="si">}</span><span class="sb">.php&#39;);</span><span class="err">\</span><span class="sb">n`</span><span class="p">;</span>
+    <span class="nx">output</span> <span class="o">+=</span> <span class="sb">`require_once(&#39;./</span><span class="si">${</span><span class="nx">model</span><span class="p">.</span><span class="nx">names</span><span class="p">.</span><span class="nx">kebab</span><span class="si">}</span><span class="sb">.php&#39;);\n`</span><span class="p">;</span>
 <span class="p">}</span>
 <span class="k">return</span> <span class="nx">output</span><span class="p">;</span>
 </code></pre></div>
@@ -1574,7 +1574,7 @@ require_once(&#39;./<span class="s">&lt;&lt;m a-a&gt;&gt;</span>.php&#39;);
 <input id="__tabbed_9_4" name="__tabbed_9" type="radio" /><label for="__tabbed_9_4">JavaScript</label><div class="tabbed-content">
 <div class="highlight"><pre><span></span><code><span class="kd">let</span> <span class="nx">output</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span><span class="p">;</span>
 <span class="k">for</span> <span class="p">(</span><span class="kd">let</span> <span class="nx">model</span> <span class="k">of</span> <span class="nx">models</span><span class="p">.</span><span class="nx">filter</span><span class="p">(</span><span class="nx">m</span> <span class="p">=&gt;</span> <span class="nx">m</span><span class="p">.</span><span class="nx">accesses</span><span class="p">.</span><span class="nx">properties</span><span class="p">.</span><span class="nx">onlyAdmin</span><span class="p">))</span> <span class="p">{</span>
-    <span class="nx">output</span> <span class="o">+=</span> <span class="sb">`require_once(&#39;./</span><span class="si">${</span><span class="nx">model</span><span class="p">.</span><span class="nx">names</span><span class="p">.</span><span class="nx">kebab</span><span class="si">}</span><span class="sb">.php&#39;);</span><span class="err">\</span><span class="sb">n`</span><span class="p">;</span>
+    <span class="nx">output</span> <span class="o">+=</span> <span class="sb">`require_once(&#39;./</span><span class="si">${</span><span class="nx">model</span><span class="p">.</span><span class="nx">names</span><span class="p">.</span><span class="nx">kebab</span><span class="si">}</span><span class="sb">.php&#39;);\n`</span><span class="p">;</span>
 <span class="p">}</span>
 <span class="k">return</span> <span class="nx">output</span><span class="p">;</span>
 </code></pre></div>
@@ -1636,7 +1636,7 @@ $default<span class="s">&lt;&lt;f AA&gt;&gt;</span><span class="w"> </span>=<spa
 <input id="__tabbed_10_4" name="__tabbed_10" type="radio" /><label for="__tabbed_10_4">JavaScript</label><div class="tabbed-content">
 <div class="highlight"><pre><span></span><code><span class="kd">let</span> <span class="nx">output</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span><span class="p">;</span>
 <span class="k">for</span> <span class="p">(</span><span class="kd">let</span> <span class="nx">field</span> <span class="k">of</span> <span class="nx">model</span><span class="p">.</span><span class="nx">fields</span><span class="p">.</span><span class="nx">filter</span><span class="p">(</span><span class="nx">f</span> <span class="p">=&gt;</span> <span class="nx">f</span><span class="p">.</span><span class="nx">internal</span><span class="p">))</span> <span class="p">{</span>
-    <span class="nx">output</span> <span class="o">+=</span> <span class="sb">`$default</span><span class="si">${</span><span class="nx">field</span><span class="p">.</span><span class="nx">names</span><span class="p">.</span><span class="nx">pascal</span><span class="si">}</span><span class="sb"> = </span><span class="si">${</span><span class="nx">getDefaultValue</span><span class="p">(</span><span class="nx">field</span><span class="p">)</span><span class="si">}</span><span class="sb">;</span><span class="err">\</span><span class="sb">n`</span>
+    <span class="nx">output</span> <span class="o">+=</span> <span class="sb">`$default</span><span class="si">${</span><span class="nx">field</span><span class="p">.</span><span class="nx">names</span><span class="p">.</span><span class="nx">pascal</span><span class="si">}</span><span class="sb"> = </span><span class="si">${</span><span class="nx">getDefaultValue</span><span class="p">(</span><span class="nx">field</span><span class="p">)</span><span class="si">}</span><span class="sb">;\n`</span>
 <span class="p">}</span>
 <span class="k">return</span> <span class="nx">output</span><span class="p">;</span>
 
@@ -1678,23 +1678,23 @@ import<span class="w"> </span>{<span class="s">&lt;&lt;d AA&gt;&gt;</span>}<span
 </div>
 <input id="__tabbed_11_3" name="__tabbed_11" type="radio" /><label for="__tabbed_11_3">EJS</label><div class="tabbed-content">
 <div class="highlight"><pre><span></span><code><span class="o">&lt;%</span> <span class="k">for</span> <span class="p">(</span><span class="kd">let</span> <span class="nx">dep</span> <span class="k">of</span> <span class="nx">model</span><span class="p">.</span><span class="nx">dependencies</span><span class="p">.</span><span class="nx">list</span><span class="p">)</span> <span class="p">{</span> <span class="o">-%&gt;</span>
-<span class="kr">import</span> <span class="p">{</span><span class="o">&lt;%=</span> <span class="nx">dep</span><span class="p">.</span><span class="nx">names</span><span class="p">.</span><span class="nx">pascal</span> <span class="o">%&gt;</span><span class="p">}</span> <span class="nx">from</span> <span class="s1">&#39;../&lt;%= dep.names.kebab %&gt;&#39;</span><span class="p">;</span>
+<span class="k">import</span> <span class="p">{</span><span class="o">&lt;%=</span> <span class="nx">dep</span><span class="p">.</span><span class="nx">names</span><span class="p">.</span><span class="nx">pascal</span> <span class="o">%&gt;</span><span class="p">}</span> <span class="kr">from</span> <span class="s1">&#39;../&lt;%= dep.names.kebab %&gt;&#39;</span><span class="p">;</span>
 <span class="o">&lt;%</span> <span class="p">}</span> <span class="o">-%&gt;</span>
 </code></pre></div>
 </div>
 <input id="__tabbed_11_4" name="__tabbed_11" type="radio" /><label for="__tabbed_11_4">JavaScript</label><div class="tabbed-content">
 <div class="highlight"><pre><span></span><code><span class="kd">let</span> <span class="nx">output</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span><span class="p">;</span>
 <span class="k">for</span> <span class="p">(</span><span class="kd">let</span> <span class="nx">dep</span> <span class="k">of</span> <span class="nx">model</span><span class="p">.</span><span class="nx">dependencies</span><span class="p">.</span><span class="nx">list</span><span class="p">)</span> <span class="p">{</span>
-    <span class="nx">output</span> <span class="o">+=</span> <span class="sb">`import {</span><span class="si">${</span><span class="nx">dep</span><span class="p">.</span><span class="nx">names</span><span class="p">.</span><span class="nx">pascal</span><span class="si">}</span><span class="sb">} from &#39;../</span><span class="si">${</span><span class="nx">dep</span><span class="p">.</span><span class="nx">names</span><span class="p">.</span><span class="nx">kebab</span><span class="si">}</span><span class="sb">&#39;;</span><span class="err">\</span><span class="sb">n`</span><span class="p">;</span>
+    <span class="nx">output</span> <span class="o">+=</span> <span class="sb">`import {</span><span class="si">${</span><span class="nx">dep</span><span class="p">.</span><span class="nx">names</span><span class="p">.</span><span class="nx">pascal</span><span class="si">}</span><span class="sb">} from &#39;../</span><span class="si">${</span><span class="nx">dep</span><span class="p">.</span><span class="nx">names</span><span class="p">.</span><span class="nx">kebab</span><span class="si">}</span><span class="sb">&#39;;\n`</span><span class="p">;</span>
 <span class="p">}</span>
 <span class="k">return</span> <span class="nx">output</span><span class="p">;</span>
 </code></pre></div>
 </div>
 <input id="__tabbed_11_5" name="__tabbed_11" type="radio" /><label for="__tabbed_11_5">Output</label><div class="tabbed-content">
-<div class="highlight"><pre><span></span><code><span class="kr">import</span> <span class="p">{</span><span class="nx">Restaurant</span><span class="p">}</span> <span class="nx">from</span> <span class="s1">&#39;../restaurant&#39;</span><span class="p">;</span>
-<span class="kr">import</span> <span class="p">{</span><span class="nx">User</span><span class="p">}</span> <span class="nx">from</span> <span class="s1">&#39;../user&#39;</span><span class="p">;</span>
-<span class="kr">import</span> <span class="p">{</span><span class="nx">MenuPart</span><span class="p">}</span> <span class="nx">from</span> <span class="s1">&#39;../menu-part&#39;</span><span class="p">;</span>
-<span class="kr">import</span> <span class="p">{</span><span class="nx">MenuItem</span><span class="p">}</span> <span class="nx">from</span> <span class="s1">&#39;../menu-item&#39;</span><span class="p">;</span>
+<div class="highlight"><pre><span></span><code><span class="k">import</span> <span class="p">{</span><span class="nx">Restaurant</span><span class="p">}</span> <span class="kr">from</span> <span class="s1">&#39;../restaurant&#39;</span><span class="p">;</span>
+<span class="k">import</span> <span class="p">{</span><span class="nx">User</span><span class="p">}</span> <span class="kr">from</span> <span class="s1">&#39;../user&#39;</span><span class="p">;</span>
+<span class="k">import</span> <span class="p">{</span><span class="nx">MenuPart</span><span class="p">}</span> <span class="kr">from</span> <span class="s1">&#39;../menu-part&#39;</span><span class="p">;</span>
+<span class="k">import</span> <span class="p">{</span><span class="nx">MenuItem</span><span class="p">}</span> <span class="kr">from</span> <span class="s1">&#39;../menu-item&#39;</span><span class="p">;</span>
 </code></pre></div>
 </div>
 </div>
@@ -1714,22 +1714,22 @@ import<span class="w"> </span>{<span class="s">&lt;&lt;d AA&gt;&gt;</span>}<span
 </div>
 <input id="__tabbed_12_3" name="__tabbed_12" type="radio" /><label for="__tabbed_12_3">EJS</label><div class="tabbed-content">
 <div class="highlight"><pre><span></span><code><span class="o">&lt;%</span> <span class="k">for</span> <span class="p">(</span><span class="kd">let</span> <span class="nx">dep</span> <span class="k">of</span> <span class="nx">model</span><span class="p">.</span><span class="nx">dependencies</span><span class="p">.</span><span class="nx">filter</span><span class="p">(</span><span class="nx">f</span> <span class="p">=&gt;</span> <span class="o">!</span><span class="nx">f</span><span class="p">.</span><span class="nx">hidden</span><span class="p">))</span> <span class="p">{</span> <span class="o">-%&gt;</span>
-<span class="kr">import</span> <span class="p">{</span><span class="o">&lt;%=</span> <span class="nx">dep</span><span class="p">.</span><span class="nx">names</span><span class="p">.</span><span class="nx">pascal</span> <span class="o">%&gt;</span><span class="p">}</span> <span class="nx">from</span> <span class="s1">&#39;../&lt;%= dep.names.kebab %&gt;&#39;</span><span class="p">;</span>
+<span class="k">import</span> <span class="p">{</span><span class="o">&lt;%=</span> <span class="nx">dep</span><span class="p">.</span><span class="nx">names</span><span class="p">.</span><span class="nx">pascal</span> <span class="o">%&gt;</span><span class="p">}</span> <span class="kr">from</span> <span class="s1">&#39;../&lt;%= dep.names.kebab %&gt;&#39;</span><span class="p">;</span>
 <span class="o">&lt;%</span> <span class="p">}</span> <span class="o">-%&gt;</span>
 </code></pre></div>
 </div>
 <input id="__tabbed_12_4" name="__tabbed_12" type="radio" /><label for="__tabbed_12_4">JavaScript</label><div class="tabbed-content">
 <div class="highlight"><pre><span></span><code><span class="kd">let</span> <span class="nx">output</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span><span class="p">;</span>
 <span class="k">for</span> <span class="p">(</span><span class="kd">let</span> <span class="nx">dep</span> <span class="k">of</span> <span class="nx">model</span><span class="p">.</span><span class="nx">dependencies</span><span class="p">.</span><span class="nx">filter</span><span class="p">(</span><span class="nx">f</span> <span class="p">=&gt;</span> <span class="o">!</span><span class="nx">f</span><span class="p">.</span><span class="nx">hidden</span><span class="p">))</span> <span class="p">{</span>
-    <span class="nx">output</span> <span class="o">+=</span> <span class="sb">`import {</span><span class="si">${</span><span class="nx">dep</span><span class="p">.</span><span class="nx">names</span><span class="p">.</span><span class="nx">pascal</span><span class="si">}</span><span class="sb">} from &#39;../</span><span class="si">${</span><span class="nx">dep</span><span class="p">.</span><span class="nx">names</span><span class="p">.</span><span class="nx">kebab</span><span class="si">}</span><span class="sb">&#39;;</span><span class="err">\</span><span class="sb">n`</span><span class="p">;</span>
+    <span class="nx">output</span> <span class="o">+=</span> <span class="sb">`import {</span><span class="si">${</span><span class="nx">dep</span><span class="p">.</span><span class="nx">names</span><span class="p">.</span><span class="nx">pascal</span><span class="si">}</span><span class="sb">} from &#39;../</span><span class="si">${</span><span class="nx">dep</span><span class="p">.</span><span class="nx">names</span><span class="p">.</span><span class="nx">kebab</span><span class="si">}</span><span class="sb">&#39;;\n`</span><span class="p">;</span>
 <span class="p">}</span>
 <span class="k">return</span> <span class="nx">output</span><span class="p">;</span>
 </code></pre></div>
 </div>
 <input id="__tabbed_12_5" name="__tabbed_12" type="radio" /><label for="__tabbed_12_5">Output</label><div class="tabbed-content">
-<div class="highlight"><pre><span></span><code><span class="kr">import</span> <span class="p">{</span><span class="nx">PlaceCategory</span><span class="p">}</span> <span class="nx">from</span> <span class="s1">&#39;../place-category&#39;</span><span class="p">;</span>
-<span class="kr">import</span> <span class="p">{</span><span class="nx">Service</span><span class="p">}</span> <span class="nx">from</span> <span class="s1">&#39;../service&#39;</span><span class="p">;</span>
-<span class="kr">import</span> <span class="p">{</span><span class="nx">User</span><span class="p">}</span> <span class="nx">from</span> <span class="s1">&#39;../user&#39;</span><span class="p">;</span>
+<div class="highlight"><pre><span></span><code><span class="k">import</span> <span class="p">{</span><span class="nx">PlaceCategory</span><span class="p">}</span> <span class="kr">from</span> <span class="s1">&#39;../place-category&#39;</span><span class="p">;</span>
+<span class="k">import</span> <span class="p">{</span><span class="nx">Service</span><span class="p">}</span> <span class="kr">from</span> <span class="s1">&#39;../service&#39;</span><span class="p">;</span>
+<span class="k">import</span> <span class="p">{</span><span class="nx">User</span><span class="p">}</span> <span class="kr">from</span> <span class="s1">&#39;../user&#39;</span><span class="p">;</span>
 </code></pre></div>
 </div>
 </div>
@@ -1762,7 +1762,7 @@ await<span class="w"> </span>db.collection(&#39;<span class="s">&lt;&lt;m AA&gt;
 <input id="__tabbed_13_3" name="__tabbed_13" type="radio" /><label for="__tabbed_13_3">EJS</label><div class="tabbed-content">
 <div class="highlight"><pre><span></span><code><span class="o">&lt;%</span> <span class="k">for</span> <span class="p">(</span><span class="kd">let</span> <span class="nx">referrer</span> <span class="k">of</span> <span class="nx">model</span><span class="p">.</span><span class="nx">referencedIn</span><span class="p">)</span> <span class="p">{</span> <span class="o">-%&gt;</span>
     <span class="o">&lt;%</span> <span class="k">for</span> <span class="p">(</span><span class="kd">let</span> <span class="nx">field</span> <span class="k">of</span> <span class="nx">referrer</span><span class="p">.</span><span class="nx">fields</span><span class="p">)</span> <span class="p">{</span> <span class="o">-%&gt;</span>
-<span class="nx">await</span> <span class="nx">db</span><span class="p">.</span><span class="nx">collection</span><span class="p">(</span><span class="s1">&#39;&lt;%= referrer.names.pascal %&gt;&#39;</span><span class="p">).</span><span class="nx">deleteMany</span><span class="p">({</span> <span class="o">&lt;%=</span> <span class="nx">field</span><span class="p">.</span><span class="nx">names</span><span class="p">.</span><span class="nx">snake</span> <span class="o">%&gt;:</span> <span class="nx">id</span> <span class="p">});</span>
+<span class="k">await</span> <span class="nx">db</span><span class="p">.</span><span class="nx">collection</span><span class="p">(</span><span class="s1">&#39;&lt;%= referrer.names.pascal %&gt;&#39;</span><span class="p">).</span><span class="nx">deleteMany</span><span class="p">({</span> <span class="o">&lt;%=</span> <span class="nx">field</span><span class="p">.</span><span class="nx">names</span><span class="p">.</span><span class="nx">snake</span> <span class="o">%&gt;:</span> <span class="nx">id</span> <span class="p">});</span>
    <span class="o">&lt;%</span> <span class="p">}</span> <span class="o">-%&gt;</span>
 <span class="o">&lt;%</span> <span class="p">}</span> <span class="o">-%&gt;</span>
 </code></pre></div>
@@ -1771,21 +1771,21 @@ await<span class="w"> </span>db.collection(&#39;<span class="s">&lt;&lt;m AA&gt;
 <div class="highlight"><pre><span></span><code><span class="kd">let</span> <span class="nx">output</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span><span class="p">;</span>
 <span class="k">for</span> <span class="p">(</span><span class="kd">let</span> <span class="nx">referrer</span> <span class="k">of</span> <span class="nx">model</span><span class="p">.</span><span class="nx">referencedIn</span><span class="p">)</span> <span class="p">{</span>
     <span class="k">for</span> <span class="p">(</span><span class="kd">let</span> <span class="nx">field</span> <span class="k">of</span> <span class="nx">referrer</span><span class="p">.</span><span class="nx">fields</span><span class="p">)</span> <span class="p">{</span>
-        <span class="nx">output</span> <span class="o">+=</span> <span class="sb">`await db.collection(&#39;</span><span class="si">${</span><span class="nx">referrer</span><span class="p">.</span><span class="nx">names</span><span class="p">.</span><span class="nx">pascal</span><span class="si">}</span><span class="sb">&#39;).deleteMany({ </span><span class="si">${</span><span class="nx">field</span><span class="p">.</span><span class="nx">names</span><span class="p">.</span><span class="nx">snake</span><span class="si">}</span><span class="sb">: id });</span><span class="err">\</span><span class="sb">n`</span><span class="p">;</span>
+        <span class="nx">output</span> <span class="o">+=</span> <span class="sb">`await db.collection(&#39;</span><span class="si">${</span><span class="nx">referrer</span><span class="p">.</span><span class="nx">names</span><span class="p">.</span><span class="nx">pascal</span><span class="si">}</span><span class="sb">&#39;).deleteMany({ </span><span class="si">${</span><span class="nx">field</span><span class="p">.</span><span class="nx">names</span><span class="p">.</span><span class="nx">snake</span><span class="si">}</span><span class="sb">: id });\n`</span><span class="p">;</span>
     <span class="p">}</span>
 <span class="p">}</span>
 <span class="k">return</span> <span class="nx">output</span><span class="p">;</span>
 </code></pre></div>
 </div>
 <input id="__tabbed_13_5" name="__tabbed_13" type="radio" /><label for="__tabbed_13_5">Output</label><div class="tabbed-content">
-<div class="highlight"><pre><span></span><code><span class="nx">await</span> <span class="nx">db</span><span class="p">.</span><span class="nx">collection</span><span class="p">(</span><span class="s1">&#39;Place&#39;</span><span class="p">).</span><span class="nx">deleteMany</span><span class="p">({</span> <span class="nx">owner</span><span class="o">:</span> <span class="nx">id</span> <span class="p">});</span>
-<span class="nx">await</span> <span class="nx">db</span><span class="p">.</span><span class="nx">collection</span><span class="p">(</span><span class="s1">&#39;Bookmark&#39;</span><span class="p">).</span><span class="nx">deleteMany</span><span class="p">({</span> <span class="nx">owner</span><span class="o">:</span> <span class="nx">id</span> <span class="p">});</span>
-<span class="nx">await</span> <span class="nx">db</span><span class="p">.</span><span class="nx">collection</span><span class="p">(</span><span class="s1">&#39;Message&#39;</span><span class="p">).</span><span class="nx">deleteMany</span><span class="p">({</span> <span class="nx">sender</span><span class="o">:</span> <span class="nx">id</span> <span class="p">});</span>
-<span class="nx">await</span> <span class="nx">db</span><span class="p">.</span><span class="nx">collection</span><span class="p">(</span><span class="s1">&#39;Message&#39;</span><span class="p">).</span><span class="nx">deleteMany</span><span class="p">({</span> <span class="nx">recipient</span><span class="o">:</span> <span class="nx">id</span> <span class="p">});</span>
-<span class="nx">await</span> <span class="nx">db</span><span class="p">.</span><span class="nx">collection</span><span class="p">(</span><span class="s1">&#39;Conversation&#39;</span><span class="p">).</span><span class="nx">deleteMany</span><span class="p">({</span> <span class="nx">participants</span><span class="o">:</span> <span class="nx">id</span> <span class="p">});</span>
-<span class="nx">await</span> <span class="nx">db</span><span class="p">.</span><span class="nx">collection</span><span class="p">(</span><span class="s1">&#39;Conversation&#39;</span><span class="p">).</span><span class="nx">deleteMany</span><span class="p">({</span> <span class="nx">closed_by</span><span class="o">:</span> <span class="nx">id</span> <span class="p">});</span>
-<span class="nx">await</span> <span class="nx">db</span><span class="p">.</span><span class="nx">collection</span><span class="p">(</span><span class="s1">&#39;ConversationReport&#39;</span><span class="p">).</span><span class="nx">deleteMany</span><span class="p">({</span> <span class="nx">complainant</span><span class="o">:</span> <span class="nx">id</span> <span class="p">});</span>
-<span class="nx">await</span> <span class="nx">db</span><span class="p">.</span><span class="nx">collection</span><span class="p">(</span><span class="s1">&#39;ConversationReport&#39;</span><span class="p">).</span><span class="nx">deleteMany</span><span class="p">({</span> <span class="nx">defendant</span><span class="o">:</span> <span class="nx">id</span> <span class="p">});</span>
+<div class="highlight"><pre><span></span><code><span class="k">await</span> <span class="nx">db</span><span class="p">.</span><span class="nx">collection</span><span class="p">(</span><span class="s1">&#39;Place&#39;</span><span class="p">).</span><span class="nx">deleteMany</span><span class="p">({</span> <span class="nx">owner</span><span class="o">:</span> <span class="nx">id</span> <span class="p">});</span>
+<span class="k">await</span> <span class="nx">db</span><span class="p">.</span><span class="nx">collection</span><span class="p">(</span><span class="s1">&#39;Bookmark&#39;</span><span class="p">).</span><span class="nx">deleteMany</span><span class="p">({</span> <span class="nx">owner</span><span class="o">:</span> <span class="nx">id</span> <span class="p">});</span>
+<span class="k">await</span> <span class="nx">db</span><span class="p">.</span><span class="nx">collection</span><span class="p">(</span><span class="s1">&#39;Message&#39;</span><span class="p">).</span><span class="nx">deleteMany</span><span class="p">({</span> <span class="nx">sender</span><span class="o">:</span> <span class="nx">id</span> <span class="p">});</span>
+<span class="k">await</span> <span class="nx">db</span><span class="p">.</span><span class="nx">collection</span><span class="p">(</span><span class="s1">&#39;Message&#39;</span><span class="p">).</span><span class="nx">deleteMany</span><span class="p">({</span> <span class="nx">recipient</span><span class="o">:</span> <span class="nx">id</span> <span class="p">});</span>
+<span class="k">await</span> <span class="nx">db</span><span class="p">.</span><span class="nx">collection</span><span class="p">(</span><span class="s1">&#39;Conversation&#39;</span><span class="p">).</span><span class="nx">deleteMany</span><span class="p">({</span> <span class="nx">participants</span><span class="o">:</span> <span class="nx">id</span> <span class="p">});</span>
+<span class="k">await</span> <span class="nx">db</span><span class="p">.</span><span class="nx">collection</span><span class="p">(</span><span class="s1">&#39;Conversation&#39;</span><span class="p">).</span><span class="nx">deleteMany</span><span class="p">({</span> <span class="nx">closed_by</span><span class="o">:</span> <span class="nx">id</span> <span class="p">});</span>
+<span class="k">await</span> <span class="nx">db</span><span class="p">.</span><span class="nx">collection</span><span class="p">(</span><span class="s1">&#39;ConversationReport&#39;</span><span class="p">).</span><span class="nx">deleteMany</span><span class="p">({</span> <span class="nx">complainant</span><span class="o">:</span> <span class="nx">id</span> <span class="p">});</span>
+<span class="k">await</span> <span class="nx">db</span><span class="p">.</span><span class="nx">collection</span><span class="p">(</span><span class="s1">&#39;ConversationReport&#39;</span><span class="p">).</span><span class="nx">deleteMany</span><span class="p">({</span> <span class="nx">defendant</span><span class="o">:</span> <span class="nx">id</span> <span class="p">});</span>
 </code></pre></div>
 </div>
 </div>
@@ -1812,8 +1812,8 @@ export<span class="w"> </span>class<span class="w"> </span><span class="s">&lt;&
 </div>
 <input id="__tabbed_14_3" name="__tabbed_14" type="radio" /><label for="__tabbed_14_3">EJS</label><div class="tabbed-content">
 <div class="highlight"><pre><span></span><code><span class="o">&lt;%</span> <span class="k">if</span> <span class="p">(</span><span class="nx">model</span><span class="p">.</span><span class="nx">hasNotes</span><span class="p">)</span> <span class="p">{</span> <span class="o">%&gt;</span><span class="c1">// &lt;%= model.notes %&gt;&lt;% } %&gt;</span>
-<span class="kr">export</span> <span class="kr">class</span> <span class="o">&lt;%=</span> <span class="nx">model</span><span class="p">.</span><span class="nx">names</span><span class="p">.</span><span class="nx">pascal</span> <span class="o">%&gt;</span> <span class="p">{</span>
-<span class="o">&lt;%</span> <span class="k">for</span> <span class="p">(</span><span class="kr">const</span> <span class="nx">field</span> <span class="k">of</span> <span class="nx">model</span><span class="p">.</span><span class="nx">fields</span><span class="p">.</span><span class="nx">list</span><span class="p">)</span> <span class="p">{</span> <span class="o">-%&gt;</span>
+<span class="k">export</span> <span class="kd">class</span> <span class="o">&lt;%=</span> <span class="nx">model</span><span class="p">.</span><span class="nx">names</span><span class="p">.</span><span class="nx">pascal</span> <span class="o">%&gt;</span> <span class="p">{</span>
+<span class="o">&lt;%</span> <span class="k">for</span> <span class="p">(</span><span class="kd">const</span> <span class="nx">field</span> <span class="k">of</span> <span class="nx">model</span><span class="p">.</span><span class="nx">fields</span><span class="p">.</span><span class="nx">list</span><span class="p">)</span> <span class="p">{</span> <span class="o">-%&gt;</span>
     <span class="kr">public</span> <span class="o">&lt;%=</span> <span class="nx">field</span><span class="p">.</span><span class="nx">names</span><span class="p">.</span><span class="nx">camel</span> <span class="o">%&gt;</span><span class="p">;</span> <span class="o">&lt;%</span> <span class="k">if</span> <span class="p">(</span><span class="nx">field</span><span class="p">.</span><span class="nx">hasNotes</span><span class="p">)</span> <span class="p">{</span> <span class="o">%&gt;</span><span class="c1">// &lt;%= field.notes %&gt;&lt;% } %&gt;</span>
 <span class="o">&lt;%</span> <span class="p">}</span> <span class="o">%&gt;</span>
 <span class="p">}</span>
@@ -1821,16 +1821,16 @@ export<span class="w"> </span>class<span class="w"> </span><span class="s">&lt;&
 </div>
 <input id="__tabbed_14_4" name="__tabbed_14" type="radio" /><label for="__tabbed_14_4">JavaScript</label><div class="tabbed-content">
 <div class="highlight"><pre><span></span><code><span class="kd">let</span> <span class="nx">output</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span><span class="p">;</span>
-<span class="k">if</span> <span class="p">(</span><span class="nx">model</span><span class="p">.</span><span class="nx">hasNotes</span><span class="p">)</span> <span class="p">{</span> <span class="nx">output</span> <span class="o">+=</span> <span class="sb">`// </span><span class="si">${</span><span class="nx">model</span><span class="p">.</span><span class="nx">notes</span><span class="si">}</span><span class="err">\</span><span class="sb">n`</span><span class="p">;</span> <span class="p">}</span>
+<span class="k">if</span> <span class="p">(</span><span class="nx">model</span><span class="p">.</span><span class="nx">hasNotes</span><span class="p">)</span> <span class="p">{</span> <span class="nx">output</span> <span class="o">+=</span> <span class="sb">`// </span><span class="si">${</span><span class="nx">model</span><span class="p">.</span><span class="nx">notes</span><span class="si">}</span><span class="sb">\n`</span><span class="p">;</span> <span class="p">}</span>
 <span class="nx">output</span> <span class="o">+=</span> <span class="sb">`export class </span><span class="si">${</span><span class="nx">model</span><span class="p">.</span><span class="nx">names</span><span class="p">.</span><span class="nx">pascal</span><span class="si">}</span><span class="sb"> {</span>
 <span class="si">${</span><span class="nx">getFields</span><span class="p">()</span><span class="si">}</span><span class="sb">}`</span><span class="p">;</span>
 
 <span class="kd">function</span> <span class="nx">getFields</span><span class="p">()</span> <span class="p">{</span>
     <span class="kd">let</span> <span class="nx">fields</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span><span class="p">;</span>
-    <span class="k">for</span> <span class="p">(</span><span class="kr">const</span> <span class="nx">field</span> <span class="k">of</span> <span class="nx">model</span><span class="p">.</span><span class="nx">fields</span><span class="p">.</span><span class="nx">list</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">for</span> <span class="p">(</span><span class="kd">const</span> <span class="nx">field</span> <span class="k">of</span> <span class="nx">model</span><span class="p">.</span><span class="nx">fields</span><span class="p">.</span><span class="nx">list</span><span class="p">)</span> <span class="p">{</span>
         <span class="nx">fields</span> <span class="o">+=</span> <span class="sb">`    public </span><span class="si">${</span><span class="nx">field</span><span class="p">.</span><span class="nx">names</span><span class="p">.</span><span class="nx">camel</span><span class="si">}</span><span class="sb">;`</span><span class="p">;</span>
         <span class="k">if</span> <span class="p">(</span><span class="nx">field</span><span class="p">.</span><span class="nx">hasNotes</span><span class="p">)</span> <span class="p">{</span> <span class="nx">fields</span> <span class="o">+=</span> <span class="sb">` // </span><span class="si">${</span><span class="nx">field</span><span class="p">.</span><span class="nx">notes</span><span class="si">}</span><span class="sb">`</span><span class="p">;</span> <span class="p">}</span>
-        <span class="nx">fields</span> <span class="o">+=</span> <span class="sb">`</span><span class="err">\</span><span class="sb">n`</span><span class="p">;</span>
+        <span class="nx">fields</span> <span class="o">+=</span> <span class="sb">`\n`</span><span class="p">;</span>
     <span class="p">}</span>
     <span class="k">return</span> <span class="nx">fields</span><span class="p">;</span>
 <span class="p">}</span>
@@ -1839,10 +1839,10 @@ export<span class="w"> </span>class<span class="w"> </span><span class="s">&lt;&
 </div>
 <input id="__tabbed_14_5" name="__tabbed_14" type="radio" /><label for="__tabbed_14_5">Output</label><div class="tabbed-content">
 <div class="highlight"><pre><span></span><code><span class="c1">// A user can only list its own bookmarks</span>
-<span class="kr">export</span> <span class="kr">class</span> <span class="nx">Bookmark</span> <span class="p">{</span>
-    <span class="kr">public</span> <span class="nx">id</span><span class="p">;</span>
-    <span class="kr">public</span> <span class="nx">owner</span><span class="p">;</span> <span class="c1">// Current user when creating the bookmark</span>
-    <span class="kr">public</span> <span class="nx">place</span><span class="p">;</span>
+<span class="k">export</span> <span class="kd">class</span> <span class="nx">Bookmark</span> <span class="p">{</span>
+    <span class="k">public</span> <span class="nx">id</span><span class="p">;</span>
+    <span class="k">public</span> <span class="nx">owner</span><span class="p">;</span> <span class="c1">// Current user when creating the bookmark</span>
+    <span class="k">public</span> <span class="nx">place</span><span class="p">;</span>
 <span class="p">}</span>
 </code></pre></div>
 </div>
@@ -1895,7 +1895,7 @@ Here is how to find them in the templates:</p>
 </code></pre></div>
 </div>
 <input id="__tabbed_16_3" name="__tabbed_16" type="radio" /><label for="__tabbed_16_3">EJS</label><div class="tabbed-content">
-<div class="highlight"><pre><span></span><code><span class="o">&lt;%</span> <span class="k">for</span><span class="p">(</span><span class="kr">const</span> <span class="nx">field</span> <span class="k">of</span> <span class="nx">model</span><span class="p">.</span><span class="nx">fields</span><span class="p">.</span><span class="nx">list</span><span class="p">)</span> <span class="p">{</span> <span class="o">-%&gt;</span>
+<div class="highlight"><pre><span></span><code><span class="o">&lt;%</span> <span class="k">for</span><span class="p">(</span><span class="kd">const</span> <span class="nx">field</span> <span class="k">of</span> <span class="nx">model</span><span class="p">.</span><span class="nx">fields</span><span class="p">.</span><span class="nx">list</span><span class="p">)</span> <span class="p">{</span> <span class="o">-%&gt;</span>
     <span class="o">&lt;%</span> <span class="k">if</span> <span class="p">(</span><span class="nx">field</span><span class="p">.</span><span class="nx">meta</span><span class="p">.</span><span class="nx">plural</span><span class="p">)</span> <span class="p">{</span> <span class="o">-%&gt;</span>
 <span class="c1">// Plural of &lt;%=field.names.camel%&gt; is &lt;%=field.meta.plural.camel%&gt;</span>
     <span class="o">&lt;%</span> <span class="p">}</span> <span class="o">-%&gt;</span>
@@ -1904,9 +1904,9 @@ Here is how to find them in the templates:</p>
 </div>
 <input id="__tabbed_16_4" name="__tabbed_16" type="radio" /><label for="__tabbed_16_4">JavaScript</label><div class="tabbed-content">
 <div class="highlight"><pre><span></span><code><span class="nx">output</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span><span class="p">;</span>
-    <span class="k">for</span> <span class="p">(</span><span class="kr">const</span> <span class="nx">field</span> <span class="k">of</span> <span class="nx">model</span><span class="p">.</span><span class="nx">fields</span><span class="p">.</span><span class="nx">list</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">for</span> <span class="p">(</span><span class="kd">const</span> <span class="nx">field</span> <span class="k">of</span> <span class="nx">model</span><span class="p">.</span><span class="nx">fields</span><span class="p">.</span><span class="nx">list</span><span class="p">)</span> <span class="p">{</span>
         <span class="k">if</span> <span class="p">(</span><span class="nx">field</span><span class="p">.</span><span class="nx">meta</span><span class="p">.</span><span class="nx">plural</span><span class="p">)</span> <span class="p">{</span>
-            <span class="nx">output</span> <span class="o">+=</span> <span class="sb">`// Plural of </span><span class="si">${</span><span class="nx">field</span><span class="p">.</span><span class="nx">names</span><span class="p">.</span><span class="nx">camel</span><span class="si">}</span><span class="sb"> is </span><span class="si">${</span><span class="nx">field</span><span class="p">.</span><span class="nx">meta</span><span class="p">.</span><span class="nx">plural</span><span class="p">.</span><span class="nx">camel</span><span class="si">}</span><span class="err">\</span><span class="sb">n`</span><span class="p">;</span>
+            <span class="nx">output</span> <span class="o">+=</span> <span class="sb">`// Plural of </span><span class="si">${</span><span class="nx">field</span><span class="p">.</span><span class="nx">names</span><span class="p">.</span><span class="nx">camel</span><span class="si">}</span><span class="sb"> is </span><span class="si">${</span><span class="nx">field</span><span class="p">.</span><span class="nx">meta</span><span class="p">.</span><span class="nx">plural</span><span class="p">.</span><span class="nx">camel</span><span class="si">}</span><span class="sb">\n`</span><span class="p">;</span>
         <span class="p">}</span>
     <span class="p">}</span>
 <span class="k">return</span> <span class="nx">output</span><span class="p">;</span>

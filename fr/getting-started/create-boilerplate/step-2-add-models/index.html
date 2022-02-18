@@ -10,7 +10,7 @@
       
       
       <link rel="shortcut icon" href="../../../assets/icon-192x192.png">
-      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-7.0.3">
+      <meta name="generator" content="mkdocs-1.2.3, mkdocs-material-7.0.3">
     
     
       
@@ -866,27 +866,27 @@ Nous vous recommandons d'ajouter plusieurs relations entre vos modèles de donn�
 Ces champs ne sont pas contraignants, l'utilisateur pourra les modifier ou les supprimer s'il le souhaite.
 Ceci est utile pour définir la clé primaire de vos modèles de données par exemple.</p>
 <p>Les champs par défaut sont définis dans le fichier <code>hapify.json</code>:</p>
-<div class="highlight"><pre><span></span><code><span class="p">{</span>
-  <span class="nt">&quot;defaultFields&quot;</span><span class="p">:</span> <span class="p">[</span>
-    <span class="p">{</span>
-      <span class="nt">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;Id&quot;</span><span class="p">,</span>
-      <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;string&quot;</span><span class="p">,</span>
-      <span class="nt">&quot;properties&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;primary&quot;</span><span class="p">,</span> <span class="s2">&quot;internal&quot;</span><span class="p">]</span>
-    <span class="p">}</span>
-  <span class="p">]</span>
-<span class="p">}</span>
+<div class="highlight"><pre><span></span><code><span class="p">{</span><span class="w"></span>
+<span class="w">  </span><span class="nt">&quot;defaultFields&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w"></span>
+<span class="w">    </span><span class="p">{</span><span class="w"></span>
+<span class="w">      </span><span class="nt">&quot;name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Id&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">      </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;string&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">      </span><span class="nt">&quot;properties&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;primary&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;internal&quot;</span><span class="p">]</span><span class="w"></span>
+<span class="w">    </span><span class="p">}</span><span class="w"></span>
+<span class="w">  </span><span class="p">]</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
 </code></pre></div>
 <p>Pour obtenir ces champs par défaut, vous pouvez créer un modèle de données qui ne contient que les champs par défaut voulus.
 Ouvrez ensuite le fichier <code>hapify-models.json</code>, et copiez les champs du modèle de données en question:</p>
-<div class="highlight"><pre><span></span><code><span class="p">{</span>
-  <span class="nt">&quot;fields&quot;</span><span class="p">:</span> <span class="p">[</span>
-    <span class="p">{</span>
-      <span class="nt">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;id&quot;</span><span class="p">,</span>
-      <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;number&quot;</span><span class="p">,</span>
-      <span class="nt">&quot;properties&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;primary&quot;</span><span class="p">,</span> <span class="s2">&quot;internal&quot;</span><span class="p">]</span>
-    <span class="p">}</span>
-  <span class="p">]</span>
-<span class="p">}</span>
+<div class="highlight"><pre><span></span><code><span class="p">{</span><span class="w"></span>
+<span class="w">  </span><span class="nt">&quot;fields&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w"></span>
+<span class="w">    </span><span class="p">{</span><span class="w"></span>
+<span class="w">      </span><span class="nt">&quot;name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;id&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">      </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;number&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">      </span><span class="nt">&quot;properties&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;primary&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;internal&quot;</span><span class="p">]</span><span class="w"></span>
+<span class="w">    </span><span class="p">}</span><span class="w"></span>
+<span class="w">  </span><span class="p">]</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
 </code></pre></div>
 <p>Enfin, collez cela dans le fichier <code>hapify.json</code> à l'entrée <code>defaultFields</code>.</p>
 <div class="admonition warning">

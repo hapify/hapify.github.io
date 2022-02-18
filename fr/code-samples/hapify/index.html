@@ -10,7 +10,7 @@
       
       
       <link rel="shortcut icon" href="../../assets/icon-192x192.png">
-      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-7.0.3">
+      <meta name="generator" content="mkdocs-1.2.3, mkdocs-material-7.0.3">
     
     
       
@@ -890,30 +890,30 @@ return<span class="w"> </span>root.fields.label
 </code></pre></div>
 </div>
 <input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><label for="__tabbed_1_2">Sortie 1</label><div class="tabbed-content">
-<div class="highlight"><pre><span></span><code><span class="kr">import</span> <span class="p">{</span><span class="nx">PlaceCategory</span><span class="p">}</span> <span class="nx">from</span> <span class="s1">&#39;./PlaceCategory&#39;</span><span class="p">;</span>
-<span class="kr">import</span> <span class="p">{</span><span class="nx">Service</span><span class="p">}</span> <span class="nx">from</span> <span class="s1">&#39;./Service&#39;</span><span class="p">;</span>
-<span class="kr">import</span> <span class="p">{</span><span class="nx">User</span><span class="p">}</span> <span class="nx">from</span> <span class="s1">&#39;./User&#39;</span><span class="p">;</span>
+<div class="highlight"><pre><span></span><code><span class="k">import</span> <span class="p">{</span><span class="nx">PlaceCategory</span><span class="p">}</span> <span class="kr">from</span> <span class="s1">&#39;./PlaceCategory&#39;</span><span class="p">;</span>
+<span class="k">import</span> <span class="p">{</span><span class="nx">Service</span><span class="p">}</span> <span class="kr">from</span> <span class="s1">&#39;./Service&#39;</span><span class="p">;</span>
+<span class="k">import</span> <span class="p">{</span><span class="nx">User</span><span class="p">}</span> <span class="kr">from</span> <span class="s1">&#39;./User&#39;</span><span class="p">;</span>
 
 <span class="cm">/** Represent a restaurant */</span>
-<span class="kr">export</span> <span class="kr">class</span> <span class="nx">Place</span> <span class="p">{</span>
+<span class="k">export</span> <span class="kd">class</span> <span class="nx">Place</span> <span class="p">{</span>
 
-    <span class="kr">public</span> <span class="nx">name</span>: <span class="kt">string</span><span class="p">;</span>
-    <span class="kr">public</span> <span class="nx">description</span>: <span class="kt">string</span><span class="p">;</span>
-    <span class="kr">private</span> <span class="nx">categories</span>: <span class="kt">number</span><span class="p">[];</span>
-    <span class="kr">public</span> <span class="nx">address1</span>: <span class="kt">string</span><span class="p">;</span>
-    <span class="kr">public</span> <span class="nx">address2</span>: <span class="kt">string</span><span class="p">;</span>
+    <span class="k">public</span> <span class="nx">name</span>: <span class="kt">string</span><span class="p">;</span>
+    <span class="k">public</span> <span class="nx">description</span>: <span class="kt">string</span><span class="p">;</span>
+    <span class="k">private</span> <span class="nx">categories</span>: <span class="kt">number</span><span class="p">[];</span>
+    <span class="k">public</span> <span class="nx">address1</span>: <span class="kt">string</span><span class="p">;</span>
+    <span class="k">public</span> <span class="nx">address2</span>: <span class="kt">string</span><span class="p">;</span>
     <span class="cm">/** Inferred from address fields */</span>
-    <span class="kr">public</span> <span class="nx">latitude</span>: <span class="kt">number</span><span class="p">;</span>
+    <span class="k">public</span> <span class="nx">latitude</span>: <span class="kt">number</span><span class="p">;</span>
     <span class="cm">/** Inferred from address fields */</span>
-    <span class="kr">public</span> <span class="nx">longitude</span>: <span class="kt">number</span><span class="p">;</span>
-    <span class="kr">public</span> <span class="nx">phone</span>: <span class="kt">string</span><span class="p">;</span>
-    <span class="kr">public</span> <span class="nx">websiteUrl</span>: <span class="kt">string</span><span class="p">;</span>
-    <span class="kr">private</span> <span class="nx">services</span>: <span class="kt">number</span><span class="p">[];</span>
-    <span class="kr">public</span> <span class="nx">timetable</span>: <span class="kt">string</span><span class="p">;</span>
-    <span class="kr">private</span> <span class="nx">owner</span>: <span class="kt">number</span><span class="p">;</span>
-    <span class="kr">public</span> <span class="nx">disabled</span>: <span class="kt">boolean</span><span class="p">;</span>
+    <span class="k">public</span> <span class="nx">longitude</span>: <span class="kt">number</span><span class="p">;</span>
+    <span class="k">public</span> <span class="nx">phone</span>: <span class="kt">string</span><span class="p">;</span>
+    <span class="k">public</span> <span class="nx">websiteUrl</span>: <span class="kt">string</span><span class="p">;</span>
+    <span class="k">private</span> <span class="nx">services</span>: <span class="kt">number</span><span class="p">[];</span>
+    <span class="k">public</span> <span class="nx">timetable</span>: <span class="kt">string</span><span class="p">;</span>
+    <span class="k">private</span> <span class="nx">owner</span>: <span class="kt">number</span><span class="p">;</span>
+    <span class="k">public</span> <span class="nx">disabled</span>: <span class="kt">boolean</span><span class="p">;</span>
 
-    <span class="kr">constructor</span><span class="p">(</span><span class="kr">private</span> <span class="nx">id</span>: <span class="kt">number</span><span class="p">)</span> <span class="p">{}</span>
+    <span class="kr">constructor</span><span class="p">(</span><span class="k">private</span> <span class="nx">id</span>: <span class="kt">number</span><span class="p">)</span> <span class="p">{}</span>
 
     <span class="nx">getId</span><span class="p">()</span><span class="o">:</span> <span class="kt">number</span> <span class="p">{</span>
         <span class="k">return</span> <span class="k">this</span><span class="p">.</span><span class="nx">id</span>
@@ -924,35 +924,35 @@ return<span class="w"> </span>root.fields.label
     <span class="p">}</span>
 
     <span class="nx">getCategories</span><span class="p">()</span><span class="o">:</span> <span class="nx">PlaceCategory</span><span class="p">[]</span> <span class="p">{</span>
-        <span class="k">return</span> <span class="k">this</span><span class="p">.</span><span class="nx">categories</span><span class="p">.</span><span class="nx">map</span><span class="p">(</span><span class="nx">id</span> <span class="o">=&gt;</span> <span class="k">new</span> <span class="nx">PlaceCategory</span><span class="p">(</span><span class="nx">id</span><span class="p">));</span>
+        <span class="k">return</span> <span class="k">this</span><span class="p">.</span><span class="nx">categories</span><span class="p">.</span><span class="nx">map</span><span class="p">(</span><span class="nx">id</span> <span class="p">=&gt;</span> <span class="ow">new</span> <span class="nx">PlaceCategory</span><span class="p">(</span><span class="nx">id</span><span class="p">));</span>
     <span class="p">}</span>
 
     <span class="nx">getServices</span><span class="p">()</span><span class="o">:</span> <span class="nx">Service</span><span class="p">[]</span> <span class="p">{</span>
-        <span class="k">return</span> <span class="k">this</span><span class="p">.</span><span class="nx">services</span><span class="p">.</span><span class="nx">map</span><span class="p">(</span><span class="nx">id</span> <span class="o">=&gt;</span> <span class="k">new</span> <span class="nx">Service</span><span class="p">(</span><span class="nx">id</span><span class="p">));</span>
+        <span class="k">return</span> <span class="k">this</span><span class="p">.</span><span class="nx">services</span><span class="p">.</span><span class="nx">map</span><span class="p">(</span><span class="nx">id</span> <span class="p">=&gt;</span> <span class="ow">new</span> <span class="nx">Service</span><span class="p">(</span><span class="nx">id</span><span class="p">));</span>
     <span class="p">}</span>
 
     <span class="nx">getOwner</span><span class="p">()</span><span class="o">:</span> <span class="nx">User</span> <span class="p">{</span>
-        <span class="k">return</span> <span class="k">new</span> <span class="nx">User</span><span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="nx">owner</span><span class="p">);</span>
+        <span class="k">return</span> <span class="ow">new</span> <span class="nx">User</span><span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="nx">owner</span><span class="p">);</span>
     <span class="p">}</span>
 <span class="p">}</span>
 </code></pre></div>
 </div>
 <input id="__tabbed_1_3" name="__tabbed_1" type="radio" /><label for="__tabbed_1_3">Sortie 2</label><div class="tabbed-content">
-<div class="highlight"><pre><span></span><code><span class="kr">export</span> <span class="nx">type</span> <span class="nx">UserRoleEnum</span> <span class="o">=</span> <span class="o">|</span> <span class="s1">&#39;admin&#39;</span> <span class="o">|</span> <span class="s1">&#39;user&#39;</span><span class="p">;</span>
+<div class="highlight"><pre><span></span><code><span class="k">export</span> <span class="kr">type</span> <span class="nx">UserRoleEnum</span> <span class="o">=</span> <span class="o">|</span> <span class="s1">&#39;admin&#39;</span> <span class="o">|</span> <span class="s1">&#39;user&#39;</span><span class="p">;</span>
 
 <span class="cm">/** Represent a customer */</span>
-<span class="kr">export</span> <span class="kr">class</span> <span class="nx">User</span> <span class="p">{</span>
+<span class="k">export</span> <span class="kd">class</span> <span class="nx">User</span> <span class="p">{</span>
 
-    <span class="kr">public</span> <span class="nx">name</span>: <span class="kt">string</span><span class="p">;</span>
-    <span class="kr">public</span> <span class="nx">email</span>: <span class="kt">string</span><span class="p">;</span>
+    <span class="k">public</span> <span class="nx">name</span>: <span class="kt">string</span><span class="p">;</span>
+    <span class="k">public</span> <span class="nx">email</span>: <span class="kt">string</span><span class="p">;</span>
     <span class="cm">/** Hashed using BCrpyt */</span>
-    <span class="kr">public</span> <span class="nx">password</span>: <span class="kt">string</span><span class="p">;</span>
-    <span class="kr">public</span> <span class="nx">role</span>: <span class="kt">UserRoleEnum</span><span class="p">;</span>
+    <span class="k">public</span> <span class="nx">password</span>: <span class="kt">string</span><span class="p">;</span>
+    <span class="k">public</span> <span class="nx">role</span>: <span class="kt">UserRoleEnum</span><span class="p">;</span>
     <span class="cm">/** Allow admins to disable this user */</span>
-    <span class="kr">public</span> <span class="nx">banned</span>: <span class="kt">boolean</span><span class="p">;</span>
-    <span class="kr">public</span> <span class="nx">lastConnectedAt</span>: <span class="kt">Date</span><span class="p">;</span>
+    <span class="k">public</span> <span class="nx">banned</span>: <span class="kt">boolean</span><span class="p">;</span>
+    <span class="k">public</span> <span class="nx">lastConnectedAt</span>: <span class="kt">Date</span><span class="p">;</span>
 
-    <span class="kr">constructor</span><span class="p">(</span><span class="kr">private</span> <span class="nx">id</span>: <span class="kt">number</span><span class="p">)</span> <span class="p">{}</span>
+    <span class="kr">constructor</span><span class="p">(</span><span class="k">private</span> <span class="nx">id</span>: <span class="kt">number</span><span class="p">)</span> <span class="p">{}</span>
 
     <span class="nx">getId</span><span class="p">()</span><span class="o">:</span> <span class="kt">number</span> <span class="p">{</span>
         <span class="k">return</span> <span class="k">this</span><span class="p">.</span><span class="nx">id</span>

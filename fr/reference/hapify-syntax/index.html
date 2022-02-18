@@ -10,7 +10,7 @@
       
       
       <link rel="shortcut icon" href="../../assets/icon-192x192.png">
-      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-7.0.3">
+      <meta name="generator" content="mkdocs-1.2.3, mkdocs-material-7.0.3">
     
     
       
@@ -1628,7 +1628,7 @@ const<span class="w"> </span><span class="s">&lt;&lt;M aA&gt;&gt;</span><span cl
 </div>
 <p>Pour un modèle de données nommé <code>user group</code>, le résultat sera le suivant :</p>
 <div class="highlight"><pre><span></span><code><span class="c1">// Create a new user group</span>
-<span class="kr">const</span> <span class="nx">userGroup</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">UserGroup</span><span class="p">();</span>
+<span class="kd">const</span> <span class="nx">userGroup</span> <span class="o">=</span> <span class="ow">new</span> <span class="nx">UserGroup</span><span class="p">();</span>
 </code></pre></div>
 <h3 id="noms-des-champs">Noms des champs</h3>
 <p>Lister tous les champs d'un modèle de données :</p>
@@ -1699,17 +1699,17 @@ const<span class="w"> </span>mongoDb<span class="w"> </span>=<span class="w"> </
 <input id="__tabbed_4_3" name="__tabbed_4" type="radio" /><label for="__tabbed_4_3">Équivalent JavaScript</label><div class="tabbed-content">
 <div class="highlight"><pre><span></span><code><span class="nx">out</span> <span class="o">+=</span> <span class="sb">`const utils = require(&#39;utils&#39;);`</span><span class="p">;</span>
 <span class="k">if</span> <span class="p">(</span><span class="nx">root</span><span class="p">.</span><span class="nx">fields</span><span class="p">.</span><span class="nx">filter</span><span class="p">(</span><span class="nx">f</span> <span class="p">=&gt;</span> <span class="nx">f</span><span class="p">.</span><span class="nx">type</span> <span class="o">===</span> <span class="s1">&#39;entity&#39;</span><span class="p">).</span><span class="nx">length</span> <span class="o">&gt;</span> <span class="mf">0</span><span class="p">)</span> <span class="p">{</span>
-    <span class="nx">out</span> <span class="o">+=</span> <span class="sb">`</span><span class="err">\</span><span class="sb">nconst mongoDb = require(&#39;mongodb&#39;);`</span><span class="p">;</span>
+    <span class="nx">out</span> <span class="o">+=</span> <span class="sb">`\nconst mongoDb = require(&#39;mongodb&#39;);`</span><span class="p">;</span>
 <span class="p">}</span>
 </code></pre></div>
 </div>
 </div>
 <p>Pour un modèle de données qui contient au moins un champ de type <code>entity</code>, le résultat sera le suivant :</p>
-<div class="highlight"><pre><span></span><code><span class="kr">const</span> <span class="nx">utils</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;utils&#39;</span><span class="p">);</span>
-<span class="kr">const</span> <span class="nx">mongoDb</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;mongodb&#39;</span><span class="p">);</span>
+<div class="highlight"><pre><span></span><code><span class="kd">const</span> <span class="nx">utils</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;utils&#39;</span><span class="p">);</span>
+<span class="kd">const</span> <span class="nx">mongoDb</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;mongodb&#39;</span><span class="p">);</span>
 </code></pre></div>
 <p>Pour un modèle de données qui ne contient pas de champ de type <code>entity</code>, le résultat sera le suivant :</p>
-<div class="highlight"><pre><span></span><code><span class="kr">const</span> <span class="nx">utils</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;utils&#39;</span><span class="p">);</span>
+<div class="highlight"><pre><span></span><code><span class="kd">const</span> <span class="nx">utils</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;utils&#39;</span><span class="p">);</span>
 </code></pre></div>
 <h4 id="sans-filtre">Sans filtre</h4>
 <p>Le filtrage des champs est optionnel.</p>
@@ -2035,6 +2035,10 @@ Réécrivons cette dernière condition :</p>
 <li><code>noOwner</code> (alias: <code>pNOw</code>) Aucune action n'est restreinte à <code>owner</code></li>
 <li><code>noAuth</code> (alias: <code>pNAu</code>) Aucune action n'est restreinte à <code>authenticated</code></li>
 <li><code>noGuest</code> (alias: <code>pNGs</code>) Aucune action n'est restreinte à <code>guest</code></li>
+<li><code>hasAdmin</code> (alias: <code>pHAd</code>) Au moins une action est restreinte à <code>admin</code></li>
+<li><code>hasOwner</code> (alias: <code>pHOw</code>) Au moins une action est restreinte à <code>owner</code></li>
+<li><code>hasAuth</code> (alias: <code>pHAu</code>) Au moins une action est restreinte à <code>authenticated</code></li>
+<li><code>hasGuest</code> (alias: <code>pHGs</code>) Au moins une action est restreinte à <code>guest</code></li>
 </ul>
 <p><strong>Exemple</strong></p>
 <div class="tabbed-set" data-tabs="14:3"><input checked="checked" id="__tabbed_14_1" name="__tabbed_14" type="radio" /><label for="__tabbed_14_1">Hapify (long)</label><div class="tabbed-content">
@@ -2333,7 +2337,7 @@ Le filtrage ne s'effectue <strong>pas</strong> sur les champs du modèle de donn
 </div>
 <input id="__tabbed_24_3" name="__tabbed_24" type="radio" /><label for="__tabbed_24_3">Équivalent JavaScript</label><div class="tabbed-content">
 <div class="highlight"><pre><span></span><code><span class="k">for</span> <span class="p">(</span><span class="kd">let</span> <span class="nx">access</span> <span class="k">of</span> <span class="nx">root</span><span class="p">.</span><span class="nx">accesses</span><span class="p">.</span><span class="nx">filter</span><span class="p">(</span><span class="nx">a</span> <span class="p">=&gt;</span> <span class="nx">a</span><span class="p">.</span><span class="nx">admin</span> <span class="o">||</span> <span class="nx">a</span><span class="p">.</span><span class="nx">owner</span><span class="p">))</span> <span class="p">{</span>
-    <span class="nx">out</span> <span class="o">+=</span> <span class="sb">`    </span><span class="si">${</span><span class="nx">access</span><span class="p">.</span><span class="nx">action</span><span class="si">}</span><span class="err">\</span><span class="sb">n`</span><span class="p">;</span>
+    <span class="nx">out</span> <span class="o">+=</span> <span class="sb">`    </span><span class="si">${</span><span class="nx">access</span><span class="p">.</span><span class="nx">action</span><span class="si">}</span><span class="sb">\n`</span><span class="p">;</span>
 <span class="p">}</span>
 </code></pre></div>
 </div>
@@ -2431,7 +2435,7 @@ type<span class="w"> </span><span class="s">&lt;&lt;f AA&gt;&gt;</span><span cla
 </code></pre></div>
 </div>
 <input id="__tabbed_27_3" name="__tabbed_27" type="radio" /><label for="__tabbed_27_3">Sortie</label><div class="tabbed-content">
-<div class="highlight"><pre><span></span><code><span class="kr">const</span> <span class="nx">models</span> <span class="o">=</span> <span class="p">{</span>
+<div class="highlight"><pre><span></span><code><span class="kd">const</span> <span class="nx">models</span> <span class="o">=</span> <span class="p">{</span>
     <span class="nx">user</span><span class="o">:</span> <span class="p">[</span>
         <span class="s1">&#39;id&#39;</span><span class="p">,</span>
         <span class="s1">&#39;createdAt&#39;</span><span class="p">,</span>
@@ -2529,10 +2533,10 @@ export<span class="w"> </span>class<span class="w"> </span><span class="s">&lt;&
 </div>
 <input id="__tabbed_29_3" name="__tabbed_29" type="radio" /><label for="__tabbed_29_3">Sortie</label><div class="tabbed-content">
 <div class="highlight"><pre><span></span><code><span class="c1">// A user can only list its own bookmarks</span>
-<span class="kr">export</span> <span class="kr">class</span> <span class="nx">Bookmark</span> <span class="p">{</span>
-    <span class="kr">public</span> <span class="nx">id</span><span class="p">;</span>
-    <span class="kr">public</span> <span class="nx">owner</span><span class="p">;</span> <span class="c1">// Current user when creating the bookmark</span>
-    <span class="kr">public</span> <span class="nx">place</span><span class="p">;</span>
+<span class="k">export</span> <span class="kd">class</span> <span class="nx">Bookmark</span> <span class="p">{</span>
+    <span class="k">public</span> <span class="nx">id</span><span class="p">;</span>
+    <span class="k">public</span> <span class="nx">owner</span><span class="p">;</span> <span class="c1">// Current user when creating the bookmark</span>
+    <span class="k">public</span> <span class="nx">place</span><span class="p">;</span>
 <span class="p">}</span>
 </code></pre></div>
 </div>
@@ -2589,7 +2593,7 @@ Nous vous recommandons vivement d'utiliser un formateur de code suite à la gén
 </div>
 <h2 id="mots-reserves">Mots réservés</h2>
 <p>La liste suivante de mots ne peut pas être utilisée pour nommer des variables.</p>
-<p><code>A</code>, <code>Ac</code>, <code>Accesses</code>, <code>ad</code>, <code>Ad</code>, <code>admin</code>, <code>An</code>, <code>and</code>, <code>andNot</code>, <code>Ar</code>, <code>As</code>, <code>au</code>, <code>Au</code>, <code>audio</code>, <code>auth</code>, <code>boolean</code>, <code>CountAccess</code>, <code>CreateAccess</code>, <code>D</code>, <code>date</code>, <code>datetime</code>, <code>Dependencies</code>, <code>document</code>, <code>else</code>, <code>elseif</code>, <code>em</code>, <code>email</code>, <code>embedded</code>, <code>endfor</code>, <code>endif</code>, <code>entity</code>, <code>enum</code>, <code>F</code>, <code>Fields</code>, <code>file</code>, <code>float</code>, <code>for</code>, <code>gs</code>, <code>gteAdmin</code>, <code>gteAuth</code>, <code>gteGuest</code>, <code>gteOwner</code>, <code>guest</code>, <code>hasNotes</code>, <code>hd</code>, <code>hidden</code>, <code>hN</code>, <code>if</code>, <code>image</code>, <code>in</code>, <code>integer</code>, <code>internal</code>, <code>isGeolocated</code>, <code>isGeoSearchable</code>, <code>label</code>, <code>latitude</code>, <code>lb</code>, <code>longitude</code>, <code>lteAdmin</code>, <code>lteAuth</code>, <code>lteGuest</code>, <code>lteOwner</code>, <code>M</code>, <code>mainlyHidden</code>, <code>mainlyInternal</code>, <code>manyMany</code>, <code>manyOne</code>, <code>maxAdmin</code>, <code>maxAuth</code>, <code>maxGuest</code>, <code>maxOwner</code>, <code>ml</code>, <code>Model</code>, <code>Models</code>, <code>multiple</code>, <code>noAdmin</code>, <code>noAuth</code>, <code>noGuest</code>, <code>noOwner</code>, <code>not</code>, <code>nu</code>, <code>nullable</code>, <code>number</code>, <code>object</code>, <code>oneMany</code>, <code>oneOne</code>, <code>onlyAdmin</code>, <code>onlyAuth</code>, <code>onlyGuest</code>, <code>onlyOwner</code>, <code>or</code>, <code>orNot</code>, <code>os</code>, <code>out</code>, <code>ow</code>, <code>owner</code>, <code>ownership</code>, <code>P</code>, <code>password</code>, <code>pGeo</code>, <code>pGSe</code>, <code>pMAd</code>, <code>pMAu</code>, <code>pMGs</code>, <code>pMHd</code>, <code>pMIn</code>, <code>pMOw</code>, <code>pNAd</code>, <code>pNAu</code>, <code>pNGs</code>, <code>pNOw</code>, <code>pOAd</code>, <code>pOAu</code>, <code>pOGs</code>, <code>pOOw</code>, <code>pr</code>, <code>primary</code>, <code>PrimaryField</code>, <code>R</code>, <code>ReadAccess</code>, <code>ReferencedIn</code>, <code>RefModels</code>, <code>RemoveAccess</code>, <code>restricted</code>, <code>rich</code>, <code>richText</code>, <code>root</code>, <code>rs</code>, <code>se</code>, <code>searchable</code>, <code>SearchAccess</code>, <code>so</code>, <code>sortable</code>, <code>string</code>, <code>tB</code>, <code>tD</code>, <code>tDd</code>, <code>tDt</code>, <code>tE</code>, <code>tEmm</code>, <code>tEmo</code>, <code>tEom</code>, <code>tEoo</code>, <code>text</code>, <code>tF</code>, <code>tFa</code>, <code>tFd</code>, <code>tFi</code>, <code>tFv</code>, <code>time</code>, <code>tN</code>, <code>tNf</code>, <code>tNg</code>, <code>tNi</code>, <code>tNt</code>, <code>tO</code>, <code>tS</code>, <code>tSe</code>, <code>tSp</code>, <code>tSr</code>, <code>tSt</code>, <code>tSu</code>, <code>tU</code>, <code>un</code>, <code>unique</code>, <code>UpdateAccess</code>, <code>url</code>, <code>video</code>.</p>
+<p><code>A</code>, <code>Ac</code>, <code>Accesses</code>, <code>ad</code>, <code>Ad</code>, <code>admin</code>, <code>An</code>, <code>and</code>, <code>andNot</code>, <code>Ar</code>, <code>As</code>, <code>au</code>, <code>Au</code>, <code>audio</code>, <code>auth</code>, <code>boolean</code>, <code>CountAccess</code>, <code>CreateAccess</code>, <code>D</code>, <code>date</code>, <code>datetime</code>, <code>Dependencies</code>, <code>document</code>, <code>else</code>, <code>elseif</code>, <code>em</code>, <code>email</code>, <code>embedded</code>, <code>endfor</code>, <code>endif</code>, <code>entity</code>, <code>enum</code>, <code>F</code>, <code>Fields</code>, <code>file</code>, <code>float</code>, <code>for</code>, <code>gs</code>, <code>gteAdmin</code>, <code>gteAuth</code>, <code>gteGuest</code>, <code>gteOwner</code>, <code>guest</code>, <code>hasAdmin</code>, <code>hasAuth</code>, <code>hasGuest</code>, <code>hasNotes</code>, <code>hasOwner</code>, <code>hd</code>, <code>hidden</code>, <code>hN</code>, <code>if</code>, <code>image</code>, <code>in</code>, <code>integer</code>, <code>internal</code>, <code>isGeolocated</code>, <code>isGeoSearchable</code>, <code>label</code>, <code>latitude</code>, <code>lb</code>, <code>longitude</code>, <code>lteAdmin</code>, <code>lteAuth</code>, <code>lteGuest</code>, <code>lteOwner</code>, <code>M</code>, <code>mainlyHidden</code>, <code>mainlyInternal</code>, <code>manyMany</code>, <code>manyOne</code>, <code>maxAdmin</code>, <code>maxAuth</code>, <code>maxGuest</code>, <code>maxOwner</code>, <code>ml</code>, <code>Model</code>, <code>Models</code>, <code>multiple</code>, <code>noAdmin</code>, <code>noAuth</code>, <code>noGuest</code>, <code>noOwner</code>, <code>not</code>, <code>nu</code>, <code>nullable</code>, <code>number</code>, <code>object</code>, <code>oneMany</code>, <code>oneOne</code>, <code>onlyAdmin</code>, <code>onlyAuth</code>, <code>onlyGuest</code>, <code>onlyOwner</code>, <code>or</code>, <code>orNot</code>, <code>os</code>, <code>out</code>, <code>ow</code>, <code>owner</code>, <code>ownership</code>, <code>P</code>, <code>password</code>, <code>pGeo</code>, <code>pGSe</code>, <code>pHAd</code>, <code>pHAu</code>, <code>pHGs</code>, <code>pHOw</code>, <code>pMAd</code>, <code>pMAu</code>, <code>pMGs</code>, <code>pMHd</code>, <code>pMIn</code>, <code>pMOw</code>, <code>pNAd</code>, <code>pNAu</code>, <code>pNGs</code>, <code>pNOw</code>, <code>pOAd</code>, <code>pOAu</code>, <code>pOGs</code>, <code>pOOw</code>, <code>pr</code>, <code>primary</code>, <code>PrimaryField</code>, <code>R</code>, <code>ReadAccess</code>, <code>ReferencedIn</code>, <code>RefModels</code>, <code>RemoveAccess</code>, <code>restricted</code>, <code>rich</code>, <code>richText</code>, <code>root</code>, <code>rs</code>, <code>se</code>, <code>searchable</code>, <code>SearchAccess</code>, <code>so</code>, <code>sortable</code>, <code>string</code>, <code>tB</code>, <code>tD</code>, <code>tDd</code>, <code>tDt</code>, <code>tE</code>, <code>tEmm</code>, <code>tEmo</code>, <code>tEom</code>, <code>tEoo</code>, <code>text</code>, <code>tF</code>, <code>tFa</code>, <code>tFd</code>, <code>tFi</code>, <code>tFv</code>, <code>time</code>, <code>tN</code>, <code>tNf</code>, <code>tNg</code>, <code>tNi</code>, <code>tNt</code>, <code>tO</code>, <code>tS</code>, <code>tSe</code>, <code>tSp</code>, <code>tSr</code>, <code>tSt</code>, <code>tSu</code>, <code>tU</code>, <code>un</code>, <code>unique</code>, <code>UpdateAccess</code>, <code>url</code>, <code>video</code>.</p>
                 
               
               

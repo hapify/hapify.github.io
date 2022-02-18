@@ -10,7 +10,7 @@
       
       
       <link rel="shortcut icon" href="../../../assets/icon-192x192.png">
-      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-7.0.3">
+      <meta name="generator" content="mkdocs-1.2.3, mkdocs-material-7.0.3">
     
     
       
@@ -888,47 +888,47 @@ Votre code doit retourner un objet comme celui-ci :</p>
 <h3 id="acceder-aux-proprietes-du-modele-de-donnees">Accéder aux propriétés du modèle de données</h3>
 <p>Dans le script du validateur, le modèle de données est disponible sous la variable <code>model</code>.
 La variable <code>model</code> est structurée comme ceci :</p>
-<div class="highlight"><pre><span></span><code><span class="p">{</span>
-    <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;bdc6c58e-ec49-9193-6b29-6c75518bc3ad&quot;</span><span class="p">,</span>
-    <span class="nt">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;Bookmark&quot;</span><span class="p">,</span>
-    <span class="nt">&quot;notes&quot;</span><span class="p">:</span> <span class="s2">&quot;A user can only list its own bookmarks&quot;</span><span class="p">,</span>
-    <span class="nt">&quot;fields&quot;</span><span class="p">:</span> <span class="p">[</span>
-        <span class="p">{</span>
-            <span class="nt">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;_id&quot;</span><span class="p">,</span>
-            <span class="nt">&quot;notes&quot;</span><span class="p">:</span> <span class="kc">null</span><span class="p">,</span>
-            <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;string&quot;</span><span class="p">,</span>
-            <span class="nt">&quot;subtype&quot;</span><span class="p">:</span> <span class="kc">null</span><span class="p">,</span>
-            <span class="nt">&quot;value&quot;</span><span class="p">:</span> <span class="kc">null</span><span class="p">,</span>
-            <span class="nt">&quot;primary&quot;</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
-            <span class="nt">&quot;unique&quot;</span><span class="p">:</span> <span class="kc">false</span><span class="p">,</span>
-            <span class="nt">&quot;label&quot;</span><span class="p">:</span> <span class="kc">false</span><span class="p">,</span>
-            <span class="nt">&quot;nullable&quot;</span><span class="p">:</span> <span class="kc">false</span><span class="p">,</span>
-            <span class="nt">&quot;multiple&quot;</span><span class="p">:</span> <span class="kc">false</span><span class="p">,</span>
-            <span class="nt">&quot;embedded&quot;</span><span class="p">:</span> <span class="kc">false</span><span class="p">,</span>
-            <span class="nt">&quot;searchable&quot;</span><span class="p">:</span> <span class="kc">false</span><span class="p">,</span>
-            <span class="nt">&quot;sortable&quot;</span><span class="p">:</span> <span class="kc">false</span><span class="p">,</span>
-            <span class="nt">&quot;hidden&quot;</span><span class="p">:</span> <span class="kc">false</span><span class="p">,</span>
-            <span class="nt">&quot;internal&quot;</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
-            <span class="nt">&quot;restricted&quot;</span><span class="p">:</span> <span class="kc">false</span><span class="p">,</span>
-            <span class="nt">&quot;ownership&quot;</span><span class="p">:</span> <span class="kc">false</span>
-        <span class="p">}</span>
-    <span class="p">],</span>
-    <span class="nt">&quot;accesses&quot;</span><span class="p">:</span> <span class="p">{</span>
-        <span class="nt">&quot;create&quot;</span><span class="p">:</span> <span class="s2">&quot;auth&quot;</span><span class="p">,</span>
-        <span class="nt">&quot;read&quot;</span><span class="p">:</span> <span class="s2">&quot;owner&quot;</span><span class="p">,</span>
-        <span class="nt">&quot;update&quot;</span><span class="p">:</span> <span class="s2">&quot;admin&quot;</span><span class="p">,</span>
-        <span class="nt">&quot;remove&quot;</span><span class="p">:</span> <span class="s2">&quot;owner&quot;</span><span class="p">,</span>
-        <span class="nt">&quot;search&quot;</span><span class="p">:</span> <span class="s2">&quot;owner&quot;</span><span class="p">,</span>
-        <span class="nt">&quot;count&quot;</span><span class="p">:</span> <span class="s2">&quot;owner&quot;</span>
-    <span class="p">}</span>
-<span class="p">}</span>
+<div class="highlight"><pre><span></span><code><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="nt">&quot;id&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;bdc6c58e-ec49-9193-6b29-6c75518bc3ad&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">    </span><span class="nt">&quot;name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Bookmark&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">    </span><span class="nt">&quot;notes&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;A user can only list its own bookmarks&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">    </span><span class="nt">&quot;fields&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w"></span>
+<span class="w">        </span><span class="p">{</span><span class="w"></span>
+<span class="w">            </span><span class="nt">&quot;name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;_id&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">            </span><span class="nt">&quot;notes&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w"></span>
+<span class="w">            </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;string&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">            </span><span class="nt">&quot;subtype&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w"></span>
+<span class="w">            </span><span class="nt">&quot;value&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w"></span>
+<span class="w">            </span><span class="nt">&quot;primary&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w"></span>
+<span class="w">            </span><span class="nt">&quot;unique&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w"></span>
+<span class="w">            </span><span class="nt">&quot;label&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w"></span>
+<span class="w">            </span><span class="nt">&quot;nullable&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w"></span>
+<span class="w">            </span><span class="nt">&quot;multiple&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w"></span>
+<span class="w">            </span><span class="nt">&quot;embedded&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w"></span>
+<span class="w">            </span><span class="nt">&quot;searchable&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w"></span>
+<span class="w">            </span><span class="nt">&quot;sortable&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w"></span>
+<span class="w">            </span><span class="nt">&quot;hidden&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w"></span>
+<span class="w">            </span><span class="nt">&quot;internal&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w"></span>
+<span class="w">            </span><span class="nt">&quot;restricted&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w"></span>
+<span class="w">            </span><span class="nt">&quot;ownership&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="w"></span>
+<span class="w">        </span><span class="p">}</span><span class="w"></span>
+<span class="w">    </span><span class="p">],</span><span class="w"></span>
+<span class="w">    </span><span class="nt">&quot;accesses&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;create&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;auth&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;read&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;owner&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;update&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;admin&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;remove&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;owner&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;search&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;owner&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;count&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;owner&quot;</span><span class="w"></span>
+<span class="w">    </span><span class="p">}</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
 </code></pre></div>
 <p>Contrairement au moteur de template JavaScript, les propriétés du modèle de données ne sont pas pré-calculées et vous n'avez pas accès aux dépendances du modèle de données.</p>
 <h2 id="exemple-de-validateur">Exemple de validateur</h2>
 <p>Voici un exemple de validateur qui envoie un avertissement pour un type de champ non pris en charge, et une erreur si la clé primaire n'est pas conforme.</p>
 <div class="highlight"><pre><span></span><code><span class="c1">// Model object is injected as &quot;model&quot;</span>
-<span class="kr">const</span> <span class="nx">errors</span> <span class="o">=</span> <span class="p">[];</span>
-<span class="kr">const</span> <span class="nx">warnings</span> <span class="o">=</span> <span class="p">[];</span>
+<span class="kd">const</span> <span class="nx">errors</span> <span class="o">=</span> <span class="p">[];</span>
+<span class="kd">const</span> <span class="nx">warnings</span> <span class="o">=</span> <span class="p">[];</span>
 
 <span class="c1">// -----------------------------</span>
 <span class="c1">// File fields</span>
@@ -942,11 +942,11 @@ La variable <code>model</code> est structurée comme ceci :</p>
 
 <span class="c1">// -----------------------------</span>
 <span class="c1">// Primary key</span>
-<span class="kr">const</span> <span class="nx">primaries</span> <span class="o">=</span> <span class="nx">model</span><span class="p">.</span><span class="nx">fields</span><span class="p">.</span><span class="nx">filter</span><span class="p">((</span><span class="nx">f</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="nx">f</span><span class="p">.</span><span class="nx">primary</span><span class="p">);</span>
+<span class="kd">const</span> <span class="nx">primaries</span> <span class="o">=</span> <span class="nx">model</span><span class="p">.</span><span class="nx">fields</span><span class="p">.</span><span class="nx">filter</span><span class="p">((</span><span class="nx">f</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="nx">f</span><span class="p">.</span><span class="nx">primary</span><span class="p">);</span>
 <span class="k">if</span> <span class="p">(</span><span class="nx">primaries</span><span class="p">.</span><span class="nx">length</span> <span class="o">&gt;</span> <span class="mf">1</span><span class="p">)</span> <span class="p">{</span>
     <span class="nx">errors</span><span class="p">.</span><span class="nx">push</span><span class="p">(</span><span class="s1">&#39;Only one field can be primary&#39;</span><span class="p">);</span>
 <span class="p">}</span>
-<span class="kr">const</span> <span class="nx">primary</span> <span class="o">=</span> <span class="nx">primaries</span><span class="p">[</span><span class="mf">0</span><span class="p">];</span>
+<span class="kd">const</span> <span class="nx">primary</span> <span class="o">=</span> <span class="nx">primaries</span><span class="p">[</span><span class="mf">0</span><span class="p">];</span>
 <span class="k">if</span> <span class="p">(</span><span class="nx">primary</span><span class="p">)</span> <span class="p">{</span>
     <span class="k">if</span> <span class="p">(</span><span class="nx">primary</span><span class="p">.</span><span class="nx">name</span> <span class="o">!==</span> <span class="s1">&#39;_id&#39;</span><span class="p">)</span> <span class="p">{</span>
         <span class="nx">errors</span><span class="p">.</span><span class="nx">push</span><span class="p">(</span><span class="s1">&#39;Primary key must be called &quot;_id&quot;&#39;</span><span class="p">);</span>
